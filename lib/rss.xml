@@ -1,5 +1,130 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Obsidian]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://sunha20.github.io/digital-garden/</link><image><url>https://sunha20.github.io/digital-garden/lib/media/favicon.png</url><title>Obsidian</title><link>https://sunha20.github.io/digital-garden/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Fri, 24 May 2024 03:22:34 GMT</lastBuildDate><atom:link href="https://sunha20.github.io/digital-garden/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Fri, 24 May 2024 03:22:33 GMT</pubDate><copyright><![CDATA[seonha20]]></copyright><ttl>60</ttl><dc:creator>seonha20</dc:creator><item><title><![CDATA[index]]></title><description><![CDATA[ 
- <br><a data-href="Coding Test" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html" class="internal-link" target="_self" rel="noopener">Coding Test</a>]]></description><link>https://sunha20.github.io/digital-garden/index.html</link><guid isPermaLink="false">index.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Fri, 24 May 2024 03:21:53 GMT</pubDate></item><item><title><![CDATA[1로 만들기]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Obsidian]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://sunha20.github.io/digital-garden/</link><image><url>https://sunha20.github.io/digital-garden/lib/media/favicon.png</url><title>Obsidian</title><link>https://sunha20.github.io/digital-garden/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Fri, 24 May 2024 13:28:35 GMT</lastBuildDate><atom:link href="https://sunha20.github.io/digital-garden/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Fri, 24 May 2024 13:28:34 GMT</pubDate><copyright><![CDATA[seonha20]]></copyright><ttl>60</ttl><dc:creator>seonha20</dc:creator><item><title><![CDATA[Coding Test]]></title><description><![CDATA[ 
+ <br><br><a data-tooltip-position="top" aria-label="1. Study/Coding Test/new file.md" data-href="1. Study/Coding Test/new file.md" href="https://sunha20.github.io/digital-garden/1. Study/Coding Test/new file" class="internal-link" target="_self" rel="noopener">new file</a>   |   <a data-tooltip-position="top" aria-label="1. Study/Coding Test/new folder/new folder.md" data-href="1. Study/Coding Test/new folder/new folder.md" href="https://sunha20.github.io/digital-garden/1. Study/Coding Test/new folder/new folder" class="internal-link" target="_self" rel="noopener">new folder</a><br><br>]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html</link><guid isPermaLink="false">1. Study/Coding Test/Coding Test.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Fri, 24 May 2024 11:50:21 GMT</pubDate></item><item><title><![CDATA[42626. 더맵게]]></title><description><![CDATA[ 
+ <br>NAV: <a data-href="1. Study/Coding Test.md" href="https://sunha20.github.io/digital-garden/1. Study/Coding Test" class="internal-link" target="_self" rel="noopener">1. Study/Coding Test.md</a><br><br>매운 것을 좋아하는 Leo는 모든 음식의 스코빌 지수를 K 이상으로 만들고 싶습니다. 모든 음식의 스코빌 지수를 K 이상으로 만들기 위해 Leo는 스코빌 지수가 가장 낮은 두 개의 음식을 아래와 같이 특별한 방법으로 섞어 새로운 음식을 만듭니다.<br>섞은 음식의 스코빌 지수 = 가장 맵지 않은 음식의 스코빌 지수 + (두 번째로 맵지 않은 음식의 스코빌 지수 * 2)
+복사<br>Leo는 모든 음식의 스코빌 지수가 K 이상이 될 때까지 반복하여 섞습니다.<br>
+Leo가 가진 음식의 스코빌 지수를 담은 배열 scoville과 원하는 스코빌 지수 K가 주어질 때, 모든 음식의 스코빌 지수를 K 이상으로 만들기 위해 섞어야 하는 최소 횟수를 return 하도록 solution 함수를 작성해주세요.<br><br>
+<br>scoville의 길이는 2 이상 1,000,000 이하입니다.
+<br>K는 0 이상 1,000,000,000 이하입니다.
+<br>scoville의 원소는 각각 0 이상 1,000,000 이하입니다.
+<br>모든 음식의 스코빌 지수를 K 이상으로 만들 수 없는 경우에는 -1을 return 합니다.
+<br><br><br><br>
+<br>스코빌 지수가 1인 음식과 2인 음식을 섞으면 음식의 스코빌 지수가 아래와 같이 됩니다.<br>
+새로운 음식의 스코빌 지수 = 1 + (2 * 2) = 5<br>
+가진 음식의 스코빌 지수 = [5, 3, 9, 10, 12]
+<br>스코빌 지수가 3인 음식과 5인 음식을 섞으면 음식의 스코빌 지수가 아래와 같이 됩니다.<br>
+새로운 음식의 스코빌 지수 = 3 + (5 * 2) = 13<br>
+가진 음식의 스코빌 지수 = [13, 9, 10, 12]
+<br>모든 음식의 스코빌 지수가 7 이상이 되었고 이때 섞은 횟수는 2회입니다.<br><br><br><br>: if (minA == null || minB == null) {<br>
+<br>null과 int를 비교하여 생긴 문제.
+<br>원래 목적: 
+
+<br>우선순위 큐에서 poll()은 첫 번째 값을 반환하고&nbsp;제거, 비어있으면&nbsp;null을 반환하기 때문에 반환값이 null인 경우를 체크하려고 했다.
+<br>우선순위 큐에 담겨있는 값은 Integer라서 Integer 대신 int 사용. → 이유: 익숙해서…
+
+
+<br>문제: int는 reference type이 아닌 primitive type이기 때문에 null이 안 됨…
+<br>해결방안
+
+<br>int 대신 Integer(wrapper class) 사용
+
+
+<br>/*
+목표: 모든 음식의 스코빌 지수 &gt; K;
+방법: 스코빌 지수가 가장 낮은 두개의 음식으로 새 음식을 만들기;
+
+- 최소 힙 이용(by 우선순위 큐)
+*/
+
+import java.util.*;
+class Solution {
+    public int solution(int[] scoville, int K) {
+        PriorityQueue&lt;Integer&gt; hp = new PriorityQueue&lt;&gt;();
+        for (int s: scoville) {
+            hp.add(s);
+        }
+        
+        int cnt = 0;
+        Integer minA;
+        Integer minB;
+        
+        while (true) {
+            minA = hp.poll();
+            minB = hp.poll();
+            if (minA == null || minB == null) {
+                return -1;
+            }
+            if (minA &gt;= K) {
+                return cnt;
+            }
+            
+            int newFood = minA + (minB * 2);
+            hp.add(newFood);
+            cnt += 1;
+        }
+    }
+}
+복사<br><br>
+<br>정확성 테스트 3개 정도 실패
+<br>원인
+
+<br>16, 22, 23 문제는 제공된 scoville이 2개인 경우에 대한 테스트입니다. (<a data-tooltip-position="top" aria-label="https://school.programmers.co.kr/questions/50794" rel="noopener" class="external-link" href="https://school.programmers.co.kr/questions/50794" target="_blank">질문글 참고</a> / <a data-href="42626. 더맵게#테스트 케이스 추가 팁" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/42626.-더맵게.html#테스트_케이스_추가_팁" class="internal-link" target="_self" rel="noopener">42626. 더맵게 &gt; 테스트 케이스 추가 팁</a>)
+<br>null check가 먼저 이루어지면서 문제가 생김 → 새로 뽑은 수가 null인데 이미, 조건(K 이상)을 만족했을 때
+<br>단순히 null 체크와 조건 체크 순서를 바꾸면 minA가 null일 때 문제가 생김.
+
+<br>수 하나는 무조건 큐에 추가되기 때문에 minA가 null일 리는 없음
+<br>처음 주어지는 input도 2개 이상.
+
+
+
+
+<br>/*
+목표: 모든 음식의 스코빌 지수 &gt; K;
+방법: 스코빌 지수가 가장 낮은 두개의 음식으로 새 음식을 만들기;
+
+- 최소 힙 이용(by 우선순위 큐)
+*/
+
+import java.util.*;
+class Solution {
+    public int solution(int[] scoville, int K) {
+        PriorityQueue&lt;Integer&gt; hp = new PriorityQueue&lt;&gt;();
+        for (int s: scoville) {
+            hp.add(s);
+        }
+        
+        int cnt = 0;
+        Integer minA;
+        Integer minB;
+        
+        while (true) {
+            // 가장 스코빌 지수가 낮은 음식 2개
+            minA = hp.poll();
+            minB = hp.poll();
+            
+            // 조건 체크1 (문제 조건상 항상 minA != null 만족)
+            if (minA &gt;= K) {
+                return cnt;
+            }
+            // 조건 체크2
+            if (minB == null) {
+                return -1;
+            }
+
+            // 새로운 음식 추가 및, 시도 횟수 늘리기.
+            int newFood = minA + (minB * 2);
+            hp.add(newFood);
+            cnt += 1;
+        }
+    }
+}
+복사<br><br>
+<br>기본 테스트 케이스: 문제에서 주어진 예제 테스트 케이스부터 실행해 보세요.
+<br>경계값 테스트: 입력 값의 최소, 최대 경계에서의 동작을 확인하세요. 예를 들어, 비밀번호의 길이가 최대(6자리) 또는 최소(1자리)일 때의 동작을 확인해 보세요.
+<br>특별한 경우 테스트: 일반적이지 않은 입력값이나 특별한 상황에서의 동작을 확인해 보세요. 예를 들어, DB가 비어있는 경우나, 같은 비밀번호를 가진 여러 회원이 있는 경우 등입니다.
+<br>랜덤한 테스트: 여러 다양한 입력 조건에서의 동작을 확인하기 위해 랜덤한 입력값을 사용한 테스트 케이스를 추가해 보세요.
+<br>순차적 테스트: 입력값이 특정 순서에 따라 동작을 확인하는 테스트 케이스를 추가해 보세요. 예를 들어, DB에 회원 정보가 아이디 순서나 비밀번호 순서에 따라 정렬된 경우 등입니다.
+]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/42626.-더맵게.html</link><guid isPermaLink="false">1. Study/Coding Test/42626. 더맵게.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Fri, 24 May 2024 13:27:58 GMT</pubDate></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
+ <br><a data-href="Coding Test" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html" class="internal-link" target="_self" rel="noopener">Coding Test</a>]]></description><link>https://sunha20.github.io/digital-garden/index.html</link><guid isPermaLink="false">index.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Fri, 24 May 2024 03:53:47 GMT</pubDate></item><item><title><![CDATA[1로 만들기]]></title><description><![CDATA[ 
  <br><br>ID: 1463<br>
 Site: 백준<br>
 URL: <a rel="noopener" class="external-link" href="https://www.acmicpc.net/problem/1463" target="_blank">https://www.acmicpc.net/problem/1463</a><br>
@@ -4505,68 +4630,7 @@ Java에서 데이터를 읽고 쓰는 방법에는 여러 가지가 있습니다
 <br><a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank"><strong></strong>: 노드 스트림은 스트림의 주축을 이루는 요소입니다</a>노드 스트림(Node Stream)<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">1</a>.&nbsp;<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">노드 스트림은 데이터 타입 (Char 또는 Byte), 방향 (Input 또는 Output), 노드 타입 (File 또는 키보드 등등)에 따라 결정됩니다</a><a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">1</a>.
 <br><a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank"><strong></strong>: 보조 스트림은 노드 스트림을 통해 들어오거나, 나가는 데이터를 처리하는 것을 도와주는 일종의 플러그인입니다</a>보조 스트림(Auxiliary Stream)<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">1</a>.&nbsp;<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">보조 스트림은 노드 스트림에 연결되어 기능을 추가하거나 향상시킵니다</a><a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">1</a>.&nbsp;<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">예를 들어,&nbsp;<code></code>와&nbsp;<code></code>은 보조 스트림의 예로, 이들은 노드 스트림에 버퍼링 기능을 추가하여 입출력 효율을 높입니다</a>BufferedReaderBufferedInputStream<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">1</a><a data-tooltip-position="top" aria-label="https://velog.io/@roycewon/BufferedReader%EB%A5%BC-%EC%95%8C%EA%B3%A0-%EC%93%B0%EC%9E%90" rel="noopener" class="external-link" href="https://velog.io/@roycewon/BufferedReader%EB%A5%BC-%EC%95%8C%EA%B3%A0-%EC%93%B0%EC%9E%90" target="_blank">2</a>.
 <br>이 세 가지 개념은 Java의 입출력 시스템을 이해하는 데 중요한 역할을 합니다. 이해가 되셨나요? 추가적인 질문이 있으시면 언제든지 물어보세요! 😊<br>Scanner&nbsp;클래스는 Java에서 제공하는&nbsp;보조 스트림(Auxiliary Stream)&nbsp;중 하나입니다.&nbsp;Scanner는 기본적으로 입력 스트림을 받아서 다양한 타입의 데이터를 읽을 수 있는 메소드를 제공합니다. 이는&nbsp;InputStream,&nbsp;File,&nbsp;String&nbsp;등 다양한 소스로부터 데이터를 읽을 수 있게 해주는 기능을 추가하는 역할을 하므로, 보조 스트림에 속합니다. 이해가 되셨나요? 추가적인 질문이 있으시면 언제든지 물어보세요! 😊<br>InputStreamReader는 Java에서 제공하는&nbsp;노드 스트림(Node Stream)&nbsp;중 하나입니다.&nbsp;InputStreamReader는 바이트 스트림을 문자 스트림으로 변환하는 데 사용됩니다. 이 클래스는&nbsp;System.in과 같은&nbsp;InputStream을&nbsp;Reader로 변환하여, 문자 단위로 읽을 수 있게 해줍니다. 따라서,&nbsp;InputStreamReader는 데이터의 원본(노드)에서 직접 데이터를 읽어오는 역할을 하므로 노드 스트림에 속합니다. 이해가 되셨나요? 추가적인 질문이 있으시면 언제든지 물어보세요! 😊<br>System.in과 같은&nbsp;InputStream은 Java에서 제공하는&nbsp;노드 스트림(Node Stream)&nbsp;중 하나입니다.&nbsp;InputStream은 바이트 단위로 데이터를 읽어오는 스트림입니다. 이는 데이터의 원본(노드)에서 직접 데이터를 읽어오는 역할을 하므로 노드 스트림에 속합니다.&nbsp;System.in은 표준 입력 스트림으로, 주로 키보드 입력을 받기 위해 사용됩니다. 이해가 되셨나요? 추가적인 질문이 있으시면 언제든지 물어보세요! 😊<br>+) <a data-tooltip-position="top" aria-label="https://www.acmicpc.net/board/view/9744" rel="noopener" class="external-link" href="https://www.acmicpc.net/board/view/9744" target="_blank">글 읽기 - BufferedReader를 어떻게 사용해야 할지 모르겠습니다.</a><br>
-일반적으로 BufferedReader 를 통해 입력받을때 유의하셔야 할 점이 몇가지 있습니다.&nbsp;<br>1. 기본적으로 BufferedReader는 한 줄을 통째로 입력받는 방법으로 주로 쓰입니다.<br>2. readLine() 메서드는 값을 읽어올 때, String값으로 개행문자(엔터값)를 포함해&nbsp;한줄을 전부 읽어오는 방식입니다.<br>&nbsp;- 비슷한 예로 Scanner메서드 중 nextLine()도 스트링 값과 개행문자(엔터값)을 같이 읽어옵니다.(반면 next()는 개행문자는 제외하고 스트링 값만 읽어옵니다.)<br>&nbsp;- 예제의 입력 예제를 보면 각 문장이 모두 개행문자(엔터)로 구별되있는것을 확인하실 수 있습니다. 따라서 이 문제에서&nbsp;개행문자를 입력받는것은 필수입니다!<br>3. read() 메서드는 값을 읽어올 때, int값으로 변형하여 읽어오는 방식입니다.&nbsp;<br>&nbsp;- 예를들어 input.txt에 저장된&nbsp;1이라는 숫자를 read()를 통해 읽어오면&nbsp;&nbsp;int형 숫자 1을 읽어오는 것이 아닌, txt형식으로 저장된 ASCII 형식의 문자값 '1'을 읽어오는 것이므로 결국 int값으론 49를 읽어오는 것이 됩니다.&nbsp;<br>&nbsp;- 이를 해결하려면&nbsp;int a = br.read() - 48; br.readLine();&nbsp;을 하여 ASCII 값에서 뻴셈을 이용한 뒤&nbsp;엔터 값을 읽어오거나,&nbsp;int a = Integer.parseInt(br.readLine());&nbsp;를 통해 엔터값을 포함해 한줄을 통째로 입력받은 뒤 해당 스트링값을 int로 형변환 해주는 방법이 있습니다. (저같은 경우에는 주로 후자의 방법을 사용합니다)]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/bufferedreader.html</link><guid isPermaLink="false">1. Study/Coding Test/BufferedReader.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Wed, 15 May 2024 00:33:11 GMT</pubDate></item><item><title><![CDATA[Coding Test]]></title><description><![CDATA[ 
- <br><br>
-<br><a data-href="1로 만들기" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/1로-만들기.html" class="internal-link" target="_self" rel="noopener">1로 만들기</a>
-<br><a data-href="01타일" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/01타일.html" class="internal-link" target="_self" rel="noopener">01타일</a>
-<br><a data-href="1003. 피보나치 함수" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/1003.-피보나치-함수.html" class="internal-link" target="_self" rel="noopener">1003. 피보나치 함수</a>
-<br><a data-href="1012. 유기농 배추" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/1012.-유기농-배추.html" class="internal-link" target="_self" rel="noopener">1012. 유기농 배추</a>
-<br><a data-href="1107. 리모컨" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/1107.-리모컨.html" class="internal-link" target="_self" rel="noopener">1107. 리모컨</a>
-<br><a data-href="1157. 단어 공부" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/1157.-단어-공부.html" class="internal-link" target="_self" rel="noopener">1157. 단어 공부</a>
-<br><a data-href="1309.동물원" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/1309.동물원.html" class="internal-link" target="_self" rel="noopener">1309.동물원</a>
-<br><a data-href="11047. 동전 0" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/11047.-동전-0.html" class="internal-link" target="_self" rel="noopener">11047. 동전 0</a>
-<br><a data-href="11279. 최대 힙" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/11279.-최대-힙.html" class="internal-link" target="_self" rel="noopener">11279. 최대 힙</a>
-<br><a data-href="12865. 평범한 배낭" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/12865.-평범한-배낭.html" class="internal-link" target="_self" rel="noopener">12865. 평범한 배낭</a>
-<br><a data-href="15969. 행복" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/15969.-행복.html" class="internal-link" target="_self" rel="noopener">15969. 행복</a>
-<br><a data-href="개인정보 수집 유효기간" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/개인정보-수집-유효기간.html" class="internal-link" target="_self" rel="noopener">개인정보 수집 유효기간</a>
-<br><a data-href="계단 오르기" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/계단-오르기.html" class="internal-link" target="_self" rel="noopener">계단 오르기</a>
-<br><a data-href="괄호" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/괄호.html" class="internal-link" target="_self" rel="noopener">괄호</a>
-<br><a data-href="기본" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/기본.html" class="internal-link" target="_self" rel="noopener">기본</a>
-<br><a data-href="나는야 포켓몬 마스터 이다솜" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/나는야-포켓몬-마스터-이다솜.html" class="internal-link" target="_self" rel="noopener">나는야 포켓몬 마스터 이다솜</a>
-<br><a data-href="나이순 정렬" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/나이순-정렬.html" class="internal-link" target="_self" rel="noopener">나이순 정렬</a>
-<br><a data-href="다이나믹프로그래밍(DP)" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/다이나믹프로그래밍(dp).html" class="internal-link" target="_self" rel="noopener">다이나믹프로그래밍(DP)</a>
-<br><a data-href="단어정렬" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/단어정렬.html" class="internal-link" target="_self" rel="noopener">단어정렬</a>
-<br><a data-href="덩치" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/덩치.html" class="internal-link" target="_self" rel="noopener">덩치</a>
-<br><a data-href="듣보잡" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/듣보잡.html" class="internal-link" target="_self" rel="noopener">듣보잡</a>
-<br><a data-href="랜선 자르기" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/랜선-자르기.html" class="internal-link" target="_self" rel="noopener">랜선 자르기</a>
-<br><a data-href="로프" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/로프.html" class="internal-link" target="_self" rel="noopener">로프</a>
-<br><a data-href="마인크래프트" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/마인크래프트.html" class="internal-link" target="_self" rel="noopener">마인크래프트</a>
-<br><a data-href="바이러스" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/바이러스.html" class="internal-link" target="_self" rel="noopener">바이러스</a>
-<br><a data-href="보물" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/보물.html" class="internal-link" target="_self" rel="noopener">보물</a>
-<br><a data-href="본" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/본.html" class="internal-link" target="_self" rel="noopener">본</a>
-<br><a data-href="비밀번호 만들기" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/비밀번호-만들기.html" class="internal-link" target="_self" rel="noopener">비밀번호 만들기</a>
-<br><a data-href="색종이" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/색종이.html" class="internal-link" target="_self" rel="noopener">색종이</a>
-<br><a data-href="설탕 배달" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/설탕-배달.html" class="internal-link" target="_self" rel="noopener">설탕 배달</a>
-<br><a data-href="소수 구하기" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/소수-구하기.html" class="internal-link" target="_self" rel="noopener">소수 구하기</a>
-<br><a data-href="수 찾기" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/수-찾기.html" class="internal-link" target="_self" rel="noopener">수 찾기</a>
-<br><a data-href="수들의 합2" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/수들의-합2.html" class="internal-link" target="_self" rel="noopener">수들의 합2</a>
-<br><a data-href="숫자 카드 2" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/숫자-카드-2.html" class="internal-link" target="_self" rel="noopener">숫자 카드 2</a>
-<br><a data-href="스위치 켜고 끄기" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/스위치-켜고-끄기.html" class="internal-link" target="_self" rel="noopener">스위치 켜고 끄기</a>
-<br><a data-href="영화감독 숌" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/영화감독-숌.html" class="internal-link" target="_self" rel="noopener">영화감독 숌</a>
-<br><a data-href="요세푸스 문제 0" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/요세푸스-문제-0.html" class="internal-link" target="_self" rel="noopener">요세푸스 문제 0</a>
-<br><a data-href="요세푸스 문제" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/요세푸스-문제.html" class="internal-link" target="_self" rel="noopener">요세푸스 문제</a>
-<br><a data-href="제목 없음" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/제목-없음.html" class="internal-link" target="_self" rel="noopener">제목 없음</a>
-<br><a data-href="좌표 정렬" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/좌표-정렬.html" class="internal-link" target="_self" rel="noopener">좌표 정렬</a>
-<br><a data-href="집합" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/집합.html" class="internal-link" target="_self" rel="noopener">집합</a>
-<br><a data-href="체스판 다시 칠하기" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/체스판-다시-칠하기.html" class="internal-link" target="_self" rel="noopener">체스판 다시 칠하기</a>
-<br><a data-href="카드2" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/카드2.html" class="internal-link" target="_self" rel="noopener">카드2</a>
-<br><a data-href="코테 질문 모음" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/코테-질문-모음.html" class="internal-link" target="_self" rel="noopener">코테 질문 모음</a>
-<br><a data-href="큐" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/큐.html" class="internal-link" target="_self" rel="noopener">큐</a>
-<br><a data-href="터렛" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/터렛.html" class="internal-link" target="_self" rel="noopener">터렛</a>
-<br><a data-href="통계학" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/통계학.html" class="internal-link" target="_self" rel="noopener">통계학</a>
-<br><a data-href="트리" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/트리.html" class="internal-link" target="_self" rel="noopener">트리</a>
-<br><a data-href="프린터 큐" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/프린터-큐.html" class="internal-link" target="_self" rel="noopener">프린터 큐</a>
-<br><a data-href="한수" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/한수.html" class="internal-link" target="_self" rel="noopener">한수</a>
-<br><a data-href="ATM" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/atm.html" class="internal-link" target="_self" rel="noopener">ATM</a>
-<br><a data-href="BufferedReader" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/bufferedreader.html" class="internal-link" target="_self" rel="noopener">BufferedReader</a>
-<br><a data-href="DNA" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/dna.html" class="internal-link" target="_self" rel="noopener">DNA</a>
-<br><a data-href="HELP 반례 찾기" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/help-반례-찾기.html" class="internal-link" target="_self" rel="noopener">HELP 반례 찾기</a>
-<br><a data-href="HELP 알고리즘" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/help-알고리즘.html" class="internal-link" target="_self" rel="noopener">HELP 알고리즘</a>
-<br><a data-href="Help Python과 Pypy" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/help-python과-pypy.html" class="internal-link" target="_self" rel="noopener">Help Python과 Pypy</a>
-<br><a data-href="java 기본" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/java-기본.html" class="internal-link" target="_self" rel="noopener">java 기본</a>
-<br><a data-href="N과 M(1)" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/n과-m(1).html" class="internal-link" target="_self" rel="noopener">N과 M(1)</a>
-<br><a data-href="new" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/new.html" class="internal-link" target="_self" rel="noopener">new</a>
-<br>]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html</link><guid isPermaLink="false">1. Study/Coding Test/Coding Test.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Fri, 24 May 2024 03:18:47 GMT</pubDate></item><item><title><![CDATA[DNA]]></title><description><![CDATA[ 
+일반적으로 BufferedReader 를 통해 입력받을때 유의하셔야 할 점이 몇가지 있습니다.&nbsp;<br>1. 기본적으로 BufferedReader는 한 줄을 통째로 입력받는 방법으로 주로 쓰입니다.<br>2. readLine() 메서드는 값을 읽어올 때, String값으로 개행문자(엔터값)를 포함해&nbsp;한줄을 전부 읽어오는 방식입니다.<br>&nbsp;- 비슷한 예로 Scanner메서드 중 nextLine()도 스트링 값과 개행문자(엔터값)을 같이 읽어옵니다.(반면 next()는 개행문자는 제외하고 스트링 값만 읽어옵니다.)<br>&nbsp;- 예제의 입력 예제를 보면 각 문장이 모두 개행문자(엔터)로 구별되있는것을 확인하실 수 있습니다. 따라서 이 문제에서&nbsp;개행문자를 입력받는것은 필수입니다!<br>3. read() 메서드는 값을 읽어올 때, int값으로 변형하여 읽어오는 방식입니다.&nbsp;<br>&nbsp;- 예를들어 input.txt에 저장된&nbsp;1이라는 숫자를 read()를 통해 읽어오면&nbsp;&nbsp;int형 숫자 1을 읽어오는 것이 아닌, txt형식으로 저장된 ASCII 형식의 문자값 '1'을 읽어오는 것이므로 결국 int값으론 49를 읽어오는 것이 됩니다.&nbsp;<br>&nbsp;- 이를 해결하려면&nbsp;int a = br.read() - 48; br.readLine();&nbsp;을 하여 ASCII 값에서 뻴셈을 이용한 뒤&nbsp;엔터 값을 읽어오거나,&nbsp;int a = Integer.parseInt(br.readLine());&nbsp;를 통해 엔터값을 포함해 한줄을 통째로 입력받은 뒤 해당 스트링값을 int로 형변환 해주는 방법이 있습니다. (저같은 경우에는 주로 후자의 방법을 사용합니다)]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/bufferedreader.html</link><guid isPermaLink="false">1. Study/Coding Test/BufferedReader.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Wed, 15 May 2024 00:33:11 GMT</pubDate></item><item><title><![CDATA[DNA]]></title><description><![CDATA[ 
  <br><br>ID: 1969<br>
 Site: 백준<br>
 URL: <a rel="noopener" class="external-link" href="https://www.acmicpc.net/problem/1969" target="_blank">https://www.acmicpc.net/problem/1969</a><br>
