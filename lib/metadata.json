@@ -1,72 +1,73 @@
 {
   "vaultName": "Obsidian",
-  "lastExport": 1716557314978,
+  "lastExport": 1716651765396,
   "pluginVersion": "1.8.01",
-  "validBodyClasses": "publish css-settings-manager theme-light show-inline-title minimal-default-dark minimal-default-light borders-none colorful-active links-int-on links-ext-on full-width-media img-grid minimal-readable minimal-dark-black contextual-typography outliner-plugin-dnd highlightr-realistic hide-folder-note folder-note-underline folder-note-underline-path fn-whitespace-stop-collapsing fn-hide-collapse-icon trim-cols checkbox-square metadata-heading-off",
+  "validBodyClasses": "publish css-settings-manager theme-light show-inline-title minimal-default-dark minimal-default-light borders-none colorful-active links-int-on links-ext-on full-width-media img-grid minimal-readable minimal-dark-black contextual-typography outliner-plugin-dnd trim-cols checkbox-square metadata-heading-off highlightr-realistic hide-folder-note folder-note-underline folder-note-underline-path fn-whitespace-stop-collapsing fn-hide-collapse-icon obsidian-themepocalypse",
   "useCustomHeadContent": false,
   "useCustomFavicon": false,
   "files": [
-    "1. Study/Coding Test/한수.md",
-    "1. Study/Coding Test/프린터 큐.md",
-    "1. Study/Coding Test/트리.md",
-    "1. Study/Coding Test/통계학.md",
-    "1. Study/Coding Test/큐.md",
+    "1. Study/Coding Test/1로 만들기.md",
+    "1. Study/Coding Test/01타일.md",
+    "1. Study/Coding Test/1003. 피보나치 함수.md",
+    "1. Study/Coding Test/1012. 유기농 배추.md",
+    "1. Study/Coding Test/1107. 리모컨.md",
+    "1. Study/Coding Test/1157. 단어 공부.md",
+    "1. Study/Coding Test/1309.동물원.md",
+    "1. Study/Coding Test/2336. Smallest Number in Infinite Set.md",
+    "1. Study/Coding Test/11047. 동전 0.md",
+    "1. Study/Coding Test/11279. 최대 힙.md",
+    "1. Study/Coding Test/12865. 평범한 배낭.md",
+    "1. Study/Coding Test/15969. 행복.md",
+    "1. Study/Coding Test/42626. 더맵게.md",
+    "1. Study/Coding Test/개인정보 수집 유효기간.md",
+    "1. Study/Coding Test/계단 오르기.md",
+    "1. Study/Coding Test/괄호.md",
+    "1. Study/Coding Test/기본.md",
+    "1. Study/Coding Test/나는야 포켓몬 마스터 이다솜.md",
+    "1. Study/Coding Test/나이순 정렬.md",
+    "1. Study/Coding Test/다이나믹프로그래밍(DP).md",
+    "1. Study/Coding Test/단어정렬.md",
+    "1. Study/Coding Test/덩치.md",
+    "1. Study/Coding Test/듣보잡.md",
+    "1. Study/Coding Test/랜선 자르기.md",
+    "1. Study/Coding Test/로프.md",
+    "1. Study/Coding Test/마인크래프트.md",
+    "1. Study/Coding Test/바이러스.md",
+    "1. Study/Coding Test/보물.md",
+    "1. Study/Coding Test/본.md",
+    "1. Study/Coding Test/비밀번호 만들기.md",
+    "1. Study/Coding Test/색종이.md",
+    "1. Study/Coding Test/설탕 배달.md",
+    "1. Study/Coding Test/소수 구하기.md",
+    "1. Study/Coding Test/수 찾기.md",
+    "1. Study/Coding Test/수들의 합2.md",
+    "1. Study/Coding Test/숫자 카드 2.md",
+    "1. Study/Coding Test/스위치 켜고 끄기.md",
+    "1. Study/Coding Test/영화감독 숌.md",
+    "1. Study/Coding Test/요세푸스 문제.md",
+    "1. Study/Coding Test/요세푸스 문제 0.md",
+    "1. Study/Coding Test/제목 없음.md",
+    "1. Study/Coding Test/좌표 정렬.md",
     "1. Study/Coding Test/집합.md",
     "1. Study/Coding Test/체스판 다시 칠하기.md",
     "1. Study/Coding Test/카드2.md",
-    "1. Study/Coding Test/좌표 정렬.md",
-    "1. Study/Coding Test/제목 없음.md",
-    "1. Study/Coding Test/요세푸스 문제.md",
-    "1. Study/Coding Test/요세푸스 문제 0.md",
-    "1. Study/Coding Test/영화감독 숌.md",
-    "1. Study/Coding Test/스위치 켜고 끄기.md",
-    "1. Study/Coding Test/숫자 카드 2.md",
-    "1. Study/Coding Test/수들의 합2.md",
-    "1. Study/Coding Test/수 찾기.md",
-    "1. Study/Coding Test/소수 구하기.md",
-    "1. Study/Coding Test/설탕 배달.md",
-    "1. Study/Coding Test/색종이.md",
-    "1. Study/Coding Test/비밀번호 만들기.md",
-    "1. Study/Coding Test/본.md",
-    "1. Study/Coding Test/보물.md",
-    "1. Study/Coding Test/바이러스.md",
-    "1. Study/Coding Test/마인크래프트.md",
-    "1. Study/Coding Test/로프.md",
-    "1. Study/Coding Test/랜선 자르기.md",
-    "1. Study/Coding Test/듣보잡.md",
-    "1. Study/Coding Test/덩치.md",
-    "1. Study/Coding Test/단어정렬.md",
-    "1. Study/Coding Test/다이나믹프로그래밍(DP).md",
-    "1. Study/Coding Test/나이순 정렬.md",
-    "1. Study/Coding Test/나는야 포켓몬 마스터 이다솜.md",
-    "1. Study/Coding Test/기본.md",
-    "1. Study/Coding Test/계단 오르기.md",
-    "1. Study/Coding Test/개인정보 수집 유효기간.md",
-    "1. Study/Coding Test/N과 M(1).md",
-    "1. Study/Coding Test/HELP 알고리즘.md",
-    "1. Study/Coding Test/HELP 반례 찾기.md",
-    "1. Study/Coding Test/Help Python과 Pypy.md",
-    "1. Study/Coding Test/ATM.md",
-    "1. Study/Coding Test/DNA.md",
-    "1. Study/Coding Test/1로 만들기.md",
-    "1. Study/Coding Test/01타일.md",
-    "1. Study/Coding Test/터렛.md",
-    "1. Study/Coding Test/괄호.md",
-    "1. Study/Coding Test/11279. 최대 힙.md",
-    "1. Study/Coding Test/12865. 평범한 배낭.md",
-    "1. Study/Coding Test/11047. 동전 0.md",
     "1. Study/Coding Test/코테 질문 모음.md",
-    "1. Study/Coding Test/1003. 피보나치 함수.md",
-    "1. Study/Coding Test/1107. 리모컨.md",
-    "1. Study/Coding Test/1012. 유기농 배추.md",
-    "1. Study/Coding Test/1157. 단어 공부.md",
-    "1. Study/Coding Test/java 기본.md",
+    "1. Study/Coding Test/큐.md",
+    "1. Study/Coding Test/터렛.md",
+    "1. Study/Coding Test/통계학.md",
+    "1. Study/Coding Test/트리.md",
+    "1. Study/Coding Test/프린터 큐.md",
+    "1. Study/Coding Test/한수.md",
+    "1. Study/Coding Test/ATM.md",
     "1. Study/Coding Test/BufferedReader.md",
-    "1. Study/Coding Test/15969. 행복.md",
-    "1. Study/Coding Test/1309.동물원.md",
-    "1. Study/Coding Test/new.md",
     "1. Study/Coding Test/Coding Test.md",
-    "1. Study/Coding Test/42626. 더맵게.md",
+    "1. Study/Coding Test/DNA.md",
+    "1. Study/Coding Test/HELP 반례 찾기.md",
+    "1. Study/Coding Test/HELP 알고리즘.md",
+    "1. Study/Coding Test/Help Python과 Pypy.md",
+    "1. Study/Coding Test/java 기본.md",
+    "1. Study/Coding Test/N과 M(1).md",
+    "1. Study/Coding Test/new.md",
     "index.md",
     "lib/scripts/graph-wasm.wasm",
     "lib/fonts/94f2f163d4b698242fef.otf",
@@ -149,32 +150,32 @@
       "dependencies": []
     },
     "1. Study/Coding Test/1003. 피보나치 함수.md": {
-      "modifiedTime": 1716520882430,
-      "sourceSize": 4320,
+      "modifiedTime": 1716651603564,
+      "sourceSize": 4401,
       "exportedPath": "1.-study/coding-test/1003.-피보나치-함수.html",
       "dependencies": []
     },
     "1. Study/Coding Test/1012. 유기농 배추.md": {
-      "modifiedTime": 1716520882430,
-      "sourceSize": 3342,
+      "modifiedTime": 1716651603564,
+      "sourceSize": 3423,
       "exportedPath": "1.-study/coding-test/1012.-유기농-배추.html",
       "dependencies": []
     },
     "1. Study/Coding Test/1107. 리모컨.md": {
-      "modifiedTime": 1716520882430,
-      "sourceSize": 9441,
+      "modifiedTime": 1716651603564,
+      "sourceSize": 9522,
       "exportedPath": "1.-study/coding-test/1107.-리모컨.html",
       "dependencies": []
     },
     "1. Study/Coding Test/1157. 단어 공부.md": {
-      "modifiedTime": 1716520882430,
-      "sourceSize": 4186,
+      "modifiedTime": 1716651603564,
+      "sourceSize": 4267,
       "exportedPath": "1.-study/coding-test/1157.-단어-공부.html",
       "dependencies": []
     },
     "1. Study/Coding Test/1309.동물원.md": {
-      "modifiedTime": 1716520882430,
-      "sourceSize": 2248,
+      "modifiedTime": 1716651603564,
+      "sourceSize": 2329,
       "exportedPath": "1.-study/coding-test/1309.동물원.html",
       "dependencies": []
     },
@@ -197,8 +198,8 @@
       "dependencies": []
     },
     "1. Study/Coding Test/15969. 행복.md": {
-      "modifiedTime": 1716520882430,
-      "sourceSize": 4625,
+      "modifiedTime": 1716651603564,
+      "sourceSize": 4706,
       "exportedPath": "1.-study/coding-test/15969.-행복.html",
       "dependencies": []
     },
@@ -443,14 +444,14 @@
       "dependencies": []
     },
     "1. Study/Coding Test/BufferedReader.md": {
-      "modifiedTime": 1716520882430,
-      "sourceSize": 8091,
+      "modifiedTime": 1716651603564,
+      "sourceSize": 8172,
       "exportedPath": "1.-study/coding-test/bufferedreader.html",
       "dependencies": []
     },
     "1. Study/Coding Test/Coding Test.md": {
-      "modifiedTime": 1716557314978,
-      "sourceSize": 2399,
+      "modifiedTime": 1716651765396,
+      "sourceSize": 2787,
       "exportedPath": "1.-study/coding-test/coding-test.html",
       "dependencies": []
     },
@@ -479,8 +480,8 @@
       "dependencies": []
     },
     "1. Study/Coding Test/java 기본.md": {
-      "modifiedTime": 1716520882430,
-      "sourceSize": 420,
+      "modifiedTime": 1716651603564,
+      "sourceSize": 501,
       "exportedPath": "1.-study/coding-test/java-기본.html",
       "dependencies": []
     },
@@ -491,8 +492,8 @@
       "dependencies": []
     },
     "1. Study/Coding Test/new.md": {
-      "modifiedTime": 1716520882430,
-      "sourceSize": 3278,
+      "modifiedTime": 1716651603564,
+      "sourceSize": 3359,
       "exportedPath": "1.-study/coding-test/new.html",
       "dependencies": []
     },
@@ -503,91 +504,91 @@
       "dependencies": []
     },
     "lib/scripts/graph-wasm.wasm": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 23377,
       "exportedPath": "lib/scripts/graph-wasm.wasm",
       "dependencies": []
     },
     "lib/fonts/94f2f163d4b698242fef.otf": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 66800,
       "exportedPath": "lib/fonts/94f2f163d4b698242fef.otf",
       "dependencies": []
     },
     "lib/fonts/72505e6a122c6acd5471.woff2": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 104232,
       "exportedPath": "lib/fonts/72505e6a122c6acd5471.woff2",
       "dependencies": []
     },
     "lib/fonts/2d5198822ab091ce4305.woff2": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 104332,
       "exportedPath": "lib/fonts/2d5198822ab091ce4305.woff2",
       "dependencies": []
     },
     "lib/fonts/c8ba52b05a9ef10f4758.woff2": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 98868,
       "exportedPath": "lib/fonts/c8ba52b05a9ef10f4758.woff2",
       "dependencies": []
     },
     "lib/fonts/cb10ffd7684cd9836a05.woff2": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 106876,
       "exportedPath": "lib/fonts/cb10ffd7684cd9836a05.woff2",
       "dependencies": []
     },
     "lib/fonts/b5f0f109bc88052d4000.woff2": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 105804,
       "exportedPath": "lib/fonts/b5f0f109bc88052d4000.woff2",
       "dependencies": []
     },
     "lib/fonts/cbe0ae49c52c920fd563.woff2": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 106108,
       "exportedPath": "lib/fonts/cbe0ae49c52c920fd563.woff2",
       "dependencies": []
     },
     "lib/fonts/535a6cf662596b3bd6a6.woff2": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 111708,
       "exportedPath": "lib/fonts/535a6cf662596b3bd6a6.woff2",
       "dependencies": []
     },
     "lib/fonts/70cc7ff27245e82ad414.ttf": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 192740,
       "exportedPath": "lib/fonts/70cc7ff27245e82ad414.ttf",
       "dependencies": []
     },
     "lib/fonts/454577c22304619db035.ttf": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 161376,
       "exportedPath": "lib/fonts/454577c22304619db035.ttf",
       "dependencies": []
     },
     "lib/fonts/52ac8f3034507f1d9e53.ttf": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 191568,
       "exportedPath": "lib/fonts/52ac8f3034507f1d9e53.ttf",
       "dependencies": []
     },
     "lib/fonts/05b618077343fbbd92b7.ttf": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 155288,
       "exportedPath": "lib/fonts/05b618077343fbbd92b7.ttf",
       "dependencies": []
     },
     "lib/fonts/4bb6ac751d1c5478ff3a.woff2": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 7876,
       "exportedPath": "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
       "dependencies": []
     },
     "lib/media/874d8b8e340f75575caa.svg": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 317,
       "exportedPath": "lib/media/874d8b8e340f75575caa.svg",
       "dependencies": []
@@ -725,111 +726,117 @@
       "dependencies": []
     },
     "lib/html/file-tree.html": {
-      "modifiedTime": 1716557314978,
-      "sourceSize": 23632,
+      "modifiedTime": 1716651765396,
+      "sourceSize": 24044,
       "exportedPath": "lib/html/file-tree.html",
       "dependencies": []
     },
     "lib/scripts/webpage.js": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 47290,
       "exportedPath": "lib/scripts/webpage.js",
       "dependencies": []
     },
     "lib/scripts/graph-view.js": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 15519,
       "exportedPath": "lib/scripts/graph-view.js",
       "dependencies": []
     },
     "lib/scripts/graph-wasm.js": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 14021,
       "exportedPath": "lib/scripts/graph-wasm.js",
       "dependencies": []
     },
     "lib/scripts/graph-render-worker.js": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 5179,
       "exportedPath": "lib/scripts/graph-render-worker.js",
       "dependencies": []
     },
     "lib/scripts/tinycolor.js": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 29832,
       "exportedPath": "lib/scripts/tinycolor.js",
       "dependencies": []
     },
     "lib/scripts/pixi.js": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 449509,
       "exportedPath": "lib/scripts/pixi.js",
       "dependencies": []
     },
     "lib/scripts/minisearch.js": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 29422,
       "exportedPath": "lib/scripts/minisearch.js",
       "dependencies": []
     },
     "lib/media/favicon.png": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 1105,
       "exportedPath": "lib/media/favicon.png",
       "dependencies": []
     },
     "lib/scripts/graph-data.js": {
-      "modifiedTime": 1716557314978,
-      "sourceSize": 4557,
+      "modifiedTime": 1716651765396,
+      "sourceSize": 4575,
       "exportedPath": "lib/scripts/graph-data.js",
       "dependencies": []
     },
     "lib/styles/obsidian.css": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 157722,
       "exportedPath": "lib/styles/obsidian.css",
       "dependencies": []
     },
     "lib/styles/other-plugins.css": {
-      "modifiedTime": 1716557314978,
-      "sourceSize": 32262,
+      "modifiedTime": 1716651765396,
+      "sourceSize": 36067,
       "exportedPath": "lib/styles/other-plugins.css",
       "dependencies": []
     },
     "lib/styles/theme.css": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 209702,
       "exportedPath": "lib/styles/theme.css",
       "dependencies": []
     },
     "lib/styles/global-variable-styles.css": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 416,
       "exportedPath": "lib/styles/global-variable-styles.css",
       "dependencies": []
     },
     "lib/styles/supported-plugins.css": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 4725,
       "exportedPath": "lib/styles/supported-plugins.css",
       "dependencies": []
     },
     "lib/styles/main-styles.css": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 23130,
       "exportedPath": "lib/styles/main-styles.css",
       "dependencies": []
     },
     "1. Study/Coding Test/42626. 더맵게.md": {
-      "modifiedTime": 1716557314978,
-      "sourceSize": 6309,
+      "modifiedTime": 1716651603564,
+      "sourceSize": 6592,
       "exportedPath": "1.-study/coding-test/42626.-더맵게.html",
       "dependencies": []
     },
     "lib/styles/snippets.css": {
-      "modifiedTime": 1716557314978,
+      "modifiedTime": 1716651765396,
       "sourceSize": 50,
       "exportedPath": "lib/styles/snippets.css",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/2336. Smallest Number in Infinite Set.md": {
+      "modifiedTime": 1716651765396,
+      "sourceSize": 6529,
+      "exportedPath": "1.-study/coding-test/2336.-smallest-number-in-infinite-set.html",
       "dependencies": []
     }
   }

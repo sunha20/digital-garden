@@ -1,350 +1,172 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Obsidian]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://sunha20.github.io/digital-garden/</link><image><url>https://sunha20.github.io/digital-garden/lib/media/favicon.png</url><title>Obsidian</title><link>https://sunha20.github.io/digital-garden/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Fri, 24 May 2024 13:28:35 GMT</lastBuildDate><atom:link href="https://sunha20.github.io/digital-garden/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Fri, 24 May 2024 13:28:34 GMT</pubDate><copyright><![CDATA[seonha20]]></copyright><ttl>60</ttl><dc:creator>seonha20</dc:creator><item><title><![CDATA[Coding Test]]></title><description><![CDATA[ 
- <br><br><a data-tooltip-position="top" aria-label="1. Study/Coding Test/new file.md" data-href="1. Study/Coding Test/new file.md" href="https://sunha20.github.io/digital-garden/1. Study/Coding Test/new file" class="internal-link" target="_self" rel="noopener">new file</a>   |   <a data-tooltip-position="top" aria-label="1. Study/Coding Test/new folder/new folder.md" data-href="1. Study/Coding Test/new folder/new folder.md" href="https://sunha20.github.io/digital-garden/1. Study/Coding Test/new folder/new folder" class="internal-link" target="_self" rel="noopener">new folder</a><br><br>]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html</link><guid isPermaLink="false">1. Study/Coding Test/Coding Test.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Fri, 24 May 2024 11:50:21 GMT</pubDate></item><item><title><![CDATA[42626. 더맵게]]></title><description><![CDATA[ 
- <br>NAV: <a data-href="1. Study/Coding Test.md" href="https://sunha20.github.io/digital-garden/1. Study/Coding Test" class="internal-link" target="_self" rel="noopener">1. Study/Coding Test.md</a><br><br>매운 것을 좋아하는 Leo는 모든 음식의 스코빌 지수를 K 이상으로 만들고 싶습니다. 모든 음식의 스코빌 지수를 K 이상으로 만들기 위해 Leo는 스코빌 지수가 가장 낮은 두 개의 음식을 아래와 같이 특별한 방법으로 섞어 새로운 음식을 만듭니다.<br>섞은 음식의 스코빌 지수 = 가장 맵지 않은 음식의 스코빌 지수 + (두 번째로 맵지 않은 음식의 스코빌 지수 * 2)
-복사<br>Leo는 모든 음식의 스코빌 지수가 K 이상이 될 때까지 반복하여 섞습니다.<br>
-Leo가 가진 음식의 스코빌 지수를 담은 배열 scoville과 원하는 스코빌 지수 K가 주어질 때, 모든 음식의 스코빌 지수를 K 이상으로 만들기 위해 섞어야 하는 최소 횟수를 return 하도록 solution 함수를 작성해주세요.<br><br>
-<br>scoville의 길이는 2 이상 1,000,000 이하입니다.
-<br>K는 0 이상 1,000,000,000 이하입니다.
-<br>scoville의 원소는 각각 0 이상 1,000,000 이하입니다.
-<br>모든 음식의 스코빌 지수를 K 이상으로 만들 수 없는 경우에는 -1을 return 합니다.
-<br><br><br><br>
-<br>스코빌 지수가 1인 음식과 2인 음식을 섞으면 음식의 스코빌 지수가 아래와 같이 됩니다.<br>
-새로운 음식의 스코빌 지수 = 1 + (2 * 2) = 5<br>
-가진 음식의 스코빌 지수 = [5, 3, 9, 10, 12]
-<br>스코빌 지수가 3인 음식과 5인 음식을 섞으면 음식의 스코빌 지수가 아래와 같이 됩니다.<br>
-새로운 음식의 스코빌 지수 = 3 + (5 * 2) = 13<br>
-가진 음식의 스코빌 지수 = [13, 9, 10, 12]
-<br>모든 음식의 스코빌 지수가 7 이상이 되었고 이때 섞은 횟수는 2회입니다.<br><br><br><br>: if (minA == null || minB == null) {<br>
-<br>null과 int를 비교하여 생긴 문제.
-<br>원래 목적: 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Obsidian]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://sunha20.github.io/digital-garden/</link><image><url>https://sunha20.github.io/digital-garden/lib/media/favicon.png</url><title>Obsidian</title><link>https://sunha20.github.io/digital-garden/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sat, 25 May 2024 15:42:46 GMT</lastBuildDate><atom:link href="https://sunha20.github.io/digital-garden/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sat, 25 May 2024 15:42:45 GMT</pubDate><copyright><![CDATA[seonha20]]></copyright><ttl>60</ttl><dc:creator>seonha20</dc:creator><item><title><![CDATA[2336. Smallest Number in Infinite Set]]></title><description><![CDATA[<a class="tag" href="https://sunha20.github.io/digital-garden/?query=tag:질문/코딩테스트" style="background-color: rgb(4, 108, 116); color: white; font-weight: 700; border: none; border-radius: 1em; padding: 0.2em 0.5em;">#질문/코딩테스트</a> 
+ <br>추가로 해볼 것:<br>
+<br><br>
+<br>처음에 1000개 들어가 배열 사용하지 않는 것도 방법일듯…! 
+<br>NAV: <a data-tooltip-position="top" aria-label="1. Study/Coding Test/Coding Test.md" data-href="1. Study/Coding Test/Coding Test.md" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html" class="internal-link" target="_self" rel="noopener">Coding Test</a><br>You have a set which contains all positive integers&nbsp;[1, 2, 3, 4, 5, ...].<br>Implement the&nbsp;SmallestInfiniteSet&nbsp;class:<br>
+<br>SmallestInfiniteSet()&nbsp;Initializes the&nbsp;SmallestInfiniteSet&nbsp;object to contain&nbsp;all&nbsp;positive integers.
+<br>int popSmallest()&nbsp;Removes&nbsp;and returns the smallest integer contained in the infinite set.
+<br>void addBack(int num)&nbsp;Adds&nbsp;a positive integer&nbsp;num&nbsp;back into the infinite set, if it is&nbsp;not&nbsp;already in the infinite set.
+<br>Example 1:<br>**Input**
+["SmallestInfiniteSet", "addBack", "popSmallest", "popSmallest", "popSmallest", "addBack", "popSmallest", "popSmallest", "popSmallest"]
+[[], [2], [], [], [], [1], [], [], []]
+**Output**
+[null, null, 1, 2, 3, null, 1, 4, 5]
+복사<br>Explanation<br>
+SmallestInfiniteSet smallestInfiniteSet = new SmallestInfiniteSet();<br>
+smallestInfiniteSet.addBack(2);    // 2 is already in the set, so no change is made.<br>
+smallestInfiniteSet.popSmallest(); // return 1, since 1 is the smallest number, and remove it from the set.<br>
+smallestInfiniteSet.popSmallest(); // return 2, and remove it from the set.<br>
+smallestInfiniteSet.popSmallest(); // return 3, and remove it from the set.<br>
+smallestInfiniteSet.addBack(1);    // 1 is added back to the set.<br>
+smallestInfiniteSet.popSmallest(); // return 1, since 1 was added back to the set and<br>
+// is the smallest number, and remove it from the set.<br>
+smallestInfiniteSet.popSmallest(); // return 4, and remove it from the set.<br>
+smallestInfiniteSet.popSmallest(); // return 5, and remove it from the set.<br>Constraints:<br>
+<br>1 &lt;= num &lt;= 1000
+<br>At most&nbsp;1000&nbsp;calls will be made&nbsp;in total&nbsp;to&nbsp;popSmallest&nbsp;and&nbsp;addBack.
+<br>Hint&nbsp;1<br>Based on the constraints, what is the maximum element that can possibly be popped?<br><br>Hint&nbsp;2<br>Maintain whether elements are in or not in the set. How many elements do we consider?<br><br>Similar Questions<br><a data-tooltip-position="top" aria-label="https://leetcode.com/problems/first-missing-positive/" rel="noopener" class="external-link" href="https://leetcode.com/problems/first-missing-positive/" target="_blank">First Missing Positive</a><br><br><br>
+<br>leet는 처음이라 문제 보는 법이 어려움.
 
-<br>우선순위 큐에서 poll()은 첫 번째 값을 반환하고&nbsp;제거, 비어있으면&nbsp;null을 반환하기 때문에 반환값이 null인 경우를 체크하려고 했다.
-<br>우선순위 큐에 담겨있는 값은 Integer라서 Integer 대신 int 사용. → 이유: 익숙해서…
+<br>특히 input 부분은 아직도 모르겠다.
 
 
-<br>문제: int는 reference type이 아닌 primitive type이기 때문에 null이 안 됨…
-<br>해결방안
+<br>infinity set이란 걸 어떻게 만들지 당황했는데, 아래 제한 사항을 살펴보니 입력되는 num이 1000 이하였음 → 1~1000까지 힙 만들기.
+<br>empty check 또한 할 필요 없음 → infinity set이며 최대 pop 호출 건수가 1000번이기 때문에.
+<br>이전 <a data-tooltip-position="top" aria-label="42626. 더맵게" data-href="42626. 더맵게" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/42626.-더맵게.html" class="internal-link" target="_self" rel="noopener">heap 문제</a>에서는 add를 사용했는데 대신 offer를사용 
 
-<br>int 대신 Integer(wrapper class) 사용
+<br>add(): 우선순위 큐에 원소를 추가. 큐가 꽉 찬 경우&nbsp;에러 발생
+<br>offer(): 우선순위 큐에 원소를 추가. 값 추가 실패 시&nbsp;false를 반환
 
 
-<br>/*
-목표: 모든 음식의 스코빌 지수 &gt; K;
-방법: 스코빌 지수가 가장 낮은 두개의 음식으로 새 음식을 만들기;
+<br>priority queue에서 값을 조회하는 함수 peek()
+<br><a href="https://sunha20.github.io/digital-garden?query=tag:질문/코딩테스트" class="tag" target="_blank" rel="noopener">#질문/코딩테스트</a><br>
+<br>priority queue의 capacity 문제 → 잘모르겠음.
+<br><br>import java.util.*;
 
-- 최소 힙 이용(by 우선순위 큐)
-*/
-
-import java.util.*;
-class Solution {
-    public int solution(int[] scoville, int K) {
-        PriorityQueue&lt;Integer&gt; hp = new PriorityQueue&lt;&gt;();
-        for (int s: scoville) {
-            hp.add(s);
+class SmallestInfiniteSet {
+    private PriorityQueue&lt;Integer&gt; sis;
+    public SmallestInfiniteSet() {
+        sis = new PriorityQueue&lt;&gt;(1000);
+        for (int i=1; i&lt;=1000; i++) {
+            sis.offer(i);
         }
-        
-        int cnt = 0;
-        Integer minA;
-        Integer minB;
-        
-        while (true) {
-            minA = hp.poll();
-            minB = hp.poll();
-            if (minA == null || minB == null) {
-                return -1;
-            }
-            if (minA &gt;= K) {
-                return cnt;
-            }
-            
-            int newFood = minA + (minB * 2);
-            hp.add(newFood);
-            cnt += 1;
+    }
+    
+    public int popSmallest() {
+        return sis.poll();
+    }
+
+    public void addBack(int num) {
+        Integer minInSet = sis.peek();
+        if (minInSet == null || minInSet &gt; num) { // minInSet == null -&gt; queue is empty
+            sis.offer(num);
         }
     }
 }
-복사<br><br>
-<br>정확성 테스트 3개 정도 실패
-<br>원인
+복사<br>["SmallestInfiniteSet","popSmallest","addBack","popSmallest","popSmallest","popSmallest","addBack","addBack","popSmallest","popSmallest"]
 
-<br>16, 22, 23 문제는 제공된 scoville이 2개인 경우에 대한 테스트입니다. (<a data-tooltip-position="top" aria-label="https://school.programmers.co.kr/questions/50794" rel="noopener" class="external-link" href="https://school.programmers.co.kr/questions/50794" target="_blank">질문글 참고</a> / <a data-href="42626. 더맵게#테스트 케이스 추가 팁" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/42626.-더맵게.html#테스트_케이스_추가_팁" class="internal-link" target="_self" rel="noopener">42626. 더맵게 &gt; 테스트 케이스 추가 팁</a>)
-<br>null check가 먼저 이루어지면서 문제가 생김 → 새로 뽑은 수가 null인데 이미, 조건(K 이상)을 만족했을 때
-<br>단순히 null 체크와 조건 체크 순서를 바꾸면 minA가 null일 때 문제가 생김.
+[[],[],[1],[],[],[],[2],[3],[],[]]
 
-<br>수 하나는 무조건 큐에 추가되기 때문에 minA가 null일 리는 없음
-<br>처음 주어지는 input도 2개 이상.
+Use Testcase
+
+Output
+
+[null,1,null,1,2,3,null,null,2,4]
+복사<br>
+<br>pop은 smallest number만 가능하기 때문에, (작은 순서대로 숫자가 사라지니) addBack의 할 때, 해당 숫자가 set에 존재하는 지를 set 가장 작은 숫자를 조회에서 확인 할 수 있다고 생각했음
+
+<br>즉, set에 들어있는 숫자는 건너뛰는 경우없이 촘촘히 채워져 있다고 생각
+<br>하지만, 123이 빠진 와중에 2가 addBack을 통해 추가되면, 3은 기존 확인 방법에서 제외되지만 사실 추가될 수 있는 상태
 
 
+<br>해결:
+
+<br>includes? (아 요즘 js를 많이 썼더니….) 말고 contains
 
 
-<br>/*
-목표: 모든 음식의 스코빌 지수 &gt; K;
-방법: 스코빌 지수가 가장 낮은 두개의 음식으로 새 음식을 만들기;
+<br><br>import java.util.*;
 
-- 최소 힙 이용(by 우선순위 큐)
-*/
-
-import java.util.*;
-class Solution {
-    public int solution(int[] scoville, int K) {
-        PriorityQueue&lt;Integer&gt; hp = new PriorityQueue&lt;&gt;();
-        for (int s: scoville) {
-            hp.add(s);
+ class SmallestInfiniteSet {
+    private PriorityQueue&lt;Integer&gt; sis;
+    
+    public SmallestInfiniteSet() {
+        sis = new PriorityQueue&lt;&gt;(1000);
+        for (int i=1; i&lt;=1000; i++) {
+            sis.offer(i);
         }
-        
-        int cnt = 0;
-        Integer minA;
-        Integer minB;
-        
-        while (true) {
-            // 가장 스코빌 지수가 낮은 음식 2개
-            minA = hp.poll();
-            minB = hp.poll();
-            
-            // 조건 체크1 (문제 조건상 항상 minA != null 만족)
-            if (minA &gt;= K) {
-                return cnt;
-            }
-            // 조건 체크2
-            if (minB == null) {
-                return -1;
-            }
+    }
 
-            // 새로운 음식 추가 및, 시도 횟수 늘리기.
-            int newFood = minA + (minB * 2);
-            hp.add(newFood);
-            cnt += 1;
+    public int popSmallest() {
+        return sis.poll();
+    }
+
+    public void addBack(int num) {
+        if (!sis.contains(num)){
+            sis.offer(num);
         }
     }
 }
-복사<br><br>
-<br>기본 테스트 케이스: 문제에서 주어진 예제 테스트 케이스부터 실행해 보세요.
-<br>경계값 테스트: 입력 값의 최소, 최대 경계에서의 동작을 확인하세요. 예를 들어, 비밀번호의 길이가 최대(6자리) 또는 최소(1자리)일 때의 동작을 확인해 보세요.
-<br>특별한 경우 테스트: 일반적이지 않은 입력값이나 특별한 상황에서의 동작을 확인해 보세요. 예를 들어, DB가 비어있는 경우나, 같은 비밀번호를 가진 여러 회원이 있는 경우 등입니다.
-<br>랜덤한 테스트: 여러 다양한 입력 조건에서의 동작을 확인하기 위해 랜덤한 입력값을 사용한 테스트 케이스를 추가해 보세요.
-<br>순차적 테스트: 입력값이 특정 순서에 따라 동작을 확인하는 테스트 케이스를 추가해 보세요. 예를 들어, DB에 회원 정보가 아이디 순서나 비밀번호 순서에 따라 정렬된 경우 등입니다.
-]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/42626.-더맵게.html</link><guid isPermaLink="false">1. Study/Coding Test/42626. 더맵게.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Fri, 24 May 2024 13:27:58 GMT</pubDate></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
- <br><a data-href="Coding Test" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html" class="internal-link" target="_self" rel="noopener">Coding Test</a>]]></description><link>https://sunha20.github.io/digital-garden/index.html</link><guid isPermaLink="false">index.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Fri, 24 May 2024 03:53:47 GMT</pubDate></item><item><title><![CDATA[1로 만들기]]></title><description><![CDATA[ 
- <br><br>ID: 1463<br>
-Site: 백준<br>
-URL: <a rel="noopener" class="external-link" href="https://www.acmicpc.net/problem/1463" target="_blank">https://www.acmicpc.net/problem/1463</a><br>
-난이도: 실버 3<br>
-다시풀기: No<br>
-분류: 다이나믹 프로그래밍<br>
-생성 일시: 2023년 8월 13일 오후 11:15<br>
-💡 - 이거 진짜 도움됨.<br><a data-tooltip-position="top" aria-label="https://bio-info.tistory.com/159" rel="noopener" class="external-link" href="https://bio-info.tistory.com/159" target="_blank">[백준] 1463 1로 만들기 (DP) - Python / 자세한 설명 / 여러가지 풀이 / 실버1</a><br><br><br><br><br><br>정수 X에 사용할 수 있는 연산은 다음과 같이 세 가지 이다.<br>
-<br>X가 3으로 나누어 떨어지면, 3으로 나눈다.
-<br>X가 2로 나누어 떨어지면, 2로 나눈다.
-<br>1을 뺀다.
-<br>정수 N이 주어졌을 때, 위와 같은 연산 세 개를 적절히 사용해서 1을 만들려고 한다. 연산을 사용하는 횟수의 최솟값을 출력하시오.<br><br>첫째 줄에 1보다 크거나 같고, 106보다 작거나 같은 정수 N이 주어진다.<br><br>첫째 줄에 연산을 하는 횟수의 최솟값을 출력한다.<br><br>2
-
-복사<br><br>1
-
-복사<br><br>10
-
-복사<br><br>3
-
-복사<br><br>10의 경우에 10 → 9 → 3 → 1 로 3번 만에 만들 수 있다.<br><br>
-<br>문제를 번역한 사람:&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/baekjoon" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/baekjoon" target="_blank">baekjoon</a>
-<br>문제의 오타를 찾은 사람:&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/cyj101366" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/cyj101366" target="_blank">cyj101366</a>,&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/jugol" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/jugol" target="_blank">jugol</a>
-<br>어색한 표현을 찾은 사람:&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/dbfldkfdbgml" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/dbfldkfdbgml" target="_blank">dbfldkfdbgml</a>
-<br>데이터를 추가한 사람:&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/dynamiseus" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/dynamiseus" target="_blank">dynamiseus</a>,&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/jooa7878" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/jooa7878" target="_blank">jooa7878</a>,&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/lcr7324" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/lcr7324" target="_blank">lcr7324</a>
-<br><br>
-<br><a data-tooltip-position="top" aria-label="https://www.acmicpc.net/problem/tag/25" rel="noopener" class="external-link" href="https://www.acmicpc.net/problem/tag/25" target="_blank">다이나믹 프로그래밍</a>
-<br><br>
-<br>Python 3: 1.5 초
-<br>PyPy3: 0.7 초
-<br>Python 2: 1.5 초
-<br>PyPy2: 0.7 초
-<br><br>
-<br>
-10
-
-<br>-1(9)
-
-<br>/3
-<br>/3
-
-
-<br>-2(8)
-
-<br>/2
-<br>/2
-<br>/2
-
-
-<br>-3(7)
-<br>-4(6)
-
-<br>/3
-<br>/2
-
-
-<br>-5(5)
-<br>-6(4)
-
-<br>/2
-<br>/2
-
-
-<br>-7
-
-
-<br>
-빼는 수를 하나씩 늘려가면서, 빼고, 각각의 경우에 2,3으로 나누고 나누어 떨어지는 경우 개수를 비교함
-
-<br>
-min
-
-<br>자 계속 틀림...
 복사<br>
-<br>
-dp공부 후…
+<br>시간이 66ms → 조금 줄이고 싶음
+<br>contains()… 아까부터 맘에 안듦.
 
-<br>
-dp list는 X길이로 만들어야겠지…
+<br>TreeSet 사용하면 중복 없고, 자동 정렬 가능! contains() 체크 안하고 그냥 추가 가능.
 
-<br>
-1을 1로 만들려면 → 0
 
-<br>
-2를 1로 만들려면 (2) → 1
+<br>import java.util.*;
 
-<br>
-3을 1로 만들려면 /3 → 1
+class SmallestInfiniteSet {
+    private TreeSet&lt;Integer&gt; sis;
+    
+    public SmallestInfiniteSet() {
+        sis = new TreeSet&lt;&gt;();
+        for (int i=1; i&lt;=1000; i++) {
+            sis.add(i);
+        }
+    }
 
-<br>
-4를 1로 만들려면 /2/2 → 2
+    public int popSmallest() {
+        return sis.pollFirst();
+    }
 
-<br>
-5를 1로 만들려면 →3
-
-<br>
-점화식을 어떻게 만들어야할까.
-
-<br>
-f(1) = 0
-
-<br>
-f(2) = 1
-
-<br>
-f(3) = 1
-
-<br>
-f(4) = 2
-
-<br>
-f(5) = 3
-
-<br>
-f(6) = 2 →
-
-<br>
-f(7) = 3 → -1, f(6)
-
-<br>
-f(8) = 3 → /2, f(4)
-
-<br>
-f(9) = 2 → /3, f(3)
-
-<br>
-f(10) = → -1, f(9)
-
-<br><br>복사<br><br><br>import sys
-
-def make_one_topdown(x):
-    if x == 1:
-        return 0
-    elif x%3 == 0 and x%2 == 0:
-        return 1+ min(make_one_topdown(x//3), make_one_topdown(x//2), make_one_topdown(x-1))
-    elif x%3 == 0:
-        return 1+ min(make_one_topdown(x//3), make_one_topdown(x-1))
-    elif x%2 == 0:
-        return 1+ min(make_one_topdown(x//2), make_one_topdown(x-1))
-    else:
-        return 1+ make_one_topdown(x-1)
-
-if __name__ == "__main__":
-    print(make_one_topdown(int(sys.stdin.readline().rstrip())))
+    public void addBack(int num) {
+        sis.add(num);
+    }
+}
 복사<br>
-<br>생각해보니까. 이 방식은 메모, 재사용의 취지에 딱 들어맞진 않음.
-<br>여기에 table을 추가하는 겨..
-<br>import sys
+<br>시간이 반절 정도 줌.
+<br>처음에 1000개 들어가 배열 사용하지 않는 것도 방법일듯…! 
+<br><br>class SmallestInfiniteSet {
+    HashSet&lt;Integer&gt; remov;
+    int i;
+    
+    public SmallestInfiniteSet() {
+        remov=new HashSet();
+        i=1;
+    }
 
-X = int(sys.stdin.readline().rstrip())
-dp = {1:0}
-def make_one_topdown(x):
-    if x in dp:
-        return dp[x]
-    else:
-        dp[x] = 1+ min(make_one_topdown(x//3)+x%3, make_one_topdown(x//2)+x%2, make_one_topdown(x-1))
-        return dp[x]
+    public int popSmallest() {
+        while(remov.contains(i)){
+            i++;
+        }
+        remov.add(i);
+        return i++;
+    }
 
-print(make_one_topdown(X))
-복사<br>
-<br>RecursionError: maximum recursion depth exceeded
-<br>생각해보면, make_one_topdown(x-1) 필요 없음…
-<br>import sys
+    public void addBack(int num) {
+        if(remov.contains(num)){
+            remov.remove(num);
+            if(i&gt;num){
+                i=num;
+            }
+        }
+    }
 
-X = int(sys.stdin.readline().rstrip())
-dp = {1:0,2:1, 3:1}
-def make_one_topdown(x):
-    if x in dp:
-        return dp[x]
-    else:
-        dp[x] = 1+ min(make_one_topdown(x//3)+ x%3, make_one_topdown(x//2)+x%2)
-        return dp[x]
-
-print(make_one_topdown(X))
-복사<br>
-<br>시간이 거의 10배 차이남
-<br>Bottom-up 방식은 dp(1)부터 dp(n)까지 전부 구하지만 top-down 방식은 그렇지 않습니다. 실제로 top-down 코드에서 dp(n) 계산이 끝난 후에 arr 전체를 출력해 보면 1~n 전부가 아닌 일부만 계산되어 있음을 확인할 수 있습니다.
-<br><a data-tooltip-position="top" aria-label="https://www.acmicpc.net/board/view/122640" rel="noopener" class="external-link" href="https://www.acmicpc.net/board/view/122640" target="_blank">글 읽기 - Top-down Bottom-up 시간 차이에 대한 질문입니다</a>]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/1로-만들기.html</link><guid isPermaLink="false">1. Study/Coding Test/1로 만들기.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Tue, 27 Feb 2024 12:05:30 GMT</pubDate></item><item><title><![CDATA[01타일]]></title><description><![CDATA[ 
- <br>ID: 1904<br>
-Site: 백준<br>
-URL: <a rel="noopener" class="external-link" href="https://www.acmicpc.net/problem/1904" target="_blank">https://www.acmicpc.net/problem/1904</a><br>
-난이도: 실버 3<br>
-다시풀기: No<br>
-생성 일시: 2023년 9월 10일 오후 8:37<br><br><br><br><br>지원이에게 2진 수열을 가르쳐 주기 위해, 지원이 아버지는 그에게 타일들을 선물해주셨다. 그리고 이 각각의 타일들은 0 또는 1이 쓰여 있는 낱장의 타일들이다.<br>어느 날 짓궂은 동주가 지원이의 공부를 방해하기 위해 0이 쓰여진 낱장의 타일들을 붙여서 한 쌍으로 이루어진 00 타일들을 만들었다. 결국 현재 1 하나만으로 이루어진 타일 또는 0타일을 두 개 붙인 한 쌍의 00타일들만이 남게 되었다.<br>그러므로 지원이는 타일로 더 이상 크기가&nbsp;N인&nbsp;모든 2진 수열을 만들 수 없게 되었다. 예를 들어, N=1일 때 1만 만들 수 있고, N=2일 때는 00, 11을 만들 수 있다. (01, 10은 만들 수 없게 되었다.) 또한 N=4일 때는 0011, 0000, 1001, 1100, 1111 등 총 5개의 2진 수열을 만들 수 있다.<br>우리의 목표는 N이 주어졌을 때 지원이가 만들 수 있는 모든 가짓수를 세는 것이다. 단 타일들은 무한히 많은 것으로 가정하자.<br><br>첫 번째 줄에 자연수 N이 주어진다. (1 ≤ N ≤ 1,000,000)<br><br>첫 번째 줄에 지원이가 만들 수 있는 길이가 N인 모든 2진 수열의 개수를 15746으로 나눈 나머지를 출력한다.<br><br>4
-
-복사<br><br>5
-
-복사<br><br>
-<br>문제의 오타를 찾은 사람:&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/mwy3055" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/mwy3055" target="_blank">mwy3055</a>
-<br>데이터를 추가한 사람:&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/qortmd7777" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/qortmd7777" target="_blank">qortmd7777</a>,&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/wider93" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/wider93" target="_blank">wider93</a>
-<br><br>
-<br>N=1
-
-<br>1
-
-
-<br>N=2
-
-<br>00
-<br>11
-
-
-<br>N=3
-
-<br>100
-<br>001
-<br>111
-
-
-<br>N=4
-
-<br>0000
-<br>1100
-<br>1001
-<br>0011
-<br>1111
-
-
-<br>
-<br>복사<br><br>복사<br><br>복사]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/01타일.html</link><guid isPermaLink="false">1. Study/Coding Test/01타일.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Tue, 14 May 2024 05:23:16 GMT</pubDate></item><item><title><![CDATA[1003. 피보나치 함수]]></title><description><![CDATA[ 
- <br>NAV: <a data-href="1. Study/Coding Test.md" href="https://sunha20.github.io/digital-garden/1. Study/Coding Test" class="internal-link" target="_self" rel="noopener">1. Study/Coding Test.md</a><br><br><br>다음 소스는 N번째 피보나치 수를 구하는 C++ 함수이다.<br>int fibonacci(int n) {<br>
+}
+복사]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/2336.-smallest-number-in-infinite-set.html</link><guid isPermaLink="false">1. Study/Coding Test/2336. Smallest Number in Infinite Set.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Sat, 25 May 2024 15:42:06 GMT</pubDate></item><item><title><![CDATA[Coding Test]]></title><description><![CDATA[ 
+ <br><br><a data-tooltip-position="top" aria-label="1. Study/Coding Test/new file.md" data-href="1. Study/Coding Test/new file.md" href="https://sunha20.github.io/digital-garden/1. Study/Coding Test/new file" class="internal-link" target="_self" rel="noopener">new file</a>   |   <a data-tooltip-position="top" aria-label="1. Study/Coding Test/new folder/new folder.md" data-href="1. Study/Coding Test/new folder/new folder.md" href="https://sunha20.github.io/digital-garden/1. Study/Coding Test/new folder/new folder" class="internal-link" target="_self" rel="noopener">new folder</a><br><br><br>
+]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html</link><guid isPermaLink="false">1. Study/Coding Test/Coding Test.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Sat, 25 May 2024 15:42:45 GMT</pubDate></item><item><title><![CDATA[1003. 피보나치 함수]]></title><description><![CDATA[ 
+ <br>NAV: <a data-tooltip-position="top" aria-label="1. Study/Coding Test/Coding Test.md" data-href="1. Study/Coding Test/Coding Test.md" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html" class="internal-link" target="_self" rel="noopener">Coding Test</a><br><br><br>다음 소스는 N번째 피보나치 수를 구하는 C++ 함수이다.<br>int fibonacci(int n) {<br>
 if (n == 0) {<br>
 printf("0");<br>
 return 0;<br>
@@ -443,8 +265,8 @@ def fibonacci():
 
 if __name__ == "__main__":
     fibonacci()
-복사]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/1003.-피보나치-함수.html</link><guid isPermaLink="false">1. Study/Coding Test/1003. 피보나치 함수.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Tue, 26 Mar 2024 11:14:49 GMT</pubDate></item><item><title><![CDATA[1012. 유기농 배추]]></title><description><![CDATA[ 
- <br>NAV: <a data-href="1. Study/Coding Test.md" href="https://sunha20.github.io/digital-garden/1. Study/Coding Test" class="internal-link" target="_self" rel="noopener">1. Study/Coding Test.md</a><br><br><br>차세대 영농인 한나는 강원도 고랭지에서 유기농 배추를 재배하기로 하였다. 농약을 쓰지 않고&nbsp;배추를 재배하려면 배추를 해충으로부터 보호하는 것이 중요하기 때문에, 한나는 해충 방지에&nbsp;효과적인 배추흰지렁이를 구입하기로 결심한다. 이 지렁이는 배추근처에 서식하며 해충을 잡아&nbsp;먹음으로써 배추를 보호한다. 특히, 어떤 배추에 배추흰지렁이가 한 마리라도 살고 있으면 이 지렁이는 인접한 다른 배추로 이동할 수 있어, 그 배추들 역시 해충으로부터 보호받을 수 있다. 한 배추의 상하좌우 네 방향에 다른 배추가 위치한 경우에 서로 인접해있는 것이다.<br>한나가 배추를 재배하는 땅은 고르지 못해서 배추를 군데군데 심어 놓았다. 배추들이 모여있는 곳에는 배추흰지렁이가 한 마리만 있으면 되므로 서로 인접해있는 배추들이 몇 군데에 퍼져있는지 조사하면 총 몇 마리의 지렁이가 필요한지 알 수 있다. 예를 들어 배추밭이 아래와 같이 구성되어 있으면 최소 5마리의 배추흰지렁이가 필요하다. 0은 배추가 심어져 있지 않은 땅이고, 1은 배추가 심어져 있는 땅을 나타낸다.<br><br><br>입력의 첫 줄에는 테스트 케이스의 개수 T가 주어진다. 그 다음 줄부터 각각의 테스트 케이스에 대해 첫째 줄에는 배추를 심은 배추밭의 가로길이 M(1 ≤ M ≤ 50)과 세로길이 N(1 ≤ N ≤ 50), 그리고 배추가 심어져 있는 위치의 개수 K(1 ≤ K ≤ 2500)이 주어진다. 그 다음 K줄에는 배추의 위치 X(0 ≤ X ≤ M-1), Y(0 ≤ Y ≤ N-1)가 주어진다. 두 배추의 위치가 같은 경우는 없다.<br><br>각 테스트 케이스에 대해 필요한 최소의 배추흰지렁이 마리 수를 출력한다.<br><br>2<br>
+복사]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/1003.-피보나치-함수.html</link><guid isPermaLink="false">1. Study/Coding Test/1003. 피보나치 함수.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Sat, 25 May 2024 15:32:54 GMT</pubDate></item><item><title><![CDATA[1012. 유기농 배추]]></title><description><![CDATA[ 
+ <br>NAV: <a data-tooltip-position="top" aria-label="1. Study/Coding Test/Coding Test.md" data-href="1. Study/Coding Test/Coding Test.md" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html" class="internal-link" target="_self" rel="noopener">Coding Test</a><br><br><br>차세대 영농인 한나는 강원도 고랭지에서 유기농 배추를 재배하기로 하였다. 농약을 쓰지 않고&nbsp;배추를 재배하려면 배추를 해충으로부터 보호하는 것이 중요하기 때문에, 한나는 해충 방지에&nbsp;효과적인 배추흰지렁이를 구입하기로 결심한다. 이 지렁이는 배추근처에 서식하며 해충을 잡아&nbsp;먹음으로써 배추를 보호한다. 특히, 어떤 배추에 배추흰지렁이가 한 마리라도 살고 있으면 이 지렁이는 인접한 다른 배추로 이동할 수 있어, 그 배추들 역시 해충으로부터 보호받을 수 있다. 한 배추의 상하좌우 네 방향에 다른 배추가 위치한 경우에 서로 인접해있는 것이다.<br>한나가 배추를 재배하는 땅은 고르지 못해서 배추를 군데군데 심어 놓았다. 배추들이 모여있는 곳에는 배추흰지렁이가 한 마리만 있으면 되므로 서로 인접해있는 배추들이 몇 군데에 퍼져있는지 조사하면 총 몇 마리의 지렁이가 필요한지 알 수 있다. 예를 들어 배추밭이 아래와 같이 구성되어 있으면 최소 5마리의 배추흰지렁이가 필요하다. 0은 배추가 심어져 있지 않은 땅이고, 1은 배추가 심어져 있는 땅을 나타낸다.<br><br><br>입력의 첫 줄에는 테스트 케이스의 개수 T가 주어진다. 그 다음 줄부터 각각의 테스트 케이스에 대해 첫째 줄에는 배추를 심은 배추밭의 가로길이 M(1 ≤ M ≤ 50)과 세로길이 N(1 ≤ N ≤ 50), 그리고 배추가 심어져 있는 위치의 개수 K(1 ≤ K ≤ 2500)이 주어진다. 그 다음 K줄에는 배추의 위치 X(0 ≤ X ≤ M-1), Y(0 ≤ Y ≤ N-1)가 주어진다. 두 배추의 위치가 같은 경우는 없다.<br><br>각 테스트 케이스에 대해 필요한 최소의 배추흰지렁이 마리 수를 출력한다.<br><br>2<br>
 10 8 17<br>
 0 0<br>
 1 0<br>
@@ -481,8 +303,8 @@ if __name__ == "__main__":
 <br><a data-tooltip-position="top" aria-label="https://www.acmicpc.net/problem/tag/11" rel="noopener" class="external-link" href="https://www.acmicpc.net/problem/tag/11" target="_blank">그래프 탐색</a>
 <br><a data-tooltip-position="top" aria-label="https://www.acmicpc.net/problem/tag/126" rel="noopener" class="external-link" href="https://www.acmicpc.net/problem/tag/126" target="_blank">너비 우선 탐색</a>
 <br><a data-tooltip-position="top" aria-label="https://www.acmicpc.net/problem/tag/127" rel="noopener" class="external-link" href="https://www.acmicpc.net/problem/tag/127" target="_blank">깊이 우선 탐색</a>
-]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/1012.-유기농-배추.html</link><guid isPermaLink="false">1. Study/Coding Test/1012. 유기농 배추.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Sun, 14 Apr 2024 12:28:50 GMT</pubDate></item><item><title><![CDATA[1107. 리모컨]]></title><description><![CDATA[ 
- <br>NAV: <a data-href="1. Study/Coding Test.md" href="https://sunha20.github.io/digital-garden/1. Study/Coding Test" class="internal-link" target="_self" rel="noopener">1. Study/Coding Test.md</a><br><br><br>수빈이는 TV를 보고 있다. 수빈이는 채널을 돌리려고 했지만, 버튼을 너무 세게 누르는 바람에, 일부 숫자 버튼이 고장났다.<br>리모컨에는 버튼이 0부터 9까지 숫자, +와 -가 있다. +를 누르면 현재 보고있는 채널에서 +1된 채널로 이동하고, -를 누르면 -1된 채널로 이동한다. 채널 0에서 -를 누른 경우에는 채널이 변하지 않고, 채널은 무한대 만큼 있다.<br>수빈이가 지금 이동하려고 하는 채널은 N이다. 어떤 버튼이 고장났는지 주어졌을 때, 채널 N으로 이동하기 위해서 버튼을 최소 몇 번 눌러야하는지 구하는 프로그램을 작성하시오.<br>수빈이가 지금 보고 있는 채널은 100번이다.<br><br>첫째 줄에 수빈이가 이동하려고 하는 채널 N (0 ≤ N ≤ 500,000)이 주어진다. 둘째 줄에는 고장난 버튼의 개수 M (0 ≤ M ≤ 10)이 주어진다. 고장난 버튼이 있는 경우에는 셋째 줄에는 고장난 버튼이 주어지며, 같은 버튼이 여러 번 주어지는 경우는 없다.<br><br>첫째 줄에 채널 N으로 이동하기 위해 버튼을 최소 몇 번 눌러야 하는지를 출력한다.<br><br>5457<br>
+]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/1012.-유기농-배추.html</link><guid isPermaLink="false">1. Study/Coding Test/1012. 유기농 배추.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Sat, 25 May 2024 15:36:51 GMT</pubDate></item><item><title><![CDATA[1107. 리모컨]]></title><description><![CDATA[ 
+ <br>NAV: <a data-tooltip-position="top" aria-label="1. Study/Coding Test/Coding Test.md" data-href="1. Study/Coding Test/Coding Test.md" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html" class="internal-link" target="_self" rel="noopener">Coding Test</a><br><br><br>수빈이는 TV를 보고 있다. 수빈이는 채널을 돌리려고 했지만, 버튼을 너무 세게 누르는 바람에, 일부 숫자 버튼이 고장났다.<br>리모컨에는 버튼이 0부터 9까지 숫자, +와 -가 있다. +를 누르면 현재 보고있는 채널에서 +1된 채널로 이동하고, -를 누르면 -1된 채널로 이동한다. 채널 0에서 -를 누른 경우에는 채널이 변하지 않고, 채널은 무한대 만큼 있다.<br>수빈이가 지금 이동하려고 하는 채널은 N이다. 어떤 버튼이 고장났는지 주어졌을 때, 채널 N으로 이동하기 위해서 버튼을 최소 몇 번 눌러야하는지 구하는 프로그램을 작성하시오.<br>수빈이가 지금 보고 있는 채널은 100번이다.<br><br>첫째 줄에 수빈이가 이동하려고 하는 채널 N (0 ≤ N ≤ 500,000)이 주어진다. 둘째 줄에는 고장난 버튼의 개수 M (0 ≤ M ≤ 10)이 주어진다. 고장난 버튼이 있는 경우에는 셋째 줄에는 고장난 버튼이 주어지며, 같은 버튼이 여러 번 주어지는 경우는 없다.<br><br>첫째 줄에 채널 N으로 이동하기 위해 버튼을 최소 몇 번 눌러야 하는지를 출력한다.<br><br>5457<br>
 3<br>
 6 7 8<br><br>6<br><br>100<br>
 5<br>
@@ -782,8 +604,8 @@ remote_control()
 
 
 
-]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/1107.-리모컨.html</link><guid isPermaLink="false">1. Study/Coding Test/1107. 리모컨.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Tue, 09 Apr 2024 08:40:12 GMT</pubDate></item><item><title><![CDATA[1157. 단어 공부]]></title><description><![CDATA[ 
- <br>NAV: <a data-href="1. Study/Coding Test.md" href="https://sunha20.github.io/digital-garden/1. Study/Coding Test" class="internal-link" target="_self" rel="noopener">1. Study/Coding Test.md</a><br><br><br>알파벳 대소문자로 된 단어가 주어지면, 이 단어에서 가장 많이 사용된 알파벳이 무엇인지 알아내는 프로그램을 작성하시오. 단, 대문자와 소문자를 구분하지 않는다.<br><br>첫째 줄에 알파벳 대소문자로 이루어진 단어가 주어진다. 주어지는 단어의 길이는 1,000,000을 넘지 않는다.<br><br>첫째 줄에 이 단어에서 가장 많이 사용된 알파벳을 대문자로 출력한다. 단, 가장 많이 사용된 알파벳이 여러 개 존재하는 경우에는 ?를 출력한다.<br><br>Mississipi<br><br>?<br><br>zZa<br><br>Z<br><br>z<br><br>Z<br><br>baaa<br><br>A<br><br>
+]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/1107.-리모컨.html</link><guid isPermaLink="false">1. Study/Coding Test/1107. 리모컨.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Sat, 25 May 2024 15:36:50 GMT</pubDate></item><item><title><![CDATA[1157. 단어 공부]]></title><description><![CDATA[ 
+ <br>NAV: <a data-tooltip-position="top" aria-label="1. Study/Coding Test/Coding Test.md" data-href="1. Study/Coding Test/Coding Test.md" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html" class="internal-link" target="_self" rel="noopener">Coding Test</a><br><br><br>알파벳 대소문자로 된 단어가 주어지면, 이 단어에서 가장 많이 사용된 알파벳이 무엇인지 알아내는 프로그램을 작성하시오. 단, 대문자와 소문자를 구분하지 않는다.<br><br>첫째 줄에 알파벳 대소문자로 이루어진 단어가 주어진다. 주어지는 단어의 길이는 1,000,000을 넘지 않는다.<br><br>첫째 줄에 이 단어에서 가장 많이 사용된 알파벳을 대문자로 출력한다. 단, 가장 많이 사용된 알파벳이 여러 개 존재하는 경우에는 ?를 출력한다.<br><br>Mississipi<br><br>?<br><br>zZa<br><br>Z<br><br>z<br><br>Z<br><br>baaa<br><br>A<br><br>
 <br>문제를 만든 사람:&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/author5" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/author5" target="_blank">author5</a>
 <br>데이터를 추가한 사람:&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/jejeje8" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/jejeje8" target="_blank">jejeje8</a>,&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/jh05013" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/jh05013" target="_blank">jh05013</a>,&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/kimhs" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/kimhs" target="_blank">kimhs</a>,&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/rnjs4197" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/rnjs4197" target="_blank">rnjs4197</a>
 <br><br>
@@ -862,8 +684,8 @@ byte로 받는 걸로 바꾸다가 생긴 문제점… upper case로만 치는 �
 
 <br><br>:런타임 에러&nbsp;(ArrayIndexOutOfBounds)<br>
 <br>input byte개수가 최대 1000000라는 걸 간과
-<br><br>:틀]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/1157.-단어-공부.html</link><guid isPermaLink="false">1. Study/Coding Test/1157. 단어 공부.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Wed, 15 May 2024 01:21:04 GMT</pubDate></item><item><title><![CDATA[1309.동물원]]></title><description><![CDATA[ 
- <br>NAV: <a data-href="1. Study/Coding Test.md" href="https://sunha20.github.io/digital-garden/1. Study/Coding Test" class="internal-link" target="_self" rel="noopener">1. Study/Coding Test.md</a><br><br><br>어떤 동물원에 가로로 두칸 세로로 N칸인 아래와 같은 우리가 있다.<br><img alt="" src="https://www.acmicpc.net/upload/201004/dnfl.JPG" referrerpolicy="no-referrer" style="width: 164px; max-width: 100%;"><br>이 동물원에는 사자들이 살고 있는데 사자들을 우리에 가둘 때, 가로로도 세로로도 붙어 있게 배치할 수는 없다. 이 동물원 조련사는 사자들의 배치 문제 때문에 골머리를 앓고 있다.<br>동물원 조련사의 머리가 아프지 않도록 우리가 2*N 배열에 사자를 배치하는 경우의 수가 몇 가지인지를 알아내는 프로그램을 작성해 주도록 하자. 사자를 한 마리도 배치하지 않는 경우도 하나의 경우의 수로 친다고 가정한다.<br><br>첫째 줄에 우리의 크기 N(1≤N≤100,000)이 주어진다.<br><br>첫째 줄에 사자를 배치하는 경우의 수를 9901로 나눈 나머지를 출력하여라.<br><br>4<br><br>41<br><br>
+<br><br>:틀]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/1157.-단어-공부.html</link><guid isPermaLink="false">1. Study/Coding Test/1157. 단어 공부.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Sat, 25 May 2024 15:36:52 GMT</pubDate></item><item><title><![CDATA[1309.동물원]]></title><description><![CDATA[ 
+ <br>NAV: <a data-tooltip-position="top" aria-label="1. Study/Coding Test/Coding Test.md" data-href="1. Study/Coding Test/Coding Test.md" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html" class="internal-link" target="_self" rel="noopener">Coding Test</a><br><br><br>어떤 동물원에 가로로 두칸 세로로 N칸인 아래와 같은 우리가 있다.<br><img alt="" src="https://www.acmicpc.net/upload/201004/dnfl.JPG" referrerpolicy="no-referrer" style="width: 164px; max-width: 100%;"><br>이 동물원에는 사자들이 살고 있는데 사자들을 우리에 가둘 때, 가로로도 세로로도 붙어 있게 배치할 수는 없다. 이 동물원 조련사는 사자들의 배치 문제 때문에 골머리를 앓고 있다.<br>동물원 조련사의 머리가 아프지 않도록 우리가 2*N 배열에 사자를 배치하는 경우의 수가 몇 가지인지를 알아내는 프로그램을 작성해 주도록 하자. 사자를 한 마리도 배치하지 않는 경우도 하나의 경우의 수로 친다고 가정한다.<br><br>첫째 줄에 우리의 크기 N(1≤N≤100,000)이 주어진다.<br><br>첫째 줄에 사자를 배치하는 경우의 수를 9901로 나눈 나머지를 출력하여라.<br><br>4<br><br>41<br><br>
 <br>문제의 오타를 찾은 사람:&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/joon8409" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/joon8409" target="_blank">joon8409</a>
 <br>문제를 만든 사람:&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/xhark" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/xhark" target="_blank">xhark</a>
 <br><br>
@@ -875,7 +697,498 @@ byte로 받는 걸로 바꾸다가 생긴 문제점… upper case로만 치는 �
 <br>추가되는 경우의 수 → x/오/왼<br><br><br><br><br><br>\3 → xrl<br><br>2 → xr<br><br>2 → xl<br>=&gt; x → 3 / r → 2 / l → 2 (원래 111)<br><br>
 <br>dp 사용시, 처음에 입력값들을 예외처리로 미리 빼주는 거 잊지 말기.
 <br>아악 나누기 안해줌.
-]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/1309.동물원.html</link><guid isPermaLink="false">1. Study/Coding Test/1309.동물원.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Wed, 15 May 2024 01:54:24 GMT</pubDate><enclosure url="https://www.acmicpc.net/upload/201004/dnfl.JPG" length="0" type="image/jpeg"/><content:encoded>&lt;figure&gt;&lt;img src="https://www.acmicpc.net/upload/201004/dnfl.JPG"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[11047. 동전 0]]></title><description><![CDATA[<a class="tag" href="https://sunha20.github.io/digital-garden/?query=tag:코딩테스트" style="background-color: rgb(4, 108, 116); color: white; font-weight: 700; border: none; border-radius: 1em; padding: 0.2em 0.5em;">#코딩테스트</a> <a class="tag" href="https://sunha20.github.io/digital-garden/?query=tag:실버/4" style="background-color: rgb(4, 108, 116); color: white; font-weight: 700; border: none; border-radius: 1em; padding: 0.2em 0.5em;">#실버/4</a> 
+]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/1309.동물원.html</link><guid isPermaLink="false">1. Study/Coding Test/1309.동물원.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Sat, 25 May 2024 15:36:53 GMT</pubDate><enclosure url="https://www.acmicpc.net/upload/201004/dnfl.JPG" length="0" type="image/jpeg"/><content:encoded>&lt;figure&gt;&lt;img src="https://www.acmicpc.net/upload/201004/dnfl.JPG"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[15969. 행복]]></title><description><![CDATA[ 
+ <br>NAV: <a data-tooltip-position="top" aria-label="1. Study/Coding Test/Coding Test.md" data-href="1. Study/Coding Test/Coding Test.md" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html" class="internal-link" target="_self" rel="noopener">Coding Test</a><br><br><br>코이 초등학교에 새로 부임하신 교장 선생님은 어린 학생들의 행복감과 학생들의 성적 차이 관계를 알아보기로 했다. 그래서 이전 성적을 조사하여 학생 들의 시험 점수 차이 변화를 알아보려고 한다.<br>예를 들어서 2016년 학생 8명의 점수가 다음과 같다고 하자.<br>27, 35, 92, 75, 42, 53, 29, 87<br>그러면 가장 높은 점수는 92점이고 가장 낮은 점수는 27점이므로 점수의 최대 차이는 65이다. 한편 2017년 학생 8명의 점수가 다음과 같았다.<br>85, 42, 79, 95, 37, 11, 72, 32<br>이때 가장 높은 점수는 95점이고 가장 낮은 점수는 11점이므로 점수의 최대 차이는 84이다.<br>N명 학생들의 점수가 주어졌을 때, 가장 높은 점수와 가장 낮은 점수의 차이를 구하는 프로그램을 작성하시오<br><br>표준 입력으로 다음 정보가 주어진다. 첫 번째 줄에는 학생 수&nbsp;N이 주어진다. 다음 줄에는&nbsp;N명의 학생 점수가 공백 하나를 사이에 두고 주어진다.<br><br>표준 출력으로 가장 높은 점수와 가장 낮은 점수의 차이를 출력한다.<br><br>모든 서브태스크에서 2 ≤&nbsp;N&nbsp;≤ 1,000이고 입력되는 학생들의 점수는 0 이상 1,000 이하의 정수이다.<br><br>학생 수가 2명인 경우만 존재한다.<br><br>점수가 낮은 점수부터 높은 점수까지 순서대로 주어진다.<br><br>원래의 제약 조건 이외에 아무 제약 조건이 없다.<br><br>5<br>
+27 35 92 75 42<br><br>65<br><br>8<br>
+85 42 79 95 37 11 72 32<br><br>84<br><br><a data-tooltip-position="top" aria-label="https://www.acmicpc.net/category/2" rel="noopener" class="external-link" href="https://www.acmicpc.net/category/2" target="_blank">Olympiad</a>&nbsp;&gt;&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/category/55" rel="noopener" class="external-link" href="https://www.acmicpc.net/category/55" target="_blank">한국정보올림피아드</a>&nbsp;&gt;&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/category/427" rel="noopener" class="external-link" href="https://www.acmicpc.net/category/427" target="_blank">KOI 2018</a>&nbsp;&gt;&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/category/detail/1894" rel="noopener" class="external-link" href="https://www.acmicpc.net/category/detail/1894" target="_blank">초등부</a>&nbsp;1번<br>
+<br>문제의 오타를 찾은 사람:&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/jh05013" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/jh05013" target="_blank">jh05013</a>
+<br><br>
+<br><a data-tooltip-position="top" aria-label="https://www.acmicpc.net/problem/tag/124" rel="noopener" class="external-link" href="https://www.acmicpc.net/problem/tag/124" target="_blank">수학</a>
+<br><a data-tooltip-position="top" aria-label="https://www.acmicpc.net/problem/tag/102" rel="noopener" class="external-link" href="https://www.acmicpc.net/problem/tag/102" target="_blank">구현</a>
+<br><a data-tooltip-position="top" aria-label="https://www.acmicpc.net/problem/tag/121" rel="noopener" class="external-link" href="https://www.acmicpc.net/problem/tag/121" target="_blank">사칙연산</a>
+<br><br>
+<br>파이썬의 map(int, 어쩌구.split())을 java에서 사용하고 싶음… → <a data-tooltip-position="top" aria-label="https://velog.io/@suyyeon/JAVA-String-%EB%B0%B0%EC%97%B4%EC%9D%84-int-%EB%B0%B0%EC%97%B4%EB%A1%9C-%EB%B3%80%ED%99%98%ED%95%98%EA%B8%B0" rel="noopener" class="external-link" href="https://velog.io/@suyyeon/JAVA-String-%EB%B0%B0%EC%97%B4%EC%9D%84-int-%EB%B0%B0%EC%97%B4%EB%A1%9C-%EB%B3%80%ED%99%98%ED%95%98%EA%B8%B0" target="_blank">[JAVA] String 배열을 int 배열로 변환하기</a>
+<br>int[] gradeList = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+복사<br><br>import java.io.*;  
+import java.util.Arrays;  
+  
+public class Main {  
+    public void Solution() throws IOException {  
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));  
+        int n = Integer.parseInt(br.readLine());  
+        int[] gradeList = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();  
+        int max = -1;  
+        int min = 1001;  
+        for(int grade: gradeList) {  
+            if (grade &gt; max) {  
+                max = grade;  
+            }  
+            if (grade &lt; min) {  
+                min = grade;  
+            }  
+        }  
+        System.out.println(max-min);  
+        br.close();  
+    }  
+    public static void main(String[] args) throws IOException {  
+        new Main().Solution();  
+    }  
+}
+복사<br>
+<br>이거 parsed int를 각각에서 하면 조금 시간을 줄일 수있지 않을까? → 와안전 조금 주넼ㅋㅋㅋ
+<br>public void Solution2_time() throws IOException {  
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));  
+    int n = Integer.parseInt(br.readLine());  
+    String[] gradeList = br.readLine().split(" ");  
+    int max = -1;  
+    int min = 1001;  
+    for(String grade: gradeList) {  
+        int gradeInt = Integer.parseInt(grade);  
+        if (gradeInt &gt; max) {  
+            max = gradeInt;  
+        }  
+        if (gradeInt &lt; min) {  
+            min = gradeInt;  
+        }  
+    }  
+    System.out.println(max-min);  
+    br.close();  
+}
+복사]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/15969.-행복.html</link><guid isPermaLink="false">1. Study/Coding Test/15969. 행복.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Sat, 25 May 2024 15:36:52 GMT</pubDate></item><item><title><![CDATA[42626. 더맵게]]></title><description><![CDATA[ 
+ <br><a data-href="1. Study/Coding Test/Coding Test.md" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html" class="internal-link" target="_self" rel="noopener">1. Study/Coding Test/Coding Test.md</a><br><br>매운 것을 좋아하는 Leo는 모든 음식의 스코빌 지수를 K 이상으로 만들고 싶습니다. 모든 음식의 스코빌 지수를 K 이상으로 만들기 위해 Leo는 스코빌 지수가 가장 낮은 두 개의 음식을 아래와 같이 특별한 방법으로 섞어 새로운 음식을 만듭니다.<br>섞은 음식의 스코빌 지수 = 가장 맵지 않은 음식의 스코빌 지수 + (두 번째로 맵지 않은 음식의 스코빌 지수 * 2)
+복사<br>Leo는 모든 음식의 스코빌 지수가 K 이상이 될 때까지 반복하여 섞습니다.<br>
+Leo가 가진 음식의 스코빌 지수를 담은 배열 scoville과 원하는 스코빌 지수 K가 주어질 때, 모든 음식의 스코빌 지수를 K 이상으로 만들기 위해 섞어야 하는 최소 횟수를 return 하도록 solution 함수를 작성해주세요.<br><br>
+<br>scoville의 길이는 2 이상 1,000,000 이하입니다.
+<br>K는 0 이상 1,000,000,000 이하입니다.
+<br>scoville의 원소는 각각 0 이상 1,000,000 이하입니다.
+<br>모든 음식의 스코빌 지수를 K 이상으로 만들 수 없는 경우에는 -1을 return 합니다.
+<br><br><br><br>
+<br>스코빌 지수가 1인 음식과 2인 음식을 섞으면 음식의 스코빌 지수가 아래와 같이 됩니다.<br>
+새로운 음식의 스코빌 지수 = 1 + (2 * 2) = 5<br>
+가진 음식의 스코빌 지수 = [5, 3, 9, 10, 12]
+<br>스코빌 지수가 3인 음식과 5인 음식을 섞으면 음식의 스코빌 지수가 아래와 같이 됩니다.<br>
+새로운 음식의 스코빌 지수 = 3 + (5 * 2) = 13<br>
+가진 음식의 스코빌 지수 = [13, 9, 10, 12]
+<br>모든 음식의 스코빌 지수가 7 이상이 되었고 이때 섞은 횟수는 2회입니다.<br><br><br>
+<br>참고: <a data-tooltip-position="top" aria-label="https://wrtn.ai/chat/u/65d591e80c06023ae70af73a/c/66508d0cdd60135f5bf99c8e?type=u" rel="noopener" class="external-link" href="https://wrtn.ai/chat/u/65d591e80c06023ae70af73a/c/66508d0cdd60135f5bf99c8e?type=u" target="_blank">뤼튼</a>
+<br><br>: if (minA == null || minB == null) {<br>
+<br>null과 int를 비교하여 생긴 문제.
+<br>원래 목적: 
+
+<br>우선순위 큐에서 poll()은 첫 번째 값을 반환하고&nbsp;제거, 비어있으면&nbsp;null을 반환하기 때문에 반환값이 null인 경우를 체크하려고 했다.
+<br>우선순위 큐에 담겨있는 값은 Integer라서 Integer 대신 int 사용. → 이유: 익숙해서…
+
+
+<br>문제: int는 reference type이 아닌 primitive type이기 때문에 null이 안 됨…
+<br>해결방안
+
+<br>int 대신 Integer(wrapper class) 사용
+
+
+<br>/*
+목표: 모든 음식의 스코빌 지수 &gt; K;
+방법: 스코빌 지수가 가장 낮은 두개의 음식으로 새 음식을 만들기;
+
+- 최소 힙 이용(by 우선순위 큐)
+*/
+
+import java.util.*;
+class Solution {
+    public int solution(int[] scoville, int K) {
+        PriorityQueue&lt;Integer&gt; hp = new PriorityQueue&lt;&gt;();
+        for (int s: scoville) {
+            hp.add(s);
+        }
+        
+        int cnt = 0;
+        Integer minA;
+        Integer minB;
+        
+        while (true) {
+            minA = hp.poll();
+            minB = hp.poll();
+            if (minA == null || minB == null) {
+                return -1;
+            }
+            if (minA &gt;= K) {
+                return cnt;
+            }
+            
+            int newFood = minA + (minB * 2);
+            hp.add(newFood);
+            cnt += 1;
+        }
+    }
+}
+복사<br><br>
+<br>정확성 테스트 3개 정도 실패
+<br>원인
+
+<br>16, 22, 23 문제는 제공된 scoville이 2개인 경우에 대한 테스트입니다. (<a data-tooltip-position="top" aria-label="https://school.programmers.co.kr/questions/50794" rel="noopener" class="external-link" href="https://school.programmers.co.kr/questions/50794" target="_blank">질문글 참고</a> / <a data-href="42626. 더맵게#테스트 케이스 추가 팁" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/42626.-더맵게.html#테스트_케이스_추가_팁" class="internal-link" target="_self" rel="noopener">42626. 더맵게 &gt; 테스트 케이스 추가 팁</a>)
+<br>null check가 먼저 이루어지면서 문제가 생김 → 새로 뽑은 수가 null인데 이미, 조건(K 이상)을 만족했을 때
+<br>단순히 null 체크와 조건 체크 순서를 바꾸면 minA가 null일 때 문제가 생김.
+
+<br>수 하나는 무조건 큐에 추가되기 때문에 minA가 null일 리는 없음
+<br>처음 주어지는 input도 2개 이상.
+
+
+
+
+<br>/*
+목표: 모든 음식의 스코빌 지수 &gt; K;
+방법: 스코빌 지수가 가장 낮은 두개의 음식으로 새 음식을 만들기;
+
+- 최소 힙 이용(by 우선순위 큐)
+*/
+
+import java.util.*;
+class Solution {
+    public int solution(int[] scoville, int K) {
+        PriorityQueue&lt;Integer&gt; hp = new PriorityQueue&lt;&gt;();
+        for (int s: scoville) {
+            hp.add(s);
+        }
+        
+        int cnt = 0;
+        Integer minA;
+        Integer minB;
+        
+        while (true) {
+            // 가장 스코빌 지수가 낮은 음식 2개
+            minA = hp.poll();
+            minB = hp.poll();
+            
+            // 조건 체크1 (문제 조건상 항상 minA != null 만족)
+            if (minA &gt;= K) {
+                return cnt;
+            }
+            // 조건 체크2
+            if (minB == null) {
+                return -1;
+            }
+
+            // 새로운 음식 추가 및, 시도 횟수 늘리기.
+            int newFood = minA + (minB * 2);
+            hp.add(newFood);
+            cnt += 1;
+        }
+    }
+}
+복사<br><br>
+<br>기본 테스트 케이스: 문제에서 주어진 예제 테스트 케이스부터 실행해 보세요.
+<br>경계값 테스트: 입력 값의 최소, 최대 경계에서의 동작을 확인하세요. 예를 들어, 비밀번호의 길이가 최대(6자리) 또는 최소(1자리)일 때의 동작을 확인해 보세요.
+<br>특별한 경우 테스트: 일반적이지 않은 입력값이나 특별한 상황에서의 동작을 확인해 보세요. 예를 들어, DB가 비어있는 경우나, 같은 비밀번호를 가진 여러 회원이 있는 경우 등입니다.
+<br>랜덤한 테스트: 여러 다양한 입력 조건에서의 동작을 확인하기 위해 랜덤한 입력값을 사용한 테스트 케이스를 추가해 보세요.
+<br>순차적 테스트: 입력값이 특정 순서에 따라 동작을 확인하는 테스트 케이스를 추가해 보세요. 예를 들어, DB에 회원 정보가 아이디 순서나 비밀번호 순서에 따라 정렬된 경우 등입니다
+]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/42626.-더맵게.html</link><guid isPermaLink="false">1. Study/Coding Test/42626. 더맵게.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Fri, 24 May 2024 15:06:12 GMT</pubDate></item><item><title><![CDATA[BufferedReader]]></title><description><![CDATA[ 
+ <br>NAV: <a data-tooltip-position="top" aria-label="1. Study/Coding Test/Coding Test.md" data-href="1. Study/Coding Test/Coding Test.md" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html" class="internal-link" target="_self" rel="noopener">Coding Test</a><br><a data-tooltip-position="top" aria-label="https://velog.io/@roycewon/BufferedReader%EB%A5%BC-%EC%95%8C%EA%B3%A0-%EC%93%B0%EC%9E%90" rel="noopener" class="external-link" href="https://velog.io/@roycewon/BufferedReader%EB%A5%BC-%EC%95%8C%EA%B3%A0-%EC%93%B0%EC%9E%90" target="_blank">BufferedReader를 알고 쓰자</a><br>
+<a data-tooltip-position="top" aria-label="https://nullnull.tistory.com/23" rel="noopener" class="external-link" href="https://nullnull.tistory.com/23" target="_blank">JAVA 노드 스트림 &amp; 보조 스트림</a><br>+)<br>
+Java에서 데이터를 읽고 쓰는 방법에는 여러 가지가 있습니다. 그 중에서도&nbsp;Buffer,&nbsp;노드 스트림(Node Stream), 그리고&nbsp;보조 스트림(Auxiliary Stream)에 대해 설명하겠습니다.<br>
+<br><a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank"><strong></strong>: Buffer는 데이터가 전송될 때 일시적으로 저장되는 메모리 영역입니다</a>Buffer<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">1</a>.&nbsp;<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">Buffer는 속도가 빠른 장치에서 들어오는 모든 데이터를 잠시 저장해놓고 버퍼가 꽉 차거나, 특정 커맨드를 입력받았을 때 일괄적으로 내보내고, 버퍼를 초기화시킵니다</a><a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">1</a>.&nbsp;<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">이렇게 하면 속도가 느린 장치에서 일을 여러번 하지 않도록 속도가 빠른 장치에서 미리미리 처리해두고 "버퍼"라는 임시 공간에 보관해두었다가 한번에 넘겨주는 것입니다</a><a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">1</a>.
+<br><a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank"><strong></strong>: 노드 스트림은 스트림의 주축을 이루는 요소입니다</a>노드 스트림(Node Stream)<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">1</a>.&nbsp;<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">노드 스트림은 데이터 타입 (Char 또는 Byte), 방향 (Input 또는 Output), 노드 타입 (File 또는 키보드 등등)에 따라 결정됩니다</a><a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">1</a>.
+<br><a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank"><strong></strong>: 보조 스트림은 노드 스트림을 통해 들어오거나, 나가는 데이터를 처리하는 것을 도와주는 일종의 플러그인입니다</a>보조 스트림(Auxiliary Stream)<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">1</a>.&nbsp;<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">보조 스트림은 노드 스트림에 연결되어 기능을 추가하거나 향상시킵니다</a><a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">1</a>.&nbsp;<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">예를 들어,&nbsp;<code></code>와&nbsp;<code></code>은 보조 스트림의 예로, 이들은 노드 스트림에 버퍼링 기능을 추가하여 입출력 효율을 높입니다</a>BufferedReaderBufferedInputStream<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">1</a><a data-tooltip-position="top" aria-label="https://velog.io/@roycewon/BufferedReader%EB%A5%BC-%EC%95%8C%EA%B3%A0-%EC%93%B0%EC%9E%90" rel="noopener" class="external-link" href="https://velog.io/@roycewon/BufferedReader%EB%A5%BC-%EC%95%8C%EA%B3%A0-%EC%93%B0%EC%9E%90" target="_blank">2</a>.
+<br>이 세 가지 개념은 Java의 입출력 시스템을 이해하는 데 중요한 역할을 합니다. 이해가 되셨나요? 추가적인 질문이 있으시면 언제든지 물어보세요! 😊<br>Scanner&nbsp;클래스는 Java에서 제공하는&nbsp;보조 스트림(Auxiliary Stream)&nbsp;중 하나입니다.&nbsp;Scanner는 기본적으로 입력 스트림을 받아서 다양한 타입의 데이터를 읽을 수 있는 메소드를 제공합니다. 이는&nbsp;InputStream,&nbsp;File,&nbsp;String&nbsp;등 다양한 소스로부터 데이터를 읽을 수 있게 해주는 기능을 추가하는 역할을 하므로, 보조 스트림에 속합니다. 이해가 되셨나요? 추가적인 질문이 있으시면 언제든지 물어보세요! 😊<br>InputStreamReader는 Java에서 제공하는&nbsp;노드 스트림(Node Stream)&nbsp;중 하나입니다.&nbsp;InputStreamReader는 바이트 스트림을 문자 스트림으로 변환하는 데 사용됩니다. 이 클래스는&nbsp;System.in과 같은&nbsp;InputStream을&nbsp;Reader로 변환하여, 문자 단위로 읽을 수 있게 해줍니다. 따라서,&nbsp;InputStreamReader는 데이터의 원본(노드)에서 직접 데이터를 읽어오는 역할을 하므로 노드 스트림에 속합니다. 이해가 되셨나요? 추가적인 질문이 있으시면 언제든지 물어보세요! 😊<br>System.in과 같은&nbsp;InputStream은 Java에서 제공하는&nbsp;노드 스트림(Node Stream)&nbsp;중 하나입니다.&nbsp;InputStream은 바이트 단위로 데이터를 읽어오는 스트림입니다. 이는 데이터의 원본(노드)에서 직접 데이터를 읽어오는 역할을 하므로 노드 스트림에 속합니다.&nbsp;System.in은 표준 입력 스트림으로, 주로 키보드 입력을 받기 위해 사용됩니다. 이해가 되셨나요? 추가적인 질문이 있으시면 언제든지 물어보세요! 😊<br>+) <a data-tooltip-position="top" aria-label="https://www.acmicpc.net/board/view/9744" rel="noopener" class="external-link" href="https://www.acmicpc.net/board/view/9744" target="_blank">글 읽기 - BufferedReader를 어떻게 사용해야 할지 모르겠습니다.</a><br>
+일반적으로 BufferedReader 를 통해 입력받을때 유의하셔야 할 점이 몇가지 있습니다.&nbsp;<br>1. 기본적으로 BufferedReader는 한 줄을 통째로 입력받는 방법으로 주로 쓰입니다.<br>2. readLine() 메서드는 값을 읽어올 때, String값으로 개행문자(엔터값)를 포함해&nbsp;한줄을 전부 읽어오는 방식입니다.<br>&nbsp;- 비슷한 예로 Scanner메서드 중 nextLine()도 스트링 값과 개행문자(엔터값)을 같이 읽어옵니다.(반면 next()는 개행문자는 제외하고 스트링 값만 읽어옵니다.)<br>&nbsp;- 예제의 입력 예제를 보면 각 문장이 모두 개행문자(엔터)로 구별되있는것을 확인하실 수 있습니다. 따라서 이 문제에서&nbsp;개행문자를 입력받는것은 필수입니다!<br>3. read() 메서드는 값을 읽어올 때, int값으로 변형하여 읽어오는 방식입니다.&nbsp;<br>&nbsp;- 예를들어 input.txt에 저장된&nbsp;1이라는 숫자를 read()를 통해 읽어오면&nbsp;&nbsp;int형 숫자 1을 읽어오는 것이 아닌, txt형식으로 저장된 ASCII 형식의 문자값 '1'을 읽어오는 것이므로 결국 int값으론 49를 읽어오는 것이 됩니다.&nbsp;<br>&nbsp;- 이를 해결하려면&nbsp;int a = br.read() - 48; br.readLine();&nbsp;을 하여 ASCII 값에서 뻴셈을 이용한 뒤&nbsp;엔터 값을 읽어오거나,&nbsp;int a = Integer.parseInt(br.readLine());&nbsp;를 통해 엔터값을 포함해 한줄을 통째로 입력받은 뒤 해당 스트링값을 int로 형변환 해주는 방법이 있습니다. (저같은 경우에는 주로 후자의 방법을 사용합니다)]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/bufferedreader.html</link><guid isPermaLink="false">1. Study/Coding Test/BufferedReader.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Sat, 25 May 2024 15:32:56 GMT</pubDate></item><item><title><![CDATA[java 기본]]></title><description><![CDATA[ 
+ <br>NAV: <a data-tooltip-position="top" aria-label="1. Study/Coding Test/Coding Test.md" data-href="1. Study/Coding Test/Coding Test.md" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html" class="internal-link" target="_self" rel="noopener">Coding Test</a><br><a data-tooltip-position="top" aria-label="https://nahwasa.com/entry/%EC%9E%90%EB%B0%94%EB%A1%9C-%EB%B0%B1%EC%A4%80-%ED%92%80-%EB%95%8C%EC%9D%98-%ED%8C%81-%EB%B0%8F-%EC%A3%BC%EC%9D%98%EC%A0%90-boj-java" rel="noopener" class="external-link" href="https://nahwasa.com/entry/%EC%9E%90%EB%B0%94%EB%A1%9C-%EB%B0%B1%EC%A4%80-%ED%92%80-%EB%95%8C%EC%9D%98-%ED%8C%81-%EB%B0%8F-%EC%A3%BC%EC%9D%98%EC%A0%90-boj-java" target="_blank">자바로 백준 풀 때의 팁 및 주의점 (boj java) - Nahwasa</a>]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/java-기본.html</link><guid isPermaLink="false">1. Study/Coding Test/java 기본.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Sat, 25 May 2024 15:32:56 GMT</pubDate></item><item><title><![CDATA[new]]></title><description><![CDATA[ 
+ <br>NAV: <a data-tooltip-position="top" aria-label="1. Study/Coding Test/Coding Test.md" data-href="1. Study/Coding Test/Coding Test.md" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html" class="internal-link" target="_self" rel="noopener">Coding Test</a><br><br>전화번호부에 적힌 전화번호 중, 한 번호가 다른 번호의 접두어인 경우가 있는지 확인하려 합니다.<br>
+전화번호가 다음과 같을 경우, 구조대 전화번호는 영석이의 전화번호의 접두사입니다.<br>
+<br>구조대 : 119
+<br>박준영 : 97 674 223
+<br>지영석 : 11 9552 4421
+<br>전화번호부에 적힌 전화번호를 담은 배열 phone_book 이 solution 함수의 매개변수로 주어질 때, 어떤 번호가 다른 번호의 접두어인 경우가 있으면 false를 그렇지 않으면 true를 return 하도록 solution 함수를 작성해주세요.<br><br>
+<br>phone_book의 길이는 1 이상 1,000,000 이하입니다.
+
+<br>각 전화번호의 길이는 1 이상 20 이하입니다.
+<br>같은 전화번호가 중복해서 들어있지 않습니다.
+
+
+<br><br><br><br>입출력 예 #1<br>
+앞에서 설명한 예와 같습니다.<br>입출력 예 #2<br>
+한 번호가 다른 번호의 접두사인 경우가 없으므로, 답은 true입니다.<br>입출력 예 #3<br>
+첫 번째 전화번호, “12”가 두 번째 전화번호 “123”의 접두사입니다. 따라서 답은 false입니다.<br><br>
+<br>
+우와 이걸 어떻게 해시로하지?
+
+<br>
+length만큼 비교하면 안됨?
+
+<br>
+근데 기준점이 없으니까 문제.
+
+<br>
+아 그냥 start with…?
+
+<br>
+제이 짧은 길이 기준으로 (2면) 2만큼 해시, 3만큼 해시, 4만큼 해시, 쭉쭉해서 같은 거 나오면 false 출력
+
+<br>
+오 sort를 할 수도…?
+
+<br>import java.util.Arrays;  
+  
+public class _42577p {  
+    public boolean solution1(String[] phone_book) {  
+        int len = 0;  
+        int cnt = 0;  
+        Arrays.sort(phone_book);  
+  
+        for (String a_phoneNum : phone_book) {  
+            for (String b_phoneNum: phone_book) {  
+                if (b_phoneNum.length() &gt; a_phoneNum.length() &amp;&amp; b_phoneNum.startsWith(a_phoneNum))  
+                    return false;  
+            }  
+        };  
+        return true;  
+    }  
+}
+복사<br>
+<br>효율성 테스트 3,4번 막힘.
+<br>아 헐 이게 string으로 sort하면 앞에서 부터 체크해서 사전식 배열이니까, start with 하는게 있으면 바로 뒤겠구나… 와 헐.
+
+<br>접두어 = 정렬 하면 붙어있음.
+
+
+<br>import java.util.Arrays;  
+  
+public class _42577p {  
+    public boolean solution1(String[] phone_book) {  
+        Arrays.sort(phone_book);  
+        System.out.println(Arrays.toString(phone_book));  
+        for (int i=0; i&lt;phone_book.length-1; i++) {  
+            if (phone_book[i+1].startsWith(phone_book[i])) {  
+                return false;  
+            }  
+        };  
+        return true;  
+    }  
+}
+복사<br><br>
+<br>hash를 쓰는 방법
+
+<br>저는 key 에 전화번호 넣고   썻어요 → TIL에 써보기.
+
+
+]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/new.html</link><guid isPermaLink="false">1. Study/Coding Test/new.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Sat, 25 May 2024 15:36:53 GMT</pubDate></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
+ <br><a data-href="Coding Test" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html" class="internal-link" target="_self" rel="noopener">Coding Test</a>]]></description><link>https://sunha20.github.io/digital-garden/index.html</link><guid isPermaLink="false">index.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Fri, 24 May 2024 03:53:47 GMT</pubDate></item><item><title><![CDATA[1로 만들기]]></title><description><![CDATA[ 
+ <br><br>ID: 1463<br>
+Site: 백준<br>
+URL: <a rel="noopener" class="external-link" href="https://www.acmicpc.net/problem/1463" target="_blank">https://www.acmicpc.net/problem/1463</a><br>
+난이도: 실버 3<br>
+다시풀기: No<br>
+분류: 다이나믹 프로그래밍<br>
+생성 일시: 2023년 8월 13일 오후 11:15<br>
+💡 - 이거 진짜 도움됨.<br><a data-tooltip-position="top" aria-label="https://bio-info.tistory.com/159" rel="noopener" class="external-link" href="https://bio-info.tistory.com/159" target="_blank">[백준] 1463 1로 만들기 (DP) - Python / 자세한 설명 / 여러가지 풀이 / 실버1</a><br><br><br><br><br><br>정수 X에 사용할 수 있는 연산은 다음과 같이 세 가지 이다.<br>
+<br>X가 3으로 나누어 떨어지면, 3으로 나눈다.
+<br>X가 2로 나누어 떨어지면, 2로 나눈다.
+<br>1을 뺀다.
+<br>정수 N이 주어졌을 때, 위와 같은 연산 세 개를 적절히 사용해서 1을 만들려고 한다. 연산을 사용하는 횟수의 최솟값을 출력하시오.<br><br>첫째 줄에 1보다 크거나 같고, 106보다 작거나 같은 정수 N이 주어진다.<br><br>첫째 줄에 연산을 하는 횟수의 최솟값을 출력한다.<br><br>2
+
+복사<br><br>1
+
+복사<br><br>10
+
+복사<br><br>3
+
+복사<br><br>10의 경우에 10 → 9 → 3 → 1 로 3번 만에 만들 수 있다.<br><br>
+<br>문제를 번역한 사람:&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/baekjoon" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/baekjoon" target="_blank">baekjoon</a>
+<br>문제의 오타를 찾은 사람:&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/cyj101366" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/cyj101366" target="_blank">cyj101366</a>,&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/jugol" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/jugol" target="_blank">jugol</a>
+<br>어색한 표현을 찾은 사람:&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/dbfldkfdbgml" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/dbfldkfdbgml" target="_blank">dbfldkfdbgml</a>
+<br>데이터를 추가한 사람:&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/dynamiseus" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/dynamiseus" target="_blank">dynamiseus</a>,&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/jooa7878" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/jooa7878" target="_blank">jooa7878</a>,&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/lcr7324" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/lcr7324" target="_blank">lcr7324</a>
+<br><br>
+<br><a data-tooltip-position="top" aria-label="https://www.acmicpc.net/problem/tag/25" rel="noopener" class="external-link" href="https://www.acmicpc.net/problem/tag/25" target="_blank">다이나믹 프로그래밍</a>
+<br><br>
+<br>Python 3: 1.5 초
+<br>PyPy3: 0.7 초
+<br>Python 2: 1.5 초
+<br>PyPy2: 0.7 초
+<br><br>
+<br>
+10
+
+<br>-1(9)
+
+<br>/3
+<br>/3
+
+
+<br>-2(8)
+
+<br>/2
+<br>/2
+<br>/2
+
+
+<br>-3(7)
+<br>-4(6)
+
+<br>/3
+<br>/2
+
+
+<br>-5(5)
+<br>-6(4)
+
+<br>/2
+<br>/2
+
+
+<br>-7
+
+
+<br>
+빼는 수를 하나씩 늘려가면서, 빼고, 각각의 경우에 2,3으로 나누고 나누어 떨어지는 경우 개수를 비교함
+
+<br>
+min
+
+<br>자 계속 틀림...
+복사<br>
+<br>
+dp공부 후…
+
+<br>
+dp list는 X길이로 만들어야겠지…
+
+<br>
+1을 1로 만들려면 → 0
+
+<br>
+2를 1로 만들려면 (2) → 1
+
+<br>
+3을 1로 만들려면 /3 → 1
+
+<br>
+4를 1로 만들려면 /2/2 → 2
+
+<br>
+5를 1로 만들려면 →3
+
+<br>
+점화식을 어떻게 만들어야할까.
+
+<br>
+f(1) = 0
+
+<br>
+f(2) = 1
+
+<br>
+f(3) = 1
+
+<br>
+f(4) = 2
+
+<br>
+f(5) = 3
+
+<br>
+f(6) = 2 →
+
+<br>
+f(7) = 3 → -1, f(6)
+
+<br>
+f(8) = 3 → /2, f(4)
+
+<br>
+f(9) = 2 → /3, f(3)
+
+<br>
+f(10) = → -1, f(9)
+
+<br><br>복사<br><br><br>import sys
+
+def make_one_topdown(x):
+    if x == 1:
+        return 0
+    elif x%3 == 0 and x%2 == 0:
+        return 1+ min(make_one_topdown(x//3), make_one_topdown(x//2), make_one_topdown(x-1))
+    elif x%3 == 0:
+        return 1+ min(make_one_topdown(x//3), make_one_topdown(x-1))
+    elif x%2 == 0:
+        return 1+ min(make_one_topdown(x//2), make_one_topdown(x-1))
+    else:
+        return 1+ make_one_topdown(x-1)
+
+if __name__ == "__main__":
+    print(make_one_topdown(int(sys.stdin.readline().rstrip())))
+복사<br>
+<br>생각해보니까. 이 방식은 메모, 재사용의 취지에 딱 들어맞진 않음.
+<br>여기에 table을 추가하는 겨..
+<br>import sys
+
+X = int(sys.stdin.readline().rstrip())
+dp = {1:0}
+def make_one_topdown(x):
+    if x in dp:
+        return dp[x]
+    else:
+        dp[x] = 1+ min(make_one_topdown(x//3)+x%3, make_one_topdown(x//2)+x%2, make_one_topdown(x-1))
+        return dp[x]
+
+print(make_one_topdown(X))
+복사<br>
+<br>RecursionError: maximum recursion depth exceeded
+<br>생각해보면, make_one_topdown(x-1) 필요 없음…
+<br>import sys
+
+X = int(sys.stdin.readline().rstrip())
+dp = {1:0,2:1, 3:1}
+def make_one_topdown(x):
+    if x in dp:
+        return dp[x]
+    else:
+        dp[x] = 1+ min(make_one_topdown(x//3)+ x%3, make_one_topdown(x//2)+x%2)
+        return dp[x]
+
+print(make_one_topdown(X))
+복사<br>
+<br>시간이 거의 10배 차이남
+<br>Bottom-up 방식은 dp(1)부터 dp(n)까지 전부 구하지만 top-down 방식은 그렇지 않습니다. 실제로 top-down 코드에서 dp(n) 계산이 끝난 후에 arr 전체를 출력해 보면 1~n 전부가 아닌 일부만 계산되어 있음을 확인할 수 있습니다.
+<br><a data-tooltip-position="top" aria-label="https://www.acmicpc.net/board/view/122640" rel="noopener" class="external-link" href="https://www.acmicpc.net/board/view/122640" target="_blank">글 읽기 - Top-down Bottom-up 시간 차이에 대한 질문입니다</a>]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/1로-만들기.html</link><guid isPermaLink="false">1. Study/Coding Test/1로 만들기.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Tue, 27 Feb 2024 12:05:30 GMT</pubDate></item><item><title><![CDATA[01타일]]></title><description><![CDATA[ 
+ <br>ID: 1904<br>
+Site: 백준<br>
+URL: <a rel="noopener" class="external-link" href="https://www.acmicpc.net/problem/1904" target="_blank">https://www.acmicpc.net/problem/1904</a><br>
+난이도: 실버 3<br>
+다시풀기: No<br>
+생성 일시: 2023년 9월 10일 오후 8:37<br><br><br><br><br>지원이에게 2진 수열을 가르쳐 주기 위해, 지원이 아버지는 그에게 타일들을 선물해주셨다. 그리고 이 각각의 타일들은 0 또는 1이 쓰여 있는 낱장의 타일들이다.<br>어느 날 짓궂은 동주가 지원이의 공부를 방해하기 위해 0이 쓰여진 낱장의 타일들을 붙여서 한 쌍으로 이루어진 00 타일들을 만들었다. 결국 현재 1 하나만으로 이루어진 타일 또는 0타일을 두 개 붙인 한 쌍의 00타일들만이 남게 되었다.<br>그러므로 지원이는 타일로 더 이상 크기가&nbsp;N인&nbsp;모든 2진 수열을 만들 수 없게 되었다. 예를 들어, N=1일 때 1만 만들 수 있고, N=2일 때는 00, 11을 만들 수 있다. (01, 10은 만들 수 없게 되었다.) 또한 N=4일 때는 0011, 0000, 1001, 1100, 1111 등 총 5개의 2진 수열을 만들 수 있다.<br>우리의 목표는 N이 주어졌을 때 지원이가 만들 수 있는 모든 가짓수를 세는 것이다. 단 타일들은 무한히 많은 것으로 가정하자.<br><br>첫 번째 줄에 자연수 N이 주어진다. (1 ≤ N ≤ 1,000,000)<br><br>첫 번째 줄에 지원이가 만들 수 있는 길이가 N인 모든 2진 수열의 개수를 15746으로 나눈 나머지를 출력한다.<br><br>4
+
+복사<br><br>5
+
+복사<br><br>
+<br>문제의 오타를 찾은 사람:&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/mwy3055" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/mwy3055" target="_blank">mwy3055</a>
+<br>데이터를 추가한 사람:&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/qortmd7777" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/qortmd7777" target="_blank">qortmd7777</a>,&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/wider93" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/wider93" target="_blank">wider93</a>
+<br><br>
+<br>N=1
+
+<br>1
+
+
+<br>N=2
+
+<br>00
+<br>11
+
+
+<br>N=3
+
+<br>100
+<br>001
+<br>111
+
+
+<br>N=4
+
+<br>0000
+<br>1100
+<br>1001
+<br>0011
+<br>1111
+
+
+<br>
+<br>복사<br><br>복사<br><br>복사]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/01타일.html</link><guid isPermaLink="false">1. Study/Coding Test/01타일.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Tue, 14 May 2024 05:23:16 GMT</pubDate></item><item><title><![CDATA[11047. 동전 0]]></title><description><![CDATA[<a class="tag" href="https://sunha20.github.io/digital-garden/?query=tag:코딩테스트" style="background-color: rgb(4, 108, 116); color: white; font-weight: 700; border: none; border-radius: 1em; padding: 0.2em 0.5em;">#코딩테스트</a> <a class="tag" href="https://sunha20.github.io/digital-garden/?query=tag:실버/4" style="background-color: rgb(4, 108, 116); color: white; font-weight: 700; border: none; border-radius: 1em; padding: 0.2em 0.5em;">#실버/4</a> 
  <br><a href="https://sunha20.github.io/digital-garden?query=tag:코딩테스트" class="tag" target="_blank" rel="noopener">#코딩테스트</a><br>
 <a href="https://sunha20.github.io/digital-garden?query=tag:실버/4" class="tag" target="_blank" rel="noopener">#실버/4</a> <br><br><br>준규가 가지고 있는 동전은 총 N종류이고, 각각의 동전을 매우 많이 가지고 있다.<br>동전을 적절히 사용해서 그 가치의 합을 K로 만들려고 한다. 이때 필요한 동전 개수의 최솟값을 구하는 프로그램을 작성하시오.<br><br>첫째 줄에 N과 K가 주어진다. (1 ≤ N ≤ 10, 1 ≤ K ≤ 100,000,000)<br>둘째 줄부터 N개의 줄에 동전의 가치 Ai가 오름차순으로 주어진다. (1 ≤ Ai&nbsp;≤ 1,000,000, A1&nbsp;= 1, i&nbsp;≥ 2인 경우에&nbsp;Ai는 Ai-1의 배수)<br><br>첫째 줄에 K원을 만드는데 필요한 동전 개수의 최솟값을 출력한다.<br><br>10 4200<br>
 1<br>
@@ -1109,64 +1422,7 @@ backpack()<br>- 같은 key에 추가… 하려면 복잡..
 
 - 그냥 일단 다 돌려보자. 가능한 조합을 다? 시간 절대 안될 것같은데…
 - 
-복사]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/12865.-평범한-배낭.html</link><guid isPermaLink="false">1. Study/Coding Test/12865. 평범한 배낭.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Tue, 05 Mar 2024 06:14:42 GMT</pubDate></item><item><title><![CDATA[15969. 행복]]></title><description><![CDATA[ 
- <br>NAV: <a data-href="1. Study/Coding Test.md" href="https://sunha20.github.io/digital-garden/1. Study/Coding Test" class="internal-link" target="_self" rel="noopener">1. Study/Coding Test.md</a><br><br><br>코이 초등학교에 새로 부임하신 교장 선생님은 어린 학생들의 행복감과 학생들의 성적 차이 관계를 알아보기로 했다. 그래서 이전 성적을 조사하여 학생 들의 시험 점수 차이 변화를 알아보려고 한다.<br>예를 들어서 2016년 학생 8명의 점수가 다음과 같다고 하자.<br>27, 35, 92, 75, 42, 53, 29, 87<br>그러면 가장 높은 점수는 92점이고 가장 낮은 점수는 27점이므로 점수의 최대 차이는 65이다. 한편 2017년 학생 8명의 점수가 다음과 같았다.<br>85, 42, 79, 95, 37, 11, 72, 32<br>이때 가장 높은 점수는 95점이고 가장 낮은 점수는 11점이므로 점수의 최대 차이는 84이다.<br>N명 학생들의 점수가 주어졌을 때, 가장 높은 점수와 가장 낮은 점수의 차이를 구하는 프로그램을 작성하시오<br><br>표준 입력으로 다음 정보가 주어진다. 첫 번째 줄에는 학생 수&nbsp;N이 주어진다. 다음 줄에는&nbsp;N명의 학생 점수가 공백 하나를 사이에 두고 주어진다.<br><br>표준 출력으로 가장 높은 점수와 가장 낮은 점수의 차이를 출력한다.<br><br>모든 서브태스크에서 2 ≤&nbsp;N&nbsp;≤ 1,000이고 입력되는 학생들의 점수는 0 이상 1,000 이하의 정수이다.<br><br>학생 수가 2명인 경우만 존재한다.<br><br>점수가 낮은 점수부터 높은 점수까지 순서대로 주어진다.<br><br>원래의 제약 조건 이외에 아무 제약 조건이 없다.<br><br>5<br>
-27 35 92 75 42<br><br>65<br><br>8<br>
-85 42 79 95 37 11 72 32<br><br>84<br><br><a data-tooltip-position="top" aria-label="https://www.acmicpc.net/category/2" rel="noopener" class="external-link" href="https://www.acmicpc.net/category/2" target="_blank">Olympiad</a>&nbsp;&gt;&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/category/55" rel="noopener" class="external-link" href="https://www.acmicpc.net/category/55" target="_blank">한국정보올림피아드</a>&nbsp;&gt;&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/category/427" rel="noopener" class="external-link" href="https://www.acmicpc.net/category/427" target="_blank">KOI 2018</a>&nbsp;&gt;&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/category/detail/1894" rel="noopener" class="external-link" href="https://www.acmicpc.net/category/detail/1894" target="_blank">초등부</a>&nbsp;1번<br>
-<br>문제의 오타를 찾은 사람:&nbsp;<a data-tooltip-position="top" aria-label="https://www.acmicpc.net/user/jh05013" rel="noopener" class="external-link" href="https://www.acmicpc.net/user/jh05013" target="_blank">jh05013</a>
-<br><br>
-<br><a data-tooltip-position="top" aria-label="https://www.acmicpc.net/problem/tag/124" rel="noopener" class="external-link" href="https://www.acmicpc.net/problem/tag/124" target="_blank">수학</a>
-<br><a data-tooltip-position="top" aria-label="https://www.acmicpc.net/problem/tag/102" rel="noopener" class="external-link" href="https://www.acmicpc.net/problem/tag/102" target="_blank">구현</a>
-<br><a data-tooltip-position="top" aria-label="https://www.acmicpc.net/problem/tag/121" rel="noopener" class="external-link" href="https://www.acmicpc.net/problem/tag/121" target="_blank">사칙연산</a>
-<br><br>
-<br>파이썬의 map(int, 어쩌구.split())을 java에서 사용하고 싶음… → <a data-tooltip-position="top" aria-label="https://velog.io/@suyyeon/JAVA-String-%EB%B0%B0%EC%97%B4%EC%9D%84-int-%EB%B0%B0%EC%97%B4%EB%A1%9C-%EB%B3%80%ED%99%98%ED%95%98%EA%B8%B0" rel="noopener" class="external-link" href="https://velog.io/@suyyeon/JAVA-String-%EB%B0%B0%EC%97%B4%EC%9D%84-int-%EB%B0%B0%EC%97%B4%EB%A1%9C-%EB%B3%80%ED%99%98%ED%95%98%EA%B8%B0" target="_blank">[JAVA] String 배열을 int 배열로 변환하기</a>
-<br>int[] gradeList = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-복사<br><br>import java.io.*;  
-import java.util.Arrays;  
-  
-public class Main {  
-    public void Solution() throws IOException {  
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));  
-        int n = Integer.parseInt(br.readLine());  
-        int[] gradeList = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();  
-        int max = -1;  
-        int min = 1001;  
-        for(int grade: gradeList) {  
-            if (grade &gt; max) {  
-                max = grade;  
-            }  
-            if (grade &lt; min) {  
-                min = grade;  
-            }  
-        }  
-        System.out.println(max-min);  
-        br.close();  
-    }  
-    public static void main(String[] args) throws IOException {  
-        new Main().Solution();  
-    }  
-}
-복사<br>
-<br>이거 parsed int를 각각에서 하면 조금 시간을 줄일 수있지 않을까? → 와안전 조금 주넼ㅋㅋㅋ
-<br>public void Solution2_time() throws IOException {  
-    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));  
-    int n = Integer.parseInt(br.readLine());  
-    String[] gradeList = br.readLine().split(" ");  
-    int max = -1;  
-    int min = 1001;  
-    for(String grade: gradeList) {  
-        int gradeInt = Integer.parseInt(grade);  
-        if (gradeInt &gt; max) {  
-            max = gradeInt;  
-        }  
-        if (gradeInt &lt; min) {  
-            min = gradeInt;  
-        }  
-    }  
-    System.out.println(max-min);  
-    br.close();  
-}
-복사]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/15969.-행복.html</link><guid isPermaLink="false">1. Study/Coding Test/15969. 행복.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Wed, 15 May 2024 01:20:09 GMT</pubDate></item><item><title><![CDATA[개인정보 수집 유효기간]]></title><description><![CDATA[ 
+복사]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/12865.-평범한-배낭.html</link><guid isPermaLink="false">1. Study/Coding Test/12865. 평범한 배낭.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Tue, 05 Mar 2024 06:14:42 GMT</pubDate></item><item><title><![CDATA[개인정보 수집 유효기간]]></title><description><![CDATA[ 
  <br><br>Site: 프로그래머스<br>
 난이도: Lv 1<br>
 다시풀기: No<br>
@@ -4622,15 +4878,7 @@ if __name__ == "__main__":
 복사<br><br>P = list(map(int,sys.stdin.readline().split()))
 복사<br>
 <br>input을 int의 list로 받을 때 깔끔하게 쓰는 법
-]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/atm.html</link><guid isPermaLink="false">1. Study/Coding Test/ATM.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Tue, 27 Feb 2024 12:05:30 GMT</pubDate></item><item><title><![CDATA[BufferedReader]]></title><description><![CDATA[ 
- <br>NAV: <a data-href="1. Study/Coding Test.md" href="https://sunha20.github.io/digital-garden/1. Study/Coding Test" class="internal-link" target="_self" rel="noopener">1. Study/Coding Test.md</a><br><a data-tooltip-position="top" aria-label="https://velog.io/@roycewon/BufferedReader%EB%A5%BC-%EC%95%8C%EA%B3%A0-%EC%93%B0%EC%9E%90" rel="noopener" class="external-link" href="https://velog.io/@roycewon/BufferedReader%EB%A5%BC-%EC%95%8C%EA%B3%A0-%EC%93%B0%EC%9E%90" target="_blank">BufferedReader를 알고 쓰자</a><br>
-<a data-tooltip-position="top" aria-label="https://nullnull.tistory.com/23" rel="noopener" class="external-link" href="https://nullnull.tistory.com/23" target="_blank">JAVA 노드 스트림 &amp; 보조 스트림</a><br>+)<br>
-Java에서 데이터를 읽고 쓰는 방법에는 여러 가지가 있습니다. 그 중에서도&nbsp;Buffer,&nbsp;노드 스트림(Node Stream), 그리고&nbsp;보조 스트림(Auxiliary Stream)에 대해 설명하겠습니다.<br>
-<br><a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank"><strong></strong>: Buffer는 데이터가 전송될 때 일시적으로 저장되는 메모리 영역입니다</a>Buffer<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">1</a>.&nbsp;<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">Buffer는 속도가 빠른 장치에서 들어오는 모든 데이터를 잠시 저장해놓고 버퍼가 꽉 차거나, 특정 커맨드를 입력받았을 때 일괄적으로 내보내고, 버퍼를 초기화시킵니다</a><a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">1</a>.&nbsp;<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">이렇게 하면 속도가 느린 장치에서 일을 여러번 하지 않도록 속도가 빠른 장치에서 미리미리 처리해두고 "버퍼"라는 임시 공간에 보관해두었다가 한번에 넘겨주는 것입니다</a><a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">1</a>.
-<br><a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank"><strong></strong>: 노드 스트림은 스트림의 주축을 이루는 요소입니다</a>노드 스트림(Node Stream)<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">1</a>.&nbsp;<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">노드 스트림은 데이터 타입 (Char 또는 Byte), 방향 (Input 또는 Output), 노드 타입 (File 또는 키보드 등등)에 따라 결정됩니다</a><a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">1</a>.
-<br><a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank"><strong></strong>: 보조 스트림은 노드 스트림을 통해 들어오거나, 나가는 데이터를 처리하는 것을 도와주는 일종의 플러그인입니다</a>보조 스트림(Auxiliary Stream)<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">1</a>.&nbsp;<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">보조 스트림은 노드 스트림에 연결되어 기능을 추가하거나 향상시킵니다</a><a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">1</a>.&nbsp;<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">예를 들어,&nbsp;<code></code>와&nbsp;<code></code>은 보조 스트림의 예로, 이들은 노드 스트림에 버퍼링 기능을 추가하여 입출력 효율을 높입니다</a>BufferedReaderBufferedInputStream<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">1</a><a data-tooltip-position="top" aria-label="https://velog.io/@roycewon/BufferedReader%EB%A5%BC-%EC%95%8C%EA%B3%A0-%EC%93%B0%EC%9E%90" rel="noopener" class="external-link" href="https://velog.io/@roycewon/BufferedReader%EB%A5%BC-%EC%95%8C%EA%B3%A0-%EC%93%B0%EC%9E%90" target="_blank">2</a>.
-<br>이 세 가지 개념은 Java의 입출력 시스템을 이해하는 데 중요한 역할을 합니다. 이해가 되셨나요? 추가적인 질문이 있으시면 언제든지 물어보세요! 😊<br>Scanner&nbsp;클래스는 Java에서 제공하는&nbsp;보조 스트림(Auxiliary Stream)&nbsp;중 하나입니다.&nbsp;Scanner는 기본적으로 입력 스트림을 받아서 다양한 타입의 데이터를 읽을 수 있는 메소드를 제공합니다. 이는&nbsp;InputStream,&nbsp;File,&nbsp;String&nbsp;등 다양한 소스로부터 데이터를 읽을 수 있게 해주는 기능을 추가하는 역할을 하므로, 보조 스트림에 속합니다. 이해가 되셨나요? 추가적인 질문이 있으시면 언제든지 물어보세요! 😊<br>InputStreamReader는 Java에서 제공하는&nbsp;노드 스트림(Node Stream)&nbsp;중 하나입니다.&nbsp;InputStreamReader는 바이트 스트림을 문자 스트림으로 변환하는 데 사용됩니다. 이 클래스는&nbsp;System.in과 같은&nbsp;InputStream을&nbsp;Reader로 변환하여, 문자 단위로 읽을 수 있게 해줍니다. 따라서,&nbsp;InputStreamReader는 데이터의 원본(노드)에서 직접 데이터를 읽어오는 역할을 하므로 노드 스트림에 속합니다. 이해가 되셨나요? 추가적인 질문이 있으시면 언제든지 물어보세요! 😊<br>System.in과 같은&nbsp;InputStream은 Java에서 제공하는&nbsp;노드 스트림(Node Stream)&nbsp;중 하나입니다.&nbsp;InputStream은 바이트 단위로 데이터를 읽어오는 스트림입니다. 이는 데이터의 원본(노드)에서 직접 데이터를 읽어오는 역할을 하므로 노드 스트림에 속합니다.&nbsp;System.in은 표준 입력 스트림으로, 주로 키보드 입력을 받기 위해 사용됩니다. 이해가 되셨나요? 추가적인 질문이 있으시면 언제든지 물어보세요! 😊<br>+) <a data-tooltip-position="top" aria-label="https://www.acmicpc.net/board/view/9744" rel="noopener" class="external-link" href="https://www.acmicpc.net/board/view/9744" target="_blank">글 읽기 - BufferedReader를 어떻게 사용해야 할지 모르겠습니다.</a><br>
-일반적으로 BufferedReader 를 통해 입력받을때 유의하셔야 할 점이 몇가지 있습니다.&nbsp;<br>1. 기본적으로 BufferedReader는 한 줄을 통째로 입력받는 방법으로 주로 쓰입니다.<br>2. readLine() 메서드는 값을 읽어올 때, String값으로 개행문자(엔터값)를 포함해&nbsp;한줄을 전부 읽어오는 방식입니다.<br>&nbsp;- 비슷한 예로 Scanner메서드 중 nextLine()도 스트링 값과 개행문자(엔터값)을 같이 읽어옵니다.(반면 next()는 개행문자는 제외하고 스트링 값만 읽어옵니다.)<br>&nbsp;- 예제의 입력 예제를 보면 각 문장이 모두 개행문자(엔터)로 구별되있는것을 확인하실 수 있습니다. 따라서 이 문제에서&nbsp;개행문자를 입력받는것은 필수입니다!<br>3. read() 메서드는 값을 읽어올 때, int값으로 변형하여 읽어오는 방식입니다.&nbsp;<br>&nbsp;- 예를들어 input.txt에 저장된&nbsp;1이라는 숫자를 read()를 통해 읽어오면&nbsp;&nbsp;int형 숫자 1을 읽어오는 것이 아닌, txt형식으로 저장된 ASCII 형식의 문자값 '1'을 읽어오는 것이므로 결국 int값으론 49를 읽어오는 것이 됩니다.&nbsp;<br>&nbsp;- 이를 해결하려면&nbsp;int a = br.read() - 48; br.readLine();&nbsp;을 하여 ASCII 값에서 뻴셈을 이용한 뒤&nbsp;엔터 값을 읽어오거나,&nbsp;int a = Integer.parseInt(br.readLine());&nbsp;를 통해 엔터값을 포함해 한줄을 통째로 입력받은 뒤 해당 스트링값을 int로 형변환 해주는 방법이 있습니다. (저같은 경우에는 주로 후자의 방법을 사용합니다)]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/bufferedreader.html</link><guid isPermaLink="false">1. Study/Coding Test/BufferedReader.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Wed, 15 May 2024 00:33:11 GMT</pubDate></item><item><title><![CDATA[DNA]]></title><description><![CDATA[ 
+]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/atm.html</link><guid isPermaLink="false">1. Study/Coding Test/ATM.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Tue, 27 Feb 2024 12:05:30 GMT</pubDate></item><item><title><![CDATA[DNA]]></title><description><![CDATA[ 
  <br><br>ID: 1969<br>
 Site: 백준<br>
 URL: <a rel="noopener" class="external-link" href="https://www.acmicpc.net/problem/1969" target="_blank">https://www.acmicpc.net/problem/1969</a><br>
@@ -4837,8 +5085,7 @@ URL: <a rel="noopener" class="external-link" href="https://www.acmicpc.net/blog/
 <br>아니요,&nbsp;queue.Queue도 안 됩니다. 이건 멀티스레딩을 위해 만들어진 큐이고 매우 느립니다.
 <br>파이썬의 재귀 깊이는 기본적으로 최대 1,000입니다.&nbsp;sys.setrecursionlimit으로 이 깊이를 조절할 수 있습니다.
 <br>두 개의 int를 나누면 float이 됩니다.&nbsp;int(a/b)&nbsp;말고&nbsp;a//b를 쓰는 것이 훨씬 안전합니다.&nbsp;맨 위의 "부동소수점 자료형은 나타내는 수의 범위가 넓지만 ..."을 읽어보세요.
-]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/help-python과-pypy.html</link><guid isPermaLink="false">1. Study/Coding Test/Help Python과 Pypy.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Tue, 14 May 2024 05:27:11 GMT</pubDate></item><item><title><![CDATA[java 기본]]></title><description><![CDATA[ 
- <br>NAV: <a data-href="1. Study/Coding Test.md" href="https://sunha20.github.io/digital-garden/1. Study/Coding Test" class="internal-link" target="_self" rel="noopener">1. Study/Coding Test.md</a><br><a data-tooltip-position="top" aria-label="https://nahwasa.com/entry/%EC%9E%90%EB%B0%94%EB%A1%9C-%EB%B0%B1%EC%A4%80-%ED%92%80-%EB%95%8C%EC%9D%98-%ED%8C%81-%EB%B0%8F-%EC%A3%BC%EC%9D%98%EC%A0%90-boj-java" rel="noopener" class="external-link" href="https://nahwasa.com/entry/%EC%9E%90%EB%B0%94%EB%A1%9C-%EB%B0%B1%EC%A4%80-%ED%92%80-%EB%95%8C%EC%9D%98-%ED%8C%81-%EB%B0%8F-%EC%A3%BC%EC%9D%98%EC%A0%90-boj-java" target="_blank">자바로 백준 풀 때의 팁 및 주의점 (boj java) - Nahwasa</a>]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/java-기본.html</link><guid isPermaLink="false">1. Study/Coding Test/java 기본.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Tue, 14 May 2024 05:29:41 GMT</pubDate></item><item><title><![CDATA[N과 M(1)]]></title><description><![CDATA[ 
+]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/help-python과-pypy.html</link><guid isPermaLink="false">1. Study/Coding Test/Help Python과 Pypy.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Tue, 14 May 2024 05:27:11 GMT</pubDate></item><item><title><![CDATA[N과 M(1)]]></title><description><![CDATA[ 
  <br><br>ID: 15649<br>
 Site: 백준<br>
 URL: <a rel="noopener" class="external-link" href="https://www.acmicpc.net/problem/15649" target="_blank">https://www.acmicpc.net/problem/15649</a><br>
@@ -4952,83 +5199,4 @@ print(li)
 복사<br>
 <br>나는 for문 밖에서 pop을 하니까, 길이가 0일때 생기는 문제가 있었는데, 그냥 (전단계, 레벨로) 돌아와서 바로 pop하면 되는구나..
 <br>그리고 프린트 한번에 하기.
-]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/n과-m(1).html</link><guid isPermaLink="false">1. Study/Coding Test/N과 M(1).md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Tue, 27 Feb 2024 12:05:30 GMT</pubDate></item><item><title><![CDATA[new]]></title><description><![CDATA[ 
- <br>NAV: <a data-href="1. Study/Coding Test.md" href="https://sunha20.github.io/digital-garden/1. Study/Coding Test" class="internal-link" target="_self" rel="noopener">1. Study/Coding Test.md</a><br><br>전화번호부에 적힌 전화번호 중, 한 번호가 다른 번호의 접두어인 경우가 있는지 확인하려 합니다.<br>
-전화번호가 다음과 같을 경우, 구조대 전화번호는 영석이의 전화번호의 접두사입니다.<br>
-<br>구조대 : 119
-<br>박준영 : 97 674 223
-<br>지영석 : 11 9552 4421
-<br>전화번호부에 적힌 전화번호를 담은 배열 phone_book 이 solution 함수의 매개변수로 주어질 때, 어떤 번호가 다른 번호의 접두어인 경우가 있으면 false를 그렇지 않으면 true를 return 하도록 solution 함수를 작성해주세요.<br><br>
-<br>phone_book의 길이는 1 이상 1,000,000 이하입니다.
-
-<br>각 전화번호의 길이는 1 이상 20 이하입니다.
-<br>같은 전화번호가 중복해서 들어있지 않습니다.
-
-
-<br><br><br><br>입출력 예 #1<br>
-앞에서 설명한 예와 같습니다.<br>입출력 예 #2<br>
-한 번호가 다른 번호의 접두사인 경우가 없으므로, 답은 true입니다.<br>입출력 예 #3<br>
-첫 번째 전화번호, “12”가 두 번째 전화번호 “123”의 접두사입니다. 따라서 답은 false입니다.<br><br>
-<br>
-우와 이걸 어떻게 해시로하지?
-
-<br>
-length만큼 비교하면 안됨?
-
-<br>
-근데 기준점이 없으니까 문제.
-
-<br>
-아 그냥 start with…?
-
-<br>
-제이 짧은 길이 기준으로 (2면) 2만큼 해시, 3만큼 해시, 4만큼 해시, 쭉쭉해서 같은 거 나오면 false 출력
-
-<br>
-오 sort를 할 수도…?
-
-<br>import java.util.Arrays;  
-  
-public class _42577p {  
-    public boolean solution1(String[] phone_book) {  
-        int len = 0;  
-        int cnt = 0;  
-        Arrays.sort(phone_book);  
-  
-        for (String a_phoneNum : phone_book) {  
-            for (String b_phoneNum: phone_book) {  
-                if (b_phoneNum.length() &gt; a_phoneNum.length() &amp;&amp; b_phoneNum.startsWith(a_phoneNum))  
-                    return false;  
-            }  
-        };  
-        return true;  
-    }  
-}
-복사<br>
-<br>효율성 테스트 3,4번 막힘.
-<br>아 헐 이게 string으로 sort하면 앞에서 부터 체크해서 사전식 배열이니까, start with 하는게 있으면 바로 뒤겠구나… 와 헐.
-
-<br>접두어 = 정렬 하면 붙어있음.
-
-
-<br>import java.util.Arrays;  
-  
-public class _42577p {  
-    public boolean solution1(String[] phone_book) {  
-        Arrays.sort(phone_book);  
-        System.out.println(Arrays.toString(phone_book));  
-        for (int i=0; i&lt;phone_book.length-1; i++) {  
-            if (phone_book[i+1].startsWith(phone_book[i])) {  
-                return false;  
-            }  
-        };  
-        return true;  
-    }  
-}
-복사<br><br>
-<br>hash를 쓰는 방법
-
-<br>저는 key 에 전화번호 넣고   썻어요 → TIL에 써보기.
-
-
-]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/new.html</link><guid isPermaLink="false">1. Study/Coding Test/new.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Mon, 20 May 2024 13:43:17 GMT</pubDate></item></channel></rss>
+]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/n과-m(1).html</link><guid isPermaLink="false">1. Study/Coding Test/N과 M(1).md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Tue, 27 Feb 2024 12:05:30 GMT</pubDate></item></channel></rss>
