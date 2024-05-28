@@ -1,4 +1,82 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Obsidian]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://sunha20.github.io/digital-garden/</link><image><url>https://sunha20.github.io/digital-garden/lib/media/favicon.png</url><title>Obsidian</title><link>https://sunha20.github.io/digital-garden/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 27 May 2024 10:39:06 GMT</lastBuildDate><atom:link href="https://sunha20.github.io/digital-garden/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 27 May 2024 10:38:49 GMT</pubDate><copyright><![CDATA[seonha20]]></copyright><ttl>60</ttl><dc:creator>seonha20</dc:creator><item><title><![CDATA[1로 만들기]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Obsidian]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://sunha20.github.io/digital-garden/</link><image><url>https://sunha20.github.io/digital-garden/lib/media/favicon.png</url><title>Obsidian</title><link>https://sunha20.github.io/digital-garden/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 28 May 2024 05:40:16 GMT</lastBuildDate><atom:link href="https://sunha20.github.io/digital-garden/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 28 May 2024 05:40:14 GMT</pubDate><copyright><![CDATA[seonha20]]></copyright><ttl>60</ttl><dc:creator>seonha20</dc:creator><item><title><![CDATA[42747. H-Index]]></title><description><![CDATA[ 
+ <br>
+<br>NAV: <a data-tooltip-position="top" aria-label="1. Study/Coding Test/Coding Test.md" data-href="1. Study/Coding Test/Coding Test.md" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html" class="internal-link" target="_self" rel="noopener">Coding Test</a>
+<br>Date: 2024-04-20<br>Link: <a rel="noopener" class="external-link" href="https://school.programmers.co.kr/learn/courses/30/lessons/42747" target="_blank">https://school.programmers.co.kr/learn/courses/30/lessons/42747</a><br>Level: lv2<br>Category: <a data-href="Sort" href="https://sunha20.github.io/digital-garden/Sort" class="internal-link" target="_self" rel="noopener">Sort</a><br>Success: <br>Git: -<br><br>H-Index는 과학자의 생산성과 영향력을 나타내는 지표입니다. 어느 과학자의 H-Index를 나타내는 값인 h를 구하려고 합니다. 위키백과<a data-tooltip-position="top" aria-label="https://school.programmers.co.kr/learn/courses/30/lessons/42747#fn1" rel="noopener" class="external-link" href="https://school.programmers.co.kr/learn/courses/30/lessons/42747#fn1" target="_blank">1</a>에 따르면, H-Index는 다음과 같이 구합니다.<br>어떤 과학자가 발표한 논문&nbsp;n편 중,&nbsp;h번 이상 인용된 논문이&nbsp;h편 이상이고 나머지 논문이 h번 이하 인용되었다면&nbsp;h의 최댓값이 이 과학자의 H-Index입니다.<br>어떤 과학자가 발표한 논문의 인용 횟수를 담은 배열 citations가 매개변수로 주어질 때, 이 과학자의 H-Index를 return 하도록 solution 함수를 작성해주세요.<br><br>
+<br>과학자가 발표한 논문의 수는 1편 이상 1,000편 이하입니다.
+<br>논문별 인용 횟수는 0회 이상 10,000회 이하입니다.
+<br><br><br><br>이 과학자가 발표한 논문의 수는 5편이고, 그중 3편의 논문은 3회 이상 인용되었습니다. 그리고 나머지 2편의 논문은 3회 이하 인용되었기 때문에 이 과학자의 H-Index는 3입니다.<br><br>힌트가 필요한가요? [코딩테스트 연습 힌트 모음집]으로 오세요! →&nbsp;<a data-tooltip-position="top" aria-label="https://school.programmers.co.kr/learn/courses/14743?itm_content=lesson42747" rel="noopener" class="external-link" href="https://school.programmers.co.kr/learn/courses/14743?itm_content=lesson42747" target="_blank">클릭</a><br>※ 공지 - 2019년 2월 28일 테스트 케이스가 추가되었습니다.<br><br><br>
+<br>Arrays.sort(citations, Collections.reverseOrder()); 사용 불가 primitive type이라 comparator가 없음.
+<br>Arrays.sort() vs Collections.sort()
+
+<br><a data-tooltip-position="top" aria-label="https://velog.io/@minizero0/Arrays.sort%EC%99%80-Collections.sort" rel="noopener" class="external-link" href="https://velog.io/@minizero0/Arrays.sort%EC%99%80-Collections.sort" target="_blank">Arrays.sort()와 Collections.sort()</a>
+
+
+]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/42747.-h-index.html</link><guid isPermaLink="false">1. Study/Coding Test/42747. H-Index.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Mon, 27 May 2024 12:57:38 GMT</pubDate></item><item><title><![CDATA[42842. 카펫]]></title><description><![CDATA[ 
+ <br>
+<br>NAV: <a data-tooltip-position="top" aria-label="1. Study/Coding Test/Coding Test.md" data-href="1. Study/Coding Test/Coding Test.md" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html" class="internal-link" target="_self" rel="noopener">Coding Test</a>
+<br>Date: 2024-04-20<br>Link: <a rel="noopener" class="external-link" href="https://school.programmers.co.kr/learn/courses/30/lessons/42842" target="_blank">https://school.programmers.co.kr/learn/courses/30/lessons/42842</a><br>Level: lv2<br>Category: <a data-href="Search" href="https://sunha20.github.io/digital-garden/Search" class="internal-link" target="_self" rel="noopener">Search</a><br>Success: ⭕<br>Git: -<br><br><br>Leo는 카펫을 사러 갔다가 아래 그림과 같이 중앙에는 노란색으로 칠해져 있고 테두리 1줄은 갈색으로 칠해져 있는 격자 모양 카펫을 봤습니다.<br><img alt="carpet.png" src="https://grepp-programmers.s3.ap-northeast-2.amazonaws.com/files/production/b1ebb809-f333-4df2-bc81-02682900dc2d/carpet.png" referrerpolicy="no-referrer"><br>Leo는 집으로 돌아와서 아까 본 카펫의 노란색과 갈색으로 색칠된 격자의 개수는 기억했지만, 전체 카펫의 크기는 기억하지 못했습니다.<br>Leo가 본 카펫에서 갈색 격자의 수 brown, 노란색 격자의 수 yellow가 매개변수로 주어질 때 카펫의 가로, 세로 크기를 순서대로 배열에 담아 return 하도록 solution 함수를 작성해주세요.<br><br>
+<br>갈색 격자의 수 brown은 8 이상 5,000 이하인 자연수입니다.
+<br>노란색 격자의 수 yellow는 1 이상 2,000,000 이하인 자연수입니다.
+<br>카펫의 가로 길이는 세로 길이와 같거나, 세로 길이보다 깁니다.
+<br><br><br><br><br>BBBBB<br>
+BYYYB<br>
+BBBBB<br>BBBB<br>
+BYYB<br>
+BYYB<br>
+BBBB<br>Y가 홀수 -&gt; 홀수 * 홀수<br>
+<br>
+이게 왜 완전 탐색이지? → 잘못생각하고 있었음 탐색하면 tree 탐색밖에 생각이 안나서….
+
+<br>완전탐색 참고: <a data-tooltip-position="top" aria-label="https://velog.io/@hyehyes/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%99%84%EC%A0%84%ED%83%90%EC%83%89" rel="noopener" class="external-link" href="https://velog.io/@hyehyes/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%99%84%EC%A0%84%ED%83%90%EC%83%89" target="_blank">[알고리즘] 완전탐색</a>
+
+
+<br>
+최소 세로길이 = 1 (꼭지점 제외)에서부터 하나씩 늘려가면서 탐색
+
+<br>가로길이는 하나씩 줄여감.
+<br>안에 들어갈 수 있는 블록개수와 주어진 yellow 개수를 비교에서 같으면 return.
+
+
+<br>import java.util.*;
+class Solution {
+    public int[] solution(int brown, int yellow) {
+        int h = 1; 
+        int w = brown/2 - h;
+        int generateY = 0;
+        while (h &lt;= w) {
+            generateY = h * (w-2);
+            if (generateY == yellow) break;
+            h += 1;
+            w -= 1;               
+        }
+        
+        int[] answer = {w, h+2};
+        return answer;
+    }
+}
+복사]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/42842.-카펫.html</link><guid isPermaLink="false">1. Study/Coding Test/42842. 카펫.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Tue, 28 May 2024 02:43:16 GMT</pubDate><enclosure url="https://grepp-programmers.s3.ap-northeast-2.amazonaws.com/files/production/b1ebb809-f333-4df2-bc81-02682900dc2d/carpet.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://grepp-programmers.s3.ap-northeast-2.amazonaws.com/files/production/b1ebb809-f333-4df2-bc81-02682900dc2d/carpet.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[84512. 모음사전]]></title><description><![CDATA[ 
+ <br>
+<br>NAV: <a data-tooltip-position="top" aria-label="1. Study/Coding Test/Coding Test.md" data-href="1. Study/Coding Test/Coding Test.md" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html" class="internal-link" target="_self" rel="noopener">Coding Test</a>
+<br>Date: 2024-04-20<br>Link: <a rel="noopener" class="external-link" href="https://school.programmers.co.kr/learn/courses/30/lessons/84512" target="_blank">https://school.programmers.co.kr/learn/courses/30/lessons/84512</a><br>Level: lv2<br>Category: <a data-href="Search" href="https://sunha20.github.io/digital-garden/Search" class="internal-link" target="_self" rel="noopener">Search</a><br>Success: <br>Git: -<br><br><br>사전에 알파벳 모음 'A', 'E', 'I', 'O', 'U'만을 사용하여 만들 수 있는, 길이 5 이하의 모든 단어가 수록되어 있습니다. 사전에서 첫 번째 단어는 "A"이고, 그다음은 "AA"이며, 마지막 단어는 "UUUUU"입니다.<br>단어 하나 word가 매개변수로 주어질 때, 이 단어가 사전에서 몇 번째 단어인지 return 하도록 solution 함수를 완성해주세요.<br><br>
+<br>word의 길이는 1 이상 5 이하입니다.
+<br>word는 알파벳 대문자 'A', 'E', 'I', 'O', 'U'로만 이루어져 있습니다.
+<br><br><br><br><br>입출력 예 #1<br>사전에서 첫 번째 단어는 "A"이고, 그다음은 "AA", "AAA", "AAAA", "AAAAA", "AAAAE", ... 와 같습니다. "AAAAE"는 사전에서 6번째 단어입니다.<br>입출력 예 #2<br>"AAAE"는 "A", "AA", "AAA", "AAAA", "AAAAA", "AAAAE", "AAAAI", "AAAAO", "AAAAU"의 다음인 10번째 단어입니다.<br>입출력 예 #3<br>"I"는 1563번째 단어입니다.<br>입출력 예 #4<br>"EIO"는 1189번째 단어입니다.<br><br>
+<br>
+만들고 탐색하거나….
+
+<br>
+이건 tree인데… 깊이 우선 탐색<br>
+tree<br>
+root<br>
+a e i o u<br>
+a e i o u<br>
+…
+
+<br>
+근데 다 탐색 안하고 level 별로 자식 개수가 정해져 있으니까, 그냥 그거 더하면 안되나?
+
+]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/84512.-모음사전.html</link><guid isPermaLink="false">1. Study/Coding Test/84512. 모음사전.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Tue, 28 May 2024 02:50:31 GMT</pubDate></item><item><title><![CDATA[Coding Test]]></title><description><![CDATA[ 
+ ]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html</link><guid isPermaLink="false">1. Study/Coding Test/Coding Test.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Tue, 28 May 2024 05:07:47 GMT</pubDate></item><item><title><![CDATA[1로 만들기]]></title><description><![CDATA[ 
  <br><br>ID: 1463<br>
 Site: 백준<br>
 URL: <a rel="noopener" class="external-link" href="https://www.acmicpc.net/problem/1463" target="_blank">https://www.acmicpc.net/problem/1463</a><br>
@@ -4886,9 +4964,7 @@ Java에서 데이터를 읽고 쓰는 방법에는 여러 가지가 있습니다
 <br><a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank"><strong></strong>: 노드 스트림은 스트림의 주축을 이루는 요소입니다</a>노드 스트림(Node Stream)<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">1</a>.&nbsp;<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">노드 스트림은 데이터 타입 (Char 또는 Byte), 방향 (Input 또는 Output), 노드 타입 (File 또는 키보드 등등)에 따라 결정됩니다</a><a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">1</a>.
 <br><a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank"><strong></strong>: 보조 스트림은 노드 스트림을 통해 들어오거나, 나가는 데이터를 처리하는 것을 도와주는 일종의 플러그인입니다</a>보조 스트림(Auxiliary Stream)<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">1</a>.&nbsp;<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">보조 스트림은 노드 스트림에 연결되어 기능을 추가하거나 향상시킵니다</a><a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">1</a>.&nbsp;<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">예를 들어,&nbsp;<code></code>와&nbsp;<code></code>은 보조 스트림의 예로, 이들은 노드 스트림에 버퍼링 기능을 추가하여 입출력 효율을 높입니다</a>BufferedReaderBufferedInputStream<a data-tooltip-position="top" aria-label="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" rel="noopener" class="external-link" href="https://velog.io/@kkimbj18/%EB%B2%84%ED%8D%BC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-Feat.-BufferedReader-vs-Scanner-cache" target="_blank">1</a><a data-tooltip-position="top" aria-label="https://velog.io/@roycewon/BufferedReader%EB%A5%BC-%EC%95%8C%EA%B3%A0-%EC%93%B0%EC%9E%90" rel="noopener" class="external-link" href="https://velog.io/@roycewon/BufferedReader%EB%A5%BC-%EC%95%8C%EA%B3%A0-%EC%93%B0%EC%9E%90" target="_blank">2</a>.
 <br>이 세 가지 개념은 Java의 입출력 시스템을 이해하는 데 중요한 역할을 합니다. 이해가 되셨나요? 추가적인 질문이 있으시면 언제든지 물어보세요! 😊<br>Scanner&nbsp;클래스는 Java에서 제공하는&nbsp;보조 스트림(Auxiliary Stream)&nbsp;중 하나입니다.&nbsp;Scanner는 기본적으로 입력 스트림을 받아서 다양한 타입의 데이터를 읽을 수 있는 메소드를 제공합니다. 이는&nbsp;InputStream,&nbsp;File,&nbsp;String&nbsp;등 다양한 소스로부터 데이터를 읽을 수 있게 해주는 기능을 추가하는 역할을 하므로, 보조 스트림에 속합니다. 이해가 되셨나요? 추가적인 질문이 있으시면 언제든지 물어보세요! 😊<br>InputStreamReader는 Java에서 제공하는&nbsp;노드 스트림(Node Stream)&nbsp;중 하나입니다.&nbsp;InputStreamReader는 바이트 스트림을 문자 스트림으로 변환하는 데 사용됩니다. 이 클래스는&nbsp;System.in과 같은&nbsp;InputStream을&nbsp;Reader로 변환하여, 문자 단위로 읽을 수 있게 해줍니다. 따라서,&nbsp;InputStreamReader는 데이터의 원본(노드)에서 직접 데이터를 읽어오는 역할을 하므로 노드 스트림에 속합니다. 이해가 되셨나요? 추가적인 질문이 있으시면 언제든지 물어보세요! 😊<br>System.in과 같은&nbsp;InputStream은 Java에서 제공하는&nbsp;노드 스트림(Node Stream)&nbsp;중 하나입니다.&nbsp;InputStream은 바이트 단위로 데이터를 읽어오는 스트림입니다. 이는 데이터의 원본(노드)에서 직접 데이터를 읽어오는 역할을 하므로 노드 스트림에 속합니다.&nbsp;System.in은 표준 입력 스트림으로, 주로 키보드 입력을 받기 위해 사용됩니다. 이해가 되셨나요? 추가적인 질문이 있으시면 언제든지 물어보세요! 😊<br>+) <a data-tooltip-position="top" aria-label="https://www.acmicpc.net/board/view/9744" rel="noopener" class="external-link" href="https://www.acmicpc.net/board/view/9744" target="_blank">글 읽기 - BufferedReader를 어떻게 사용해야 할지 모르겠습니다.</a><br>
-일반적으로 BufferedReader 를 통해 입력받을때 유의하셔야 할 점이 몇가지 있습니다.&nbsp;<br>1. 기본적으로 BufferedReader는 한 줄을 통째로 입력받는 방법으로 주로 쓰입니다.<br>2. readLine() 메서드는 값을 읽어올 때, String값으로 개행문자(엔터값)를 포함해&nbsp;한줄을 전부 읽어오는 방식입니다.<br>&nbsp;- 비슷한 예로 Scanner메서드 중 nextLine()도 스트링 값과 개행문자(엔터값)을 같이 읽어옵니다.(반면 next()는 개행문자는 제외하고 스트링 값만 읽어옵니다.)<br>&nbsp;- 예제의 입력 예제를 보면 각 문장이 모두 개행문자(엔터)로 구별되있는것을 확인하실 수 있습니다. 따라서 이 문제에서&nbsp;개행문자를 입력받는것은 필수입니다!<br>3. read() 메서드는 값을 읽어올 때, int값으로 변형하여 읽어오는 방식입니다.&nbsp;<br>&nbsp;- 예를들어 input.txt에 저장된&nbsp;1이라는 숫자를 read()를 통해 읽어오면&nbsp;&nbsp;int형 숫자 1을 읽어오는 것이 아닌, txt형식으로 저장된 ASCII 형식의 문자값 '1'을 읽어오는 것이므로 결국 int값으론 49를 읽어오는 것이 됩니다.&nbsp;<br>&nbsp;- 이를 해결하려면&nbsp;int a = br.read() - 48; br.readLine();&nbsp;을 하여 ASCII 값에서 뻴셈을 이용한 뒤&nbsp;엔터 값을 읽어오거나,&nbsp;int a = Integer.parseInt(br.readLine());&nbsp;를 통해 엔터값을 포함해 한줄을 통째로 입력받은 뒤 해당 스트링값을 int로 형변환 해주는 방법이 있습니다. (저같은 경우에는 주로 후자의 방법을 사용합니다)]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/bufferedreader.html</link><guid isPermaLink="false">1. Study/Coding Test/BufferedReader.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Sat, 25 May 2024 15:32:56 GMT</pubDate></item><item><title><![CDATA[Coding Test]]></title><description><![CDATA[ 
- <br><br><a data-tooltip-position="top" aria-label="1. Study/Coding Test/new file.md" data-href="1. Study/Coding Test/new file.md" href="https://sunha20.github.io/digital-garden/1. Study/Coding Test/new file" class="internal-link" target="_self" rel="noopener">new file</a>   |   <a data-tooltip-position="top" aria-label="1. Study/Coding Test/new folder/new folder.md" data-href="1. Study/Coding Test/new folder/new folder.md" href="https://sunha20.github.io/digital-garden/1. Study/Coding Test/new folder/new folder" class="internal-link" target="_self" rel="noopener">new folder</a><br><br><br>
-]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html</link><guid isPermaLink="false">1. Study/Coding Test/Coding Test.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Sun, 26 May 2024 10:58:24 GMT</pubDate></item><item><title><![CDATA[DNA]]></title><description><![CDATA[ 
+일반적으로 BufferedReader 를 통해 입력받을때 유의하셔야 할 점이 몇가지 있습니다.&nbsp;<br>1. 기본적으로 BufferedReader는 한 줄을 통째로 입력받는 방법으로 주로 쓰입니다.<br>2. readLine() 메서드는 값을 읽어올 때, String값으로 개행문자(엔터값)를 포함해&nbsp;한줄을 전부 읽어오는 방식입니다.<br>&nbsp;- 비슷한 예로 Scanner메서드 중 nextLine()도 스트링 값과 개행문자(엔터값)을 같이 읽어옵니다.(반면 next()는 개행문자는 제외하고 스트링 값만 읽어옵니다.)<br>&nbsp;- 예제의 입력 예제를 보면 각 문장이 모두 개행문자(엔터)로 구별되있는것을 확인하실 수 있습니다. 따라서 이 문제에서&nbsp;개행문자를 입력받는것은 필수입니다!<br>3. read() 메서드는 값을 읽어올 때, int값으로 변형하여 읽어오는 방식입니다.&nbsp;<br>&nbsp;- 예를들어 input.txt에 저장된&nbsp;1이라는 숫자를 read()를 통해 읽어오면&nbsp;&nbsp;int형 숫자 1을 읽어오는 것이 아닌, txt형식으로 저장된 ASCII 형식의 문자값 '1'을 읽어오는 것이므로 결국 int값으론 49를 읽어오는 것이 됩니다.&nbsp;<br>&nbsp;- 이를 해결하려면&nbsp;int a = br.read() - 48; br.readLine();&nbsp;을 하여 ASCII 값에서 뻴셈을 이용한 뒤&nbsp;엔터 값을 읽어오거나,&nbsp;int a = Integer.parseInt(br.readLine());&nbsp;를 통해 엔터값을 포함해 한줄을 통째로 입력받은 뒤 해당 스트링값을 int로 형변환 해주는 방법이 있습니다. (저같은 경우에는 주로 후자의 방법을 사용합니다)]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/bufferedreader.html</link><guid isPermaLink="false">1. Study/Coding Test/BufferedReader.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Sat, 25 May 2024 15:32:56 GMT</pubDate></item><item><title><![CDATA[DNA]]></title><description><![CDATA[ 
  <br><br>ID: 1969<br>
 Site: 백준<br>
 URL: <a rel="noopener" class="external-link" href="https://www.acmicpc.net/problem/1969" target="_blank">https://www.acmicpc.net/problem/1969</a><br>
@@ -5289,238 +5365,5 @@ public class _42577p {
 <br>저는 key 에 전화번호 넣고   썻어요 → TIL에 써보기.
 
 
-]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/new.html</link><guid isPermaLink="false">1. Study/Coding Test/new.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Sat, 25 May 2024 15:36:53 GMT</pubDate></item><item><title><![CDATA[OBSIDIAN INDEX NOTE 자동화]]></title><description><![CDATA[ 
- <br><br>
-<br>Index note: 해당 폴더의 하위 폴더와 파일에 대한 navigation 기능을 하는 note
-<br>예시 페이지2401 컴퓨터아키텍쳐<br><br>
-<br>NAV: <a data-tooltip-position="top" aria-label="1. Study/2401 컴퓨터아키텍쳐/2401 컴퓨터아키텍쳐.md" data-href="1. Study/2401 컴퓨터아키텍쳐/2401 컴퓨터아키텍쳐.md" href="https://sunha20.github.io/digital-garden/1.-study/2401-컴퓨터아키텍쳐/2401-컴퓨터아키텍쳐.html" class="internal-link" target="_self" rel="noopener">2401 컴퓨터아키텍쳐</a>
-<br>keys: <br>tags<br>File<br>Record<br><br><a data-tooltip-position="top" aria-label="1. Study/2401 컴퓨터아키텍쳐/new file.md" data-href="1. Study/2401 컴퓨터아키텍쳐/new file.md" href="https://sunha20.github.io/digital-garden/1. Study/2401 컴퓨터아키텍쳐/new file" class="internal-link is-unresolved" target="_self" rel="noopener">new file</a>   |   <a data-tooltip-position="top" aria-label="1. Study/2401 컴퓨터아키텍쳐/new folder/new folder.md" data-href="1. Study/2401 컴퓨터아키텍쳐/new folder/new folder.md" href="https://sunha20.github.io/digital-garden/1. Study/2401 컴퓨터아키텍쳐/new folder/new folder" class="internal-link is-unresolved" target="_self" rel="noopener">new folder</a><br><br>
-<br><br>(더 중요한 기능을 위로 정렬)<br>
-<br>index 자동 생성
-<br>index 자동 업데이트
-<br>graph view에 index note와 참조된 노트에 대한 link 표시 (markdown형식으로 노트 참조가 표시되어야함)
-<br>노트 정보(property) 표시
-<br>보기에 지저분 하지 않은 디자인 (ex. table)
-<br>새 노트 / 새 폴더 추가 버튼
-<br><br>
-<br>folder note: 해당 폴더에 대한 정보를 담은 index note이기 때문에, 자동으로 folder note를 만들어주고, 접근하기 편하게 하는 해당 플러그인 사용.
-<br><a data-tooltip-position="top" aria-label="OBSIDIAN INDEX NOTE 자동화 > 원하는 기능" data-href="OBSIDIAN INDEX NOTE 자동화#원하는 기능" href="https://sunha20.github.io/digital-garden/1.-study/project/obsidian-index-note-자동화.html#원하는_기능" class="internal-link" target="_self" rel="noopener">원하는 기능</a>을 가진 플러그인 후보: templater, dataview, waypoint
-<br><br>
-<br>완전히 만족하는 플러그인이 없어서 중요한 기능을 가장 많이 구현한 “waypoint”를 선택한 후 추가적인 수정 단계를 거침.
-<br><br><br>
-<br>추가할 것
-
-<br>property view
-<br>rendering in tabular format
-<br>new file / new folder
-
-
-<br>추가된 제한 사항
-
-<br>바로 인접한 하위 요소만 표현하는 방식으로 해 변경 → 더 하위레벨을 탐색해서 표현하는 방식은 table로 표현하기 복잡.
-<br>new folder의 경우 folder note가 inside folder option인 경우만 가능.
-
-
-<br><br>
-<br>Before Edit
-
-<br>e: 현재 파일
-<br>g: e의 자식 요소
-<br>getFileTreeRepresentation() 함수를 통해 하위 파일과 폴더 정보를 가져옴.
-<br>아래 코드는 재귀적으로 하위 요소들을 처리하여 treedml edge node에 닿을 때까지 탐색
-
-
-<br>// 생략
-	let g = e.children;
-	p += (p === "" ? "" : `  
-`) + (yield Promise.all(g.map(d =&gt; this.getFileTreeRepresentation(t, d, r)))).filter(Boolean).join(`  
-`)  
-            }  
-            return p  
-        })
-// 생략
-복사<br>
-<br>After Edit
-
-<br>e: 현재 파일
-<br>g: e의 자식 요소
-<br>자식 요소를 재귀적으로 처리하여 하위 level로 내려가지 않고, sibling들을 순회하면서 각각의 요소(노트 혹은 폴더)를 문자열(row)로 변환
-<br>그 문자열을 모두 모아서(p) 반환.
-
-
-<br>	let g = e.children;
-	p += g.map(d =&gt; {  
-        // 반환할 문자열 생성 -&gt; 이후에 살펴볼 예정
-        return row;  
-        }  
-    ).join('');  
-}  
-return p
-복사<br><br>
-<br>코드드
-<br>		p += g.map(d =&gt; {  
-				// 여기서는 자식 요소를 재귀적으로 처리하지 않고, 바로 문자열로 변환합니다.  
-				// key값을 활용해 table로 변환  
-				let row = "";  
-				let name;  
-				let alias;  
-				let path;  
-				let ctime;  
-				if (d instanceof a.TFile) {  
-					let f = (m = (c = this.app.metadataCache) == null ? void 0 : c.getFileCache(d)) == null ? void 0 : m.frontmatter;  
-					for (let key of keyList) {  
-						switch (key) {  
-							case "TITLE":  
-							case "Title":  
-							case "title":  
-								if (d.extension == "md") name = d.basename;  
-								else name = d.name;  
-								if (this.settings.useFrontMatterTitle) {  
-									f &amp;&amp; f.hasOwnProperty("title") &amp;&amp; (alias = f.title)  
-								} else alias = null;  
-
-								if (alias != null) row += `|[[${name}\\|${alias}|]]`;  
-								else row += `|[[${name}]]`;  
-								break;  
-
-							case "DATE":  
-							case "Date":  
-							case "date":  
-
-								if (f &amp;&amp; f.hasOwnProperty("DATE")) {  
-									ctime = f.DATE;  
-								} else if (f &amp;&amp; f.hasOwnProperty("Date")) {  
-									ctime = f.Date;  
-								} else if (f &amp;&amp; f.hasOwnProperty("date")) {  
-									ctime = f.date;  
-								} else {  
-									ctime = d.stat.ctime;  
-								}  
-
-								let date = new Date(ctime);  
-
-								row += `|${date.getFullYear()}-${date.getMonth() + 1}-${convertDate(date.getDate())} (${convertDay(date.getDay())})`  
-								break;  
-							case "tags":  
-								if (f &amp;&amp; f.hasOwnProperty(key)) {  
-									let val = f[key];  
-									if (Array.isArray(val)) val = val.join(" ");  
-									row += `|${val}`;  
-								} else  
-									row += "|";  
-								break  
-							default:  
-								if (f &amp;&amp; f.hasOwnProperty(key)) {  
-									let val = f[key];  
-
-									// array인 경우  
-									if (Array.isArray(val)) {  
-										// link를 요소로 가지는 array인지 확인 후 alias 처리  
-										val = val.map(v =&gt; convertLink(v, key));  
-										// 알맞은 형태로 join                                                val = val.join(", ");  
-
-									}  
-									// one link  
-									val = convertLink(val, key);  
-
-									// empty property  
-									if (val === null || val === undefined || val === "null") val = "";  
-									row += `|${val}`;  
-								} else {  
-									row += "|";  
-								}  
-								break;  
-						}  
-					}  
-
-					row += "|\n";  
-				}  
-
-				if (d instanceof a.TFolder) {  
-					if (this.settings.folderNoteType === u.InsideFolder)  
-						path = d.path + "/" + d.name + ".md";  
-					else if (e.parent)  
-						path = d.parent.path + "/" + d.name + ".md";  
-					row += `|[[${path}\\|${d.name}]]`;  
-
-					for (let i = 0; i &lt; keyList.length - 1; i++) {  
-						row += "|";  
-					}  
-					row += "|\n";  
-				}  
-
-				return row;  
-			}  
-		).join('');  
-	}  
-	return p  
-}  
-복사<br>
-<br>추가 함수
-<br>function convertDay(dt) {  
-    switch (dt) {  
-        case 0:  
-            return "일";  
-        case 1:  
-            return "월";  
-        case 2:  
-            return "화";  
-        case 3:  
-            return "수";  
-        case 4:  
-            return "목";  
-        case 5:  
-            return "금";  
-        case 6:  
-            return "토";  
-    }  
-  
-}  
-  
-function convertDate(dt) {  
-    let dtStr = dt.toString()  
-    if (dtStr.length === 1) {  
-        return "0" + dtStr;  
-    } else {  
-        return dtStr;  
-    }  
-}  
-  
-function convertLink(v, k) {  
-    if (typeof v === "string") {  
-        if (v === "[[") return "";  
-        if (v.startsWith("[[")) return v.replace("]]", `\\|${k}]]`);  
-        if (v.startsWith("https://") || v.startsWith("http://")) return `[${k}](${v})`;  
-    } else return v;  
-  
-}
-복사<br>
-<br><a data-tooltip-position="top" aria-label="OBSIDIAN INDEX NOTE 자동화 > 빼도 될 것 1" data-href="OBSIDIAN INDEX NOTE 자동화#빼도 될 것 1" href="https://sunha20.github.io/digital-garden/1.-study/project/obsidian-index-note-자동화.html#빼도_될_것_1" class="internal-link" target="_self" rel="noopener">위</a>의 수정본에서 생략된 부분으로 어떤 정보(property)를 어떤 형태(table)로 표시할지를 결정하는 부분
-<br>
-<br>표형식
-
-<br>기본 개념
-
-<br>obsidian 에서 “|key1|key2| \n |---|---| \n |val1|val2|”의 형식으로 입력된 값이 자동으로 하단과 같은 <a data-tooltip-position="top" aria-label="OBSIDIAN INDEX NOTE 자동화 > 표예시" data-href="OBSIDIAN INDEX NOTE 자동화#표예시" href="https://sunha20.github.io/digital-garden/1.-study/project/obsidian-index-note-자동화.html#표예시" class="internal-link" target="_self" rel="noopener">표</a>로 전환
-<br>노트 작성자의 입력값을 받아오기 가장 쉬운 방법 중 하나는 노트의 property를 사용하는 것이다.
-
-
-<br>신경 쓸 부분:
-
-<br>어떠한 property가 표시될지는 폴더별로 다르기 때문에, index table이 생성될 folder note의 property가 통해 값을 입력받음.
-<br>default key(Title, Date)를 지정
-<br>표형식의 경우 row마다 “|” 개수를 맞추어 주어야하기 때문에
-
-<br>하위 노트가 index table에서 필요로하는 property가 빈값일 경우 그냥 “|”를 추가한다. 
-
-
-<br>폴더의 경우 받아올 만한 정보가 title정도이다
-<br>날짜 정보는 유닉스 시간으로 받아오기 때문에 별도의 변환과정이 필요하다.
-<br>웹링크의 경우 길이가 너무 긴경우가 있으니 임의로 변경해준다.
-<br>list 형식의 property는 띄어쓰기 없이 “,”로 구분되어 index table에 표시되기 때문에 “, ”로 변경해준다.
-
-
-
-
-<br><br>]]></description><link>https://sunha20.github.io/digital-garden/1.-study/project/obsidian-index-note-자동화.html</link><guid isPermaLink="false">1. Study/Project/OBSIDIAN INDEX NOTE 자동화.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Mon, 27 May 2024 10:37:46 GMT</pubDate></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
+]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/new.html</link><guid isPermaLink="false">1. Study/Coding Test/new.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Sat, 25 May 2024 15:36:53 GMT</pubDate></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
  <br><a data-href="Coding Test" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html" class="internal-link" target="_self" rel="noopener">Coding Test</a>]]></description><link>https://sunha20.github.io/digital-garden/index.html</link><guid isPermaLink="false">index.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Fri, 24 May 2024 03:53:47 GMT</pubDate></item></channel></rss>
