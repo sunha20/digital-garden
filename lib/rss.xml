@@ -1,4 +1,42 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Obsidian]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://sunha20.github.io/digital-garden/</link><image><url>https://sunha20.github.io/digital-garden/lib/media/favicon.png</url><title>Obsidian</title><link>https://sunha20.github.io/digital-garden/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Fri, 31 May 2024 01:44:48 GMT</lastBuildDate><atom:link href="https://sunha20.github.io/digital-garden/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Fri, 31 May 2024 01:44:47 GMT</pubDate><copyright><![CDATA[seonha20]]></copyright><ttl>60</ttl><dc:creator>seonha20</dc:creator><item><title><![CDATA[42839. 소수 찾기]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Obsidian]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://sunha20.github.io/digital-garden/</link><image><url>https://sunha20.github.io/digital-garden/lib/media/favicon.png</url><title>Obsidian</title><link>https://sunha20.github.io/digital-garden/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Fri, 31 May 2024 01:46:42 GMT</lastBuildDate><atom:link href="https://sunha20.github.io/digital-garden/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Fri, 31 May 2024 01:46:41 GMT</pubDate><copyright><![CDATA[seonha20]]></copyright><ttl>60</ttl><dc:creator>seonha20</dc:creator><item><title><![CDATA[43165. 타겟넘버]]></title><description><![CDATA[ 
+ <br>
+<br>NAV: <a data-tooltip-position="top" aria-label="1. Study/Coding Test/Coding Test.md" data-href="1. Study/Coding Test/Coding Test.md" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html" class="internal-link" target="_self" rel="noopener">Coding Test</a>
+<br>Date: 2024-05-31<br>Link: <a rel="noopener" class="external-link" href="https://school.programmers.co.kr/learn/courses/30/lessons/43165" target="_blank">https://school.programmers.co.kr/learn/courses/30/lessons/43165</a><br>Level: lv2<br>Category: <a data-href="BFS, DFS" href="https://sunha20.github.io/digital-garden/BFS, DFS" class="internal-link" target="_self" rel="noopener">BFS, DFS</a><br>Success: ⭕<br>Git: -<br><br><br>n개의 음이 아닌 정수들이 있습니다. 이 정수들을 순서를 바꾸지 않고 적절히 더하거나 빼서 타겟 넘버를 만들려고 합니다. 예를 들어 [1, 1, 1, 1, 1]로 숫자 3을 만들려면 다음 다섯 방법을 쓸 수 있습니다.<br>-1+1+1+1+1 = 3
++1-1+1+1+1 = 3
++1+1-1+1+1 = 3
++1+1+1-1+1 = 3
++1+1+1+1-1 = 3
+복사<br>사용할 수 있는 숫자가 담긴 배열 numbers, 타겟 넘버 target이 매개변수로 주어질 때 숫자를 적절히 더하고 빼서 타겟 넘버를 만드는 방법의 수를 return 하도록 solution 함수를 작성해주세요.<br><br>
+<br>주어지는 숫자의 개수는 2개 이상 20개 이하입니다.
+<br>각 숫자는 1 이상 50 이하인 자연수입니다.
+<br>타겟 넘버는 1 이상 1000 이하인 자연수입니다.
+<br><br><br><br>입출력 예 #1<br>문제 예시와 같습니다.<br>입출력 예 #2<br>+4+1-2+1 = 4
++4-1+2-1 = 4
+복사<br>
+<br>총 2가지 방법이 있으므로, 2를 return 합니다.
+<br><br><br>
+<br>특정 알고리즘을 사용한다기보단, 문제 해결에 초점을 맞추는 게 더 효율적일 때도 있음.
+<br>파라미터로 넘기기 귀찮아서 전역변수를 종종 썼었는데 좋지 않은 습관임 (<a data-tooltip-position="top" aria-label="https://jaehoney.tistory.com/75" rel="noopener" class="external-link" href="https://jaehoney.tistory.com/75" target="_blank">참고</a>)
+<br>class Solution {
+    
+    public int solution(int[] numbers, int target) {
+        int idx = 0;
+        int cnt = checkTarget(numbers, target, 0, 0);
+        return cnt;
+    }
+    
+    private int checkTarget(int [] numbers, int target, int idx, int num) {
+        if (idx == numbers.length) {
+            if (num == target) return 1;
+            else return 0;
+        }
+        
+        return checkTarget(numbers, target, idx+1, num+numbers[idx]) + checkTarget(numbers, target, idx+1, num-numbers[idx]);
+    }
+}
+복사<br>
+<br>파라미터가 많을 때는 여기서 기본적인 실수를 많이 함… 잘 체크하기.
+]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/43165.-타겟넘버.html</link><guid isPermaLink="false">1. Study/Coding Test/43165. 타겟넘버.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Fri, 31 May 2024 01:46:30 GMT</pubDate></item><item><title><![CDATA[42839. 소수 찾기]]></title><description><![CDATA[ 
  <br>
 <br>NAV: <a data-tooltip-position="top" aria-label="1. Study/Coding Test/Coding Test.md" data-href="1. Study/Coding Test/Coding Test.md" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html" class="internal-link" target="_self" rel="noopener">Coding Test</a>
 <br>Date: 2024-04-20<br>Link: <a rel="noopener" class="external-link" href="https://school.programmers.co.kr/learn/courses/30/lessons/42839" target="_blank">https://school.programmers.co.kr/learn/courses/30/lessons/42839</a><br>Level: lv2<br>Category: <a data-href="Search" href="https://sunha20.github.io/digital-garden/Search" class="internal-link" target="_self" rel="noopener">Search</a><br>Success: -<br>Git: -<br><br><br>한자리 숫자가 적힌 종이 조각이 흩어져있습니다. 흩어진 종이 조각을 붙여 소수를 몇 개 만들 수 있는지 알아내려 합니다.<br>각 종이 조각에 적힌 숫자가 적힌 문자열 numbers가 주어졌을 때, 종이 조각으로 만들 수 있는 소수가 몇 개인지 return 하도록 solution 함수를 완성해주세요.<br><br>
@@ -35,45 +73,7 @@ private void countPrime (int[] numList, String offset){
 	else return;
 }
 
-복사]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/42839.-소수-찾기.html</link><guid isPermaLink="false">1. Study/Coding Test/42839. 소수 찾기.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Wed, 29 May 2024 03:10:39 GMT</pubDate></item><item><title><![CDATA[43165. 타겟넘버]]></title><description><![CDATA[ 
- <br>
-<br>NAV: <a data-tooltip-position="top" aria-label="1. Study/Coding Test/Coding Test.md" data-href="1. Study/Coding Test/Coding Test.md" href="https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html" class="internal-link" target="_self" rel="noopener">Coding Test</a>
-<br>Date: 2024-05-31<br>Link: -<br>Level: -<br>Category: <a data-href="BFS, DFS" href="https://sunha20.github.io/digital-garden/BFS, DFS" class="internal-link" target="_self" rel="noopener">BFS, DFS</a><br>Success: -<br>Git: -<br><br><br>n개의 음이 아닌 정수들이 있습니다. 이 정수들을 순서를 바꾸지 않고 적절히 더하거나 빼서 타겟 넘버를 만들려고 합니다. 예를 들어 [1, 1, 1, 1, 1]로 숫자 3을 만들려면 다음 다섯 방법을 쓸 수 있습니다.<br>-1+1+1+1+1 = 3
-+1-1+1+1+1 = 3
-+1+1-1+1+1 = 3
-+1+1+1-1+1 = 3
-+1+1+1+1-1 = 3
-복사<br>사용할 수 있는 숫자가 담긴 배열 numbers, 타겟 넘버 target이 매개변수로 주어질 때 숫자를 적절히 더하고 빼서 타겟 넘버를 만드는 방법의 수를 return 하도록 solution 함수를 작성해주세요.<br><br>
-<br>주어지는 숫자의 개수는 2개 이상 20개 이하입니다.
-<br>각 숫자는 1 이상 50 이하인 자연수입니다.
-<br>타겟 넘버는 1 이상 1000 이하인 자연수입니다.
-<br><br><br><br>입출력 예 #1<br>문제 예시와 같습니다.<br>입출력 예 #2<br>+4+1-2+1 = 4
-+4-1+2-1 = 4
-복사<br>
-<br>총 2가지 방법이 있으므로, 2를 return 합니다.
-<br><br><br>
-<br>특정 알고리즘을 사용한다기보단, 문제 해결에 초점을 맞추는 게 더 효율적일 때도 있음.
-<br>파라미터로 넘기기 귀찮아서 전역변수를 종종 썼었는데 좋지 않은 습관임 (<a data-tooltip-position="top" aria-label="https://jaehoney.tistory.com/75" rel="noopener" class="external-link" href="https://jaehoney.tistory.com/75" target="_blank">참고</a>)
-<br>class Solution {
-    
-    public int solution(int[] numbers, int target) {
-        int idx = 0;
-        int cnt = checkTarget(numbers, target, 0, 0);
-        return cnt;
-    }
-    
-    private int checkTarget(int [] numbers, int target, int idx, int num) {
-        if (idx == numbers.length) {
-            if (num == target) return 1;
-            else return 0;
-        }
-        
-        return checkTarget(numbers, target, idx+1, num+numbers[idx]) + checkTarget(numbers, target, idx+1, num-numbers[idx]);
-    }
-}
-복사<br>
-<br>파라미터가 많을 때는 여기서 기본적인 실수를 많이 함… 잘 체크하기.
-]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/43165.-타겟넘버.html</link><guid isPermaLink="false">1. Study/Coding Test/43165. 타겟넘버.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Fri, 31 May 2024 01:44:02 GMT</pubDate></item><item><title><![CDATA[Coding Test]]></title><description><![CDATA[ 
+복사]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/42839.-소수-찾기.html</link><guid isPermaLink="false">1. Study/Coding Test/42839. 소수 찾기.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Wed, 29 May 2024 03:10:39 GMT</pubDate></item><item><title><![CDATA[Coding Test]]></title><description><![CDATA[ 
  <br><br><a data-tooltip-position="top" aria-label="1. Study/Coding Test/new file.md" data-href="1. Study/Coding Test/new file.md" href="https://sunha20.github.io/digital-garden/1. Study/Coding Test/new file" class="internal-link" target="_self" rel="noopener">new file</a>   |   <a data-tooltip-position="top" aria-label="1. Study/Coding Test/new folder/new folder.md" data-href="1. Study/Coding Test/new folder/new folder.md" href="https://sunha20.github.io/digital-garden/1. Study/Coding Test/new folder/new folder" class="internal-link" target="_self" rel="noopener">new folder</a><br><br><br>
 ]]></description><link>https://sunha20.github.io/digital-garden/1.-study/coding-test/coding-test.html</link><guid isPermaLink="false">1. Study/Coding Test/Coding Test.md</guid><dc:creator><![CDATA[seonha20]]></dc:creator><pubDate>Fri, 31 May 2024 01:06:06 GMT</pubDate></item><item><title><![CDATA[42747. H-Index]]></title><description><![CDATA[ 
  <br>
