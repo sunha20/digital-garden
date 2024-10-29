@@ -1,87 +1,104 @@
 {
   "vaultName": "Obsidian",
-  "lastExport": 1718283796120,
+  "lastExport": 1730166978424,
   "pluginVersion": "1.8.01",
-  "validBodyClasses": "publish css-settings-manager theme-light show-inline-title show-ribbon minimal-default-dark minimal-default-light borders-none colorful-active links-int-on links-ext-on full-width-media img-grid minimal-readable minimal-dark-black contextual-typography outliner-plugin-dnd trim-cols checkbox-square metadata-heading-off highlightr-realistic hide-folder-note folder-note-underline folder-note-underline-path fn-whitespace-stop-collapsing fn-hide-collapse-icon obsidian-themepocalypse",
+  "validBodyClasses": "publish css-settings-manager theme-light show-inline-title show-ribbon minimal-default-light minimal-default-dark minimal-readable minimal-dark-tonal borders-none colorful-active links-int-on links-ext-on full-width-media img-grid contextual-typography outliner-plugin-dnd highlightr-realistic hide-folder-note folder-note-underline folder-note-underline-path fn-whitespace-stop-collapsing fn-hide-collapse-icon trim-cols checkbox-square metadata-heading-off",
   "useCustomHeadContent": false,
   "useCustomFavicon": false,
   "files": [
-    "1. Study/Coding Test/1로 만들기.md",
-    "1. Study/Coding Test/01타일.md",
-    "1. Study/Coding Test/894. All Possible Full Binary Trees.md",
-    "1. Study/Coding Test/1003. 피보나치 함수.md",
-    "1. Study/Coding Test/1011. Capacity To Ship Packages Within D Days.md",
-    "1. Study/Coding Test/1012. 유기농 배추.md",
-    "1. Study/Coding Test/1107. 리모컨.md",
-    "1. Study/Coding Test/1157. 단어 공부.md",
-    "1. Study/Coding Test/1302. Deepest Leaves Sum.md",
-    "1. Study/Coding Test/1309.동물원.md",
-    "1. Study/Coding Test/1844. 게임 맵 최단거리.md",
-    "1. Study/Coding Test/2336. Smallest Number in Infinite Set.md",
-    "1. Study/Coding Test/11047. 동전 0.md",
-    "1. Study/Coding Test/11279. 최대 힙.md",
-    "1. Study/Coding Test/12865. 평범한 배낭.md",
-    "1. Study/Coding Test/15969. 행복.md",
-    "1. Study/Coding Test/42626. 더맵게.md",
-    "1. Study/Coding Test/42746. 가장 큰 수.md",
-    "1. Study/Coding Test/42747. H-Index.md",
-    "1. Study/Coding Test/42839. 소수 찾기.md",
-    "1. Study/Coding Test/42842. 카펫.md",
-    "1. Study/Coding Test/42860. 조이스틱.md",
-    "1. Study/Coding Test/42885. 구명보트.md",
-    "1. Study/Coding Test/43165. 타겟넘버.md",
-    "1. Study/Coding Test/49191. 순위.md",
-    "1. Study/Coding Test/84512. 모음사전.md",
-    "1. Study/Coding Test/개인정보 수집 유효기간.md",
-    "1. Study/Coding Test/계단 오르기.md",
-    "1. Study/Coding Test/괄호.md",
-    "1. Study/Coding Test/기본.md",
-    "1. Study/Coding Test/나는야 포켓몬 마스터 이다솜.md",
-    "1. Study/Coding Test/나이순 정렬.md",
-    "1. Study/Coding Test/다이나믹프로그래밍(DP).md",
-    "1. Study/Coding Test/단어정렬.md",
-    "1. Study/Coding Test/덩치.md",
-    "1. Study/Coding Test/듣보잡.md",
-    "1. Study/Coding Test/랜선 자르기.md",
-    "1. Study/Coding Test/로프.md",
-    "1. Study/Coding Test/마인크래프트.md",
-    "1. Study/Coding Test/바이러스.md",
-    "1. Study/Coding Test/보물.md",
-    "1. Study/Coding Test/본.md",
-    "1. Study/Coding Test/비밀번호 만들기.md",
-    "1. Study/Coding Test/색종이.md",
-    "1. Study/Coding Test/설탕 배달.md",
-    "1. Study/Coding Test/소수 구하기.md",
-    "1. Study/Coding Test/수 찾기.md",
-    "1. Study/Coding Test/수들의 합2.md",
-    "1. Study/Coding Test/숫자 카드 2.md",
-    "1. Study/Coding Test/스위치 켜고 끄기.md",
-    "1. Study/Coding Test/영화감독 숌.md",
-    "1. Study/Coding Test/요세푸스 문제.md",
-    "1. Study/Coding Test/요세푸스 문제 0.md",
-    "1. Study/Coding Test/제목 없음.md",
-    "1. Study/Coding Test/좌표 정렬.md",
-    "1. Study/Coding Test/집합.md",
-    "1. Study/Coding Test/체스판 다시 칠하기.md",
-    "1. Study/Coding Test/카드2.md",
-    "1. Study/Coding Test/코테 질문 모음.md",
-    "1. Study/Coding Test/큐.md",
-    "1. Study/Coding Test/터렛.md",
-    "1. Study/Coding Test/통계학.md",
-    "1. Study/Coding Test/트리.md",
-    "1. Study/Coding Test/프린터 큐.md",
-    "1. Study/Coding Test/한수.md",
-    "1. Study/Coding Test/ATM.md",
-    "1. Study/Coding Test/BufferedReader.md",
     "1. Study/Coding Test/Coding Test.md",
-    "1. Study/Coding Test/DNA.md",
-    "1. Study/Coding Test/HELP 반례 찾기.md",
-    "1. Study/Coding Test/HELP 알고리즘.md",
-    "1. Study/Coding Test/Help Python과 Pypy.md",
-    "1. Study/Coding Test/java 기본.md",
-    "1. Study/Coding Test/N과 M(1).md",
-    "1. Study/Coding Test/new.md",
-    "index.md",
+    "1. Study/Coding Test/PS/트리.md",
+    "1. Study/Coding Test/PS/프린터 큐.md",
+    "1. Study/Coding Test/PS/한수.md",
+    "1. Study/Coding Test/PS/통계학.md",
+    "1. Study/Coding Test/PS/터렛.md",
+    "1. Study/Coding Test/PS/코테 질문 모음.md",
+    "1. Study/Coding Test/PS/큐.md",
+    "1. Study/Coding Test/PS/체스판 다시 칠하기.md",
+    "1. Study/Coding Test/PS/카드2.md",
+    "1. Study/Coding Test/PS/집합.md",
+    "1. Study/Coding Test/PS/좌표 정렬.md",
+    "1. Study/Coding Test/PS/요세푸스 문제.md",
+    "1. Study/Coding Test/PS/영화감독 숌.md",
+    "1. Study/Coding Test/PS/제목 없음.md",
+    "1. Study/Coding Test/PS/요세푸스 문제 0.md",
+    "1. Study/Coding Test/PS/스위치 켜고 끄기.md",
+    "1. Study/Coding Test/PS/숫자 카드 2.md",
+    "1. Study/Coding Test/PS/수 찾기.md",
+    "1. Study/Coding Test/PS/수들의 합2.md",
+    "1. Study/Coding Test/PS/소수 구하기.md",
+    "1. Study/Coding Test/PS/설탕 배달.md",
+    "1. Study/Coding Test/PS/색종이.md",
+    "1. Study/Coding Test/PS/비밀번호 만들기.md",
+    "1. Study/Coding Test/PS/바이러스.md",
+    "1. Study/Coding Test/PS/본.md",
+    "1. Study/Coding Test/PS/보물.md",
+    "1. Study/Coding Test/PS/마인크래프트.md",
+    "1. Study/Coding Test/PS/로프.md",
+    "1. Study/Coding Test/PS/듣보잡.md",
+    "1. Study/Coding Test/PS/단어정렬.md",
+    "1. Study/Coding Test/PS/덩치.md",
+    "1. Study/Coding Test/PS/다이나믹프로그래밍(DP).md",
+    "1. Study/Coding Test/PS/나이순 정렬.md",
+    "1. Study/Coding Test/PS/나는야 포켓몬 마스터 이다솜.md",
+    "1. Study/Coding Test/PS/기본.md",
+    "1. Study/Coding Test/PS/괄호.md",
+    "1. Study/Coding Test/PS/계단 오르기.md",
+    "1. Study/Coding Test/PS/개인정보 수집 유효기간.md",
+    "1. Study/Coding Test/PS/N과 M(1).md",
+    "1. Study/Coding Test/PS/PS.md",
+    "1. Study/Coding Test/PS/DNA.md",
+    "1. Study/Coding Test/PS/BufferedReader.md",
+    "1. Study/Coding Test/PS/ATM.md",
+    "1. Study/Coding Test/PS/99 club 2기 코테 문제 정리.md",
+    "1. Study/Coding Test/PS/894. All Possible Full Binary Trees.md",
+    "1. Study/Coding Test/PS/84512. 모음사전.md",
+    "1. Study/Coding Test/PS/49191. 순위.md",
+    "1. Study/Coding Test/PS/43165. 타겟넘버.md",
+    "1. Study/Coding Test/PS/42885. 구명보트.md",
+    "1. Study/Coding Test/PS/42860. 조이스틱.md",
+    "1. Study/Coding Test/PS/42842. 카펫.md",
+    "1. Study/Coding Test/PS/42839. 소수 찾기.md",
+    "1. Study/Coding Test/PS/42747. H-Index.md",
+    "1. Study/Coding Test/PS/42746. 가장 큰 수.md",
+    "1. Study/Coding Test/PS/30804. 과일 탕후루.md",
+    "1. Study/Coding Test/PS/2805. 나무 자르기.md",
+    "1. Study/Coding Test/PS/42626. 더맵게.md",
+    "1. Study/Coding Test/PS/24228. 젓가락.md",
+    "1. Study/Coding Test/PS/2336. Smallest Number in Infinite Set.md",
+    "1. Study/Coding Test/PS/1로 만들기.md",
+    "1. Study/Coding Test/PS/1654. 랜선 자르기.md",
+    "1. Study/Coding Test/PS/1844. 게임 맵 최단거리.md",
+    "1. Study/Coding Test/PS/15969. 행복.md",
+    "1. Study/Coding Test/PS/12865. 평범한 배낭.md",
+    "1. Study/Coding Test/PS/1541. 잃어버린 괄호.md",
+    "1. Study/Coding Test/PS/1476. Subrectangle Queries.md",
+    "1. Study/Coding Test/PS/1406. 에디터.md",
+    "1. Study/Coding Test/PS/1309.동물원.md",
+    "1. Study/Coding Test/PS/1302. Deepest Leaves Sum.md",
+    "1. Study/Coding Test/PS/1260. DFS와 BFS.md",
+    "1. Study/Coding Test/PS/1249. 보급로.md",
+    "1. Study/Coding Test/PS/11724. 연결 요소의 개수.md",
+    "1. Study/Coding Test/PS/11279. 최대 힙.md",
+    "1. Study/Coding Test/PS/1157. 단어 공부.md",
+    "1. Study/Coding Test/PS/1107. 리모컨.md",
+    "1. Study/Coding Test/PS/11047. 동전 0.md",
+    "1. Study/Coding Test/PS/1072. 게임.md",
+    "1. Study/Coding Test/PS/1011. Capacity To Ship Packages Within D Days.md",
+    "1. Study/Coding Test/PS/1074. Z.md",
+    "1. Study/Coding Test/PS/1012. 유기농 배추.md",
+    "1. Study/Coding Test/PS/1003. 피보나치 함수.md",
+    "1. Study/Coding Test/PS/10025. 게으른 백곰.md",
+    "1. Study/Coding Test/PS/01타일.md",
+    "1. Study/Coding Test/Algorithm/이분탐색.md",
+    "1. Study/Coding Test/Algorithm/Algorithm.md",
+    "1. Study/Coding Test/Algorithm/HELP 반례 찾기.md",
+    "1. Study/Coding Test/Algorithm/java 기본.md",
+    "1. Study/Coding Test/Algorithm/HELP 알고리즘.md",
+    "1. Study/Coding Test/Algorithm/Help Python과 Pypy.md",
+    "1. Study/Coding Test/Algorithm/Graph/Graph.md",
+    "1. Study/Coding Test/Algorithm/Graph/BFS, DFS.md",
+    "1. Study/Coding Test/Algorithm/Graph/0. Graph.md",
     "lib/scripts/graph-wasm.wasm",
     "lib/fonts/94f2f163d4b698242fef.otf",
     "lib/fonts/72505e6a122c6acd5471.woff2",
@@ -97,7 +114,6 @@
     "lib/fonts/05b618077343fbbd92b7.ttf",
     "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
     "lib/media/874d8b8e340f75575caa.svg",
-    "lib/media/3d6c1bdc4d87cde4de67.svg",
     "lib/html/file-tree.html",
     "lib/scripts/webpage.js",
     "lib/scripts/graph-view.js",
@@ -113,7 +129,8 @@
     "lib/styles/theme.css",
     "lib/styles/global-variable-styles.css",
     "lib/styles/supported-plugins.css",
-    "lib/styles/main-styles.css"
+    "lib/styles/main-styles.css",
+    "lib/styles/snippets.css"
   ],
   "mainDependencies": [
     "lib/scripts/graph-wasm.wasm",
@@ -131,7 +148,6 @@
     "lib/fonts/05b618077343fbbd92b7.ttf",
     "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
     "lib/media/874d8b8e340f75575caa.svg",
-    "lib/media/3d6c1bdc4d87cde4de67.svg",
     "lib/html/file-tree.html",
     "lib/scripts/webpage.js",
     "lib/scripts/graph-view.js",
@@ -147,337 +163,332 @@
     "lib/styles/theme.css",
     "lib/styles/global-variable-styles.css",
     "lib/styles/supported-plugins.css",
-    "lib/styles/main-styles.css"
+    "lib/styles/main-styles.css",
+    "lib/styles/snippets.css"
   ],
   "fileInfo": {
     "lib/scripts/graph-wasm.wasm": {
-      "modifiedTime": 1718283796120,
+      "modifiedTime": 1730166978424,
       "sourceSize": 23377,
       "exportedPath": "lib/scripts/graph-wasm.wasm",
       "dependencies": []
     },
     "lib/fonts/94f2f163d4b698242fef.otf": {
-      "modifiedTime": 1718283796120,
+      "modifiedTime": 1730166978424,
       "sourceSize": 66800,
       "exportedPath": "lib/fonts/94f2f163d4b698242fef.otf",
       "dependencies": []
     },
     "lib/fonts/72505e6a122c6acd5471.woff2": {
-      "modifiedTime": 1718283796120,
+      "modifiedTime": 1730166978424,
       "sourceSize": 104232,
       "exportedPath": "lib/fonts/72505e6a122c6acd5471.woff2",
       "dependencies": []
     },
     "lib/fonts/2d5198822ab091ce4305.woff2": {
-      "modifiedTime": 1718283796120,
+      "modifiedTime": 1730166978424,
       "sourceSize": 104332,
       "exportedPath": "lib/fonts/2d5198822ab091ce4305.woff2",
       "dependencies": []
     },
     "lib/fonts/c8ba52b05a9ef10f4758.woff2": {
-      "modifiedTime": 1718283796120,
+      "modifiedTime": 1730166978424,
       "sourceSize": 98868,
       "exportedPath": "lib/fonts/c8ba52b05a9ef10f4758.woff2",
       "dependencies": []
     },
     "lib/fonts/cb10ffd7684cd9836a05.woff2": {
-      "modifiedTime": 1718283796120,
+      "modifiedTime": 1730166978424,
       "sourceSize": 106876,
       "exportedPath": "lib/fonts/cb10ffd7684cd9836a05.woff2",
       "dependencies": []
     },
     "lib/fonts/b5f0f109bc88052d4000.woff2": {
-      "modifiedTime": 1718283796120,
+      "modifiedTime": 1730166978424,
       "sourceSize": 105804,
       "exportedPath": "lib/fonts/b5f0f109bc88052d4000.woff2",
       "dependencies": []
     },
     "lib/fonts/cbe0ae49c52c920fd563.woff2": {
-      "modifiedTime": 1718283796120,
+      "modifiedTime": 1730166978424,
       "sourceSize": 106108,
       "exportedPath": "lib/fonts/cbe0ae49c52c920fd563.woff2",
       "dependencies": []
     },
     "lib/fonts/535a6cf662596b3bd6a6.woff2": {
-      "modifiedTime": 1718283796120,
+      "modifiedTime": 1730166978424,
       "sourceSize": 111708,
       "exportedPath": "lib/fonts/535a6cf662596b3bd6a6.woff2",
       "dependencies": []
     },
     "lib/fonts/70cc7ff27245e82ad414.ttf": {
-      "modifiedTime": 1718283796120,
+      "modifiedTime": 1730166978424,
       "sourceSize": 192740,
       "exportedPath": "lib/fonts/70cc7ff27245e82ad414.ttf",
       "dependencies": []
     },
     "lib/fonts/454577c22304619db035.ttf": {
-      "modifiedTime": 1718283796120,
+      "modifiedTime": 1730166978424,
       "sourceSize": 161376,
       "exportedPath": "lib/fonts/454577c22304619db035.ttf",
       "dependencies": []
     },
     "lib/fonts/52ac8f3034507f1d9e53.ttf": {
-      "modifiedTime": 1718283796120,
+      "modifiedTime": 1730166978424,
       "sourceSize": 191568,
       "exportedPath": "lib/fonts/52ac8f3034507f1d9e53.ttf",
       "dependencies": []
     },
     "lib/fonts/05b618077343fbbd92b7.ttf": {
-      "modifiedTime": 1718283796120,
+      "modifiedTime": 1730166978424,
       "sourceSize": 155288,
       "exportedPath": "lib/fonts/05b618077343fbbd92b7.ttf",
       "dependencies": []
     },
     "lib/fonts/4bb6ac751d1c5478ff3a.woff2": {
-      "modifiedTime": 1718283796120,
+      "modifiedTime": 1730166978424,
       "sourceSize": 7876,
       "exportedPath": "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
       "dependencies": []
     },
     "lib/media/874d8b8e340f75575caa.svg": {
-      "modifiedTime": 1718283796120,
+      "modifiedTime": 1730166978424,
       "sourceSize": 317,
       "exportedPath": "lib/media/874d8b8e340f75575caa.svg",
       "dependencies": []
     },
     "lib/fonts/mathjax_zero.woff": {
-      "modifiedTime": 1718097375742,
+      "modifiedTime": 1730166053812,
       "sourceSize": 1368,
       "exportedPath": "lib/fonts/mathjax_zero.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_main-regular.woff": {
-      "modifiedTime": 1718097375742,
+      "modifiedTime": 1730166053812,
       "sourceSize": 34160,
       "exportedPath": "lib/fonts/mathjax_main-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_main-bold.woff": {
-      "modifiedTime": 1718097375742,
+      "modifiedTime": 1730166053812,
       "sourceSize": 34464,
       "exportedPath": "lib/fonts/mathjax_main-bold.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_math-italic.woff": {
-      "modifiedTime": 1718097375742,
+      "modifiedTime": 1730166053812,
       "sourceSize": 19360,
       "exportedPath": "lib/fonts/mathjax_math-italic.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_main-italic.woff": {
-      "modifiedTime": 1718097375742,
+      "modifiedTime": 1730166053812,
       "sourceSize": 20832,
       "exportedPath": "lib/fonts/mathjax_main-italic.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_math-bolditalic.woff": {
-      "modifiedTime": 1718097375742,
+      "modifiedTime": 1730166053812,
       "sourceSize": 19776,
       "exportedPath": "lib/fonts/mathjax_math-bolditalic.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_size1-regular.woff": {
-      "modifiedTime": 1718097375742,
+      "modifiedTime": 1730166053812,
       "sourceSize": 5792,
       "exportedPath": "lib/fonts/mathjax_size1-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_size2-regular.woff": {
-      "modifiedTime": 1718097375742,
+      "modifiedTime": 1730166053812,
       "sourceSize": 5464,
       "exportedPath": "lib/fonts/mathjax_size2-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_size3-regular.woff": {
-      "modifiedTime": 1718097375742,
+      "modifiedTime": 1730166053812,
       "sourceSize": 3244,
       "exportedPath": "lib/fonts/mathjax_size3-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_size4-regular.woff": {
-      "modifiedTime": 1718097375742,
+      "modifiedTime": 1730166053812,
       "sourceSize": 5148,
       "exportedPath": "lib/fonts/mathjax_size4-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_ams-regular.woff": {
-      "modifiedTime": 1718097375742,
+      "modifiedTime": 1730166053812,
       "sourceSize": 40808,
       "exportedPath": "lib/fonts/mathjax_ams-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_calligraphic-regular.woff": {
-      "modifiedTime": 1718097375742,
+      "modifiedTime": 1730166053812,
       "sourceSize": 9600,
       "exportedPath": "lib/fonts/mathjax_calligraphic-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_calligraphic-bold.woff": {
-      "modifiedTime": 1718097375742,
+      "modifiedTime": 1730166053812,
       "sourceSize": 9908,
       "exportedPath": "lib/fonts/mathjax_calligraphic-bold.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_fraktur-regular.woff": {
-      "modifiedTime": 1718097375742,
+      "modifiedTime": 1730166053812,
       "sourceSize": 21480,
       "exportedPath": "lib/fonts/mathjax_fraktur-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_fraktur-bold.woff": {
-      "modifiedTime": 1718097375742,
+      "modifiedTime": 1730166053812,
       "sourceSize": 22340,
       "exportedPath": "lib/fonts/mathjax_fraktur-bold.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_sansserif-regular.woff": {
-      "modifiedTime": 1718097375742,
+      "modifiedTime": 1730166053812,
       "sourceSize": 12660,
       "exportedPath": "lib/fonts/mathjax_sansserif-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_sansserif-bold.woff": {
-      "modifiedTime": 1718097375742,
+      "modifiedTime": 1730166053812,
       "sourceSize": 15944,
       "exportedPath": "lib/fonts/mathjax_sansserif-bold.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_sansserif-italic.woff": {
-      "modifiedTime": 1718097375742,
+      "modifiedTime": 1730166053812,
       "sourceSize": 14628,
       "exportedPath": "lib/fonts/mathjax_sansserif-italic.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_script-regular.woff": {
-      "modifiedTime": 1718097375742,
+      "modifiedTime": 1730166053812,
       "sourceSize": 11852,
       "exportedPath": "lib/fonts/mathjax_script-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_typewriter-regular.woff": {
-      "modifiedTime": 1718097375742,
+      "modifiedTime": 1730166053812,
       "sourceSize": 17604,
       "exportedPath": "lib/fonts/mathjax_typewriter-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_vector-regular.woff": {
-      "modifiedTime": 1718097375742,
+      "modifiedTime": 1730166053812,
       "sourceSize": 1136,
       "exportedPath": "lib/fonts/mathjax_vector-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_vector-bold.woff": {
-      "modifiedTime": 1718097375742,
+      "modifiedTime": 1730166053812,
       "sourceSize": 1116,
       "exportedPath": "lib/fonts/mathjax_vector-bold.woff",
       "dependencies": []
     },
     "lib/html/file-tree.html": {
-      "modifiedTime": 1718283796120,
-      "sourceSize": 28878,
+      "modifiedTime": 1730166978424,
+      "sourceSize": 37371,
       "exportedPath": "lib/html/file-tree.html",
       "dependencies": []
     },
     "lib/scripts/webpage.js": {
-      "modifiedTime": 1718283796120,
+      "modifiedTime": 1730166978424,
       "sourceSize": 47290,
       "exportedPath": "lib/scripts/webpage.js",
       "dependencies": []
     },
     "lib/scripts/graph-view.js": {
-      "modifiedTime": 1718283796120,
+      "modifiedTime": 1730166978424,
       "sourceSize": 15519,
       "exportedPath": "lib/scripts/graph-view.js",
       "dependencies": []
     },
     "lib/scripts/graph-wasm.js": {
-      "modifiedTime": 1718283796120,
+      "modifiedTime": 1730166978424,
       "sourceSize": 14021,
       "exportedPath": "lib/scripts/graph-wasm.js",
       "dependencies": []
     },
     "lib/scripts/graph-render-worker.js": {
-      "modifiedTime": 1718283796120,
+      "modifiedTime": 1730166978424,
       "sourceSize": 5179,
       "exportedPath": "lib/scripts/graph-render-worker.js",
       "dependencies": []
     },
     "lib/scripts/tinycolor.js": {
-      "modifiedTime": 1718283796120,
+      "modifiedTime": 1730166978424,
       "sourceSize": 29832,
       "exportedPath": "lib/scripts/tinycolor.js",
       "dependencies": []
     },
     "lib/scripts/pixi.js": {
-      "modifiedTime": 1718283796120,
+      "modifiedTime": 1730166978424,
       "sourceSize": 449509,
       "exportedPath": "lib/scripts/pixi.js",
       "dependencies": []
     },
     "lib/scripts/minisearch.js": {
-      "modifiedTime": 1718283796120,
+      "modifiedTime": 1730166978424,
       "sourceSize": 29422,
       "exportedPath": "lib/scripts/minisearch.js",
       "dependencies": []
     },
     "lib/media/favicon.png": {
-      "modifiedTime": 1718283796120,
+      "modifiedTime": 1730166978424,
       "sourceSize": 1105,
       "exportedPath": "lib/media/favicon.png",
       "dependencies": []
     },
     "lib/scripts/graph-data.js": {
-      "modifiedTime": 1718283796120,
-      "sourceSize": 5875,
+      "modifiedTime": 1730166978424,
+      "sourceSize": 7720,
       "exportedPath": "lib/scripts/graph-data.js",
       "dependencies": []
     },
     "lib/styles/obsidian.css": {
-      "modifiedTime": 1718283796120,
-      "sourceSize": 130183,
+      "modifiedTime": 1730166978424,
+      "sourceSize": 131134,
       "exportedPath": "lib/styles/obsidian.css",
       "dependencies": []
     },
     "lib/styles/other-plugins.css": {
-      "modifiedTime": 1718283796120,
-      "sourceSize": 37624,
+      "modifiedTime": 1730166978424,
+      "sourceSize": 53806,
       "exportedPath": "lib/styles/other-plugins.css",
       "dependencies": []
     },
     "lib/styles/theme.css": {
-      "modifiedTime": 1718283796120,
-      "sourceSize": 209702,
+      "modifiedTime": 1730166978424,
+      "sourceSize": 227242,
       "exportedPath": "lib/styles/theme.css",
       "dependencies": []
     },
     "lib/styles/global-variable-styles.css": {
-      "modifiedTime": 1718283796120,
-      "sourceSize": 416,
+      "modifiedTime": 1730166978424,
+      "sourceSize": 775,
       "exportedPath": "lib/styles/global-variable-styles.css",
       "dependencies": []
     },
     "lib/styles/supported-plugins.css": {
-      "modifiedTime": 1718283796120,
-      "sourceSize": 4725,
+      "modifiedTime": 1730166978424,
+      "sourceSize": 8785,
       "exportedPath": "lib/styles/supported-plugins.css",
       "dependencies": []
     },
     "lib/styles/main-styles.css": {
-      "modifiedTime": 1718283796120,
+      "modifiedTime": 1730166978424,
       "sourceSize": 23130,
       "exportedPath": "lib/styles/main-styles.css",
       "dependencies": []
     },
     "lib/styles/snippets.css": {
-      "modifiedTime": 1716720268984,
-      "sourceSize": 50,
+      "modifiedTime": 1730166978424,
+      "sourceSize": 296,
       "exportedPath": "lib/styles/snippets.css",
-      "dependencies": []
-    },
-    "index.md": {
-      "modifiedTime": 1716806329245,
-      "sourceSize": 15,
-      "exportedPath": "index.html",
       "dependencies": []
     },
     "lib/media/3d6c1bdc4d87cde4de67.svg": {
@@ -486,454 +497,562 @@
       "exportedPath": "lib/media/3d6c1bdc4d87cde4de67.svg",
       "dependencies": []
     },
-    "1. Study/Coding Test/1로 만들기.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 4837,
-      "exportedPath": "1.-study/coding-test/1로-만들기.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/01타일.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 2217,
-      "exportedPath": "1.-study/coding-test/01타일.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/894. All Possible Full Binary Trees.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 6597,
-      "exportedPath": "1.-study/coding-test/894.-all-possible-full-binary-trees.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/1003. 피보나치 함수.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 4401,
-      "exportedPath": "1.-study/coding-test/1003.-피보나치-함수.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/1011. Capacity To Ship Packages Within D Days.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 3992,
-      "exportedPath": "1.-study/coding-test/1011.-capacity-to-ship-packages-within-d-days.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/1012. 유기농 배추.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 3423,
-      "exportedPath": "1.-study/coding-test/1012.-유기농-배추.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/1107. 리모컨.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 9522,
-      "exportedPath": "1.-study/coding-test/1107.-리모컨.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/1157. 단어 공부.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 4267,
-      "exportedPath": "1.-study/coding-test/1157.-단어-공부.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/1302. Deepest Leaves Sum.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 861,
-      "exportedPath": "1.-study/coding-test/1302.-deepest-leaves-sum.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/1309.동물원.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 2329,
-      "exportedPath": "1.-study/coding-test/1309.동물원.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/1844. 게임 맵 최단거리.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 8233,
-      "exportedPath": "1.-study/coding-test/1844.-게임-맵-최단거리.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/2336. Smallest Number in Infinite Set.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 6611,
-      "exportedPath": "1.-study/coding-test/2336.-smallest-number-in-infinite-set.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/11047. 동전 0.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 2649,
-      "exportedPath": "1.-study/coding-test/11047.-동전-0.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/11279. 최대 힙.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 3822,
-      "exportedPath": "1.-study/coding-test/11279.-최대-힙.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/12865. 평범한 배낭.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 3094,
-      "exportedPath": "1.-study/coding-test/12865.-평범한-배낭.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/15969. 행복.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 4706,
-      "exportedPath": "1.-study/coding-test/15969.-행복.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/42626. 더맵게.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 6592,
-      "exportedPath": "1.-study/coding-test/42626.-더맵게.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/42746. 가장 큰 수.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 3065,
-      "exportedPath": "1.-study/coding-test/42746.-가장-큰-수.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/42747. H-Index.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 2210,
-      "exportedPath": "1.-study/coding-test/42747.-h-index.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/42839. 소수 찾기.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 2185,
-      "exportedPath": "1.-study/coding-test/42839.-소수-찾기.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/42842. 카펫.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 2677,
-      "exportedPath": "1.-study/coding-test/42842.-카펫.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/42860. 조이스틱.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 6074,
-      "exportedPath": "1.-study/coding-test/42860.-조이스틱.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/42885. 구명보트.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 4867,
-      "exportedPath": "1.-study/coding-test/42885.-구명보트.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/43165. 타겟넘버.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 2457,
-      "exportedPath": "1.-study/coding-test/43165.-타겟넘버.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/84512. 모음사전.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 1839,
-      "exportedPath": "1.-study/coding-test/84512.-모음사전.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/개인정보 수집 유효기간.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 3160,
-      "exportedPath": "1.-study/coding-test/개인정보-수집-유효기간.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/계단 오르기.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 5003,
-      "exportedPath": "1.-study/coding-test/계단-오르기.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/괄호.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 3925,
-      "exportedPath": "1.-study/coding-test/괄호.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/기본.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 178,
-      "exportedPath": "1.-study/coding-test/기본.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/나는야 포켓몬 마스터 이다솜.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 11487,
-      "exportedPath": "1.-study/coding-test/나는야-포켓몬-마스터-이다솜.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/나이순 정렬.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 2155,
-      "exportedPath": "1.-study/coding-test/나이순-정렬.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/다이나믹프로그래밍(DP).md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 3646,
-      "exportedPath": "1.-study/coding-test/다이나믹프로그래밍(dp).html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/단어정렬.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 2190,
-      "exportedPath": "1.-study/coding-test/단어정렬.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/덩치.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 4627,
-      "exportedPath": "1.-study/coding-test/덩치.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/듣보잡.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 2612,
-      "exportedPath": "1.-study/coding-test/듣보잡.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/랜선 자르기.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 3079,
-      "exportedPath": "1.-study/coding-test/랜선-자르기.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/로프.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 2325,
-      "exportedPath": "1.-study/coding-test/로프.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/마인크래프트.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 4273,
-      "exportedPath": "1.-study/coding-test/마인크래프트.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/바이러스.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 3717,
-      "exportedPath": "1.-study/coding-test/바이러스.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/보물.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 3031,
-      "exportedPath": "1.-study/coding-test/보물.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/본.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 1725,
-      "exportedPath": "1.-study/coding-test/본.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/비밀번호 만들기.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 2893,
-      "exportedPath": "1.-study/coding-test/비밀번호-만들기.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/색종이.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 2212,
-      "exportedPath": "1.-study/coding-test/색종이.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/설탕 배달.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 4138,
-      "exportedPath": "1.-study/coding-test/설탕-배달.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/소수 구하기.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 3151,
-      "exportedPath": "1.-study/coding-test/소수-구하기.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/수 찾기.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 7445,
-      "exportedPath": "1.-study/coding-test/수-찾기.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/수들의 합2.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 2688,
-      "exportedPath": "1.-study/coding-test/수들의-합2.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/숫자 카드 2.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 5172,
-      "exportedPath": "1.-study/coding-test/숫자-카드-2.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/스위치 켜고 끄기.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 8067,
-      "exportedPath": "1.-study/coding-test/스위치-켜고-끄기.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/영화감독 숌.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 6712,
-      "exportedPath": "1.-study/coding-test/영화감독-숌.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/요세푸스 문제.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 5251,
-      "exportedPath": "1.-study/coding-test/요세푸스-문제.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/요세푸스 문제 0.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 3983,
-      "exportedPath": "1.-study/coding-test/요세푸스-문제-0.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/제목 없음.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 2286,
-      "exportedPath": "1.-study/coding-test/제목-없음.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/좌표 정렬.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 578,
-      "exportedPath": "1.-study/coding-test/좌표-정렬.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/집합.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 2708,
-      "exportedPath": "1.-study/coding-test/집합.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/체스판 다시 칠하기.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 5555,
-      "exportedPath": "1.-study/coding-test/체스판-다시-칠하기.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/카드2.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 5923,
-      "exportedPath": "1.-study/coding-test/카드2.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/코테 질문 모음.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 143,
-      "exportedPath": "1.-study/coding-test/코테-질문-모음.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/큐.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 4511,
-      "exportedPath": "1.-study/coding-test/큐.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/터렛.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 2358,
-      "exportedPath": "1.-study/coding-test/터렛.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/통계학.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 2676,
-      "exportedPath": "1.-study/coding-test/통계학.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/트리.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 3925,
-      "exportedPath": "1.-study/coding-test/트리.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/프린터 큐.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 3826,
-      "exportedPath": "1.-study/coding-test/프린터-큐.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/한수.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 4748,
-      "exportedPath": "1.-study/coding-test/한수.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/ATM.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 3194,
-      "exportedPath": "1.-study/coding-test/atm.html",
-      "dependencies": []
-    },
-    "1. Study/Coding Test/BufferedReader.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 8172,
-      "exportedPath": "1.-study/coding-test/bufferedreader.html",
-      "dependencies": []
-    },
     "1. Study/Coding Test/Coding Test.md": {
-      "modifiedTime": 1718283796120,
-      "sourceSize": 3731,
+      "modifiedTime": 1730166053812,
+      "sourceSize": 442,
       "exportedPath": "1.-study/coding-test/coding-test.html",
       "dependencies": []
     },
-    "1. Study/Coding Test/DNA.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 5983,
-      "exportedPath": "1.-study/coding-test/dna.html",
+    "1. Study/Coding Test/PS/한수.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 4748,
+      "exportedPath": "1.-study/coding-test/ps/한수.html",
       "dependencies": []
     },
-    "1. Study/Coding Test/HELP 반례 찾기.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 2512,
-      "exportedPath": "1.-study/coding-test/help-반례-찾기.html",
+    "1. Study/Coding Test/PS/프린터 큐.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 3826,
+      "exportedPath": "1.-study/coding-test/ps/프린터-큐.html",
       "dependencies": []
     },
-    "1. Study/Coding Test/HELP 알고리즘.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 1688,
-      "exportedPath": "1.-study/coding-test/help-알고리즘.html",
+    "1. Study/Coding Test/PS/트리.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 3925,
+      "exportedPath": "1.-study/coding-test/ps/트리.html",
       "dependencies": []
     },
-    "1. Study/Coding Test/Help Python과 Pypy.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 2332,
-      "exportedPath": "1.-study/coding-test/help-python과-pypy.html",
+    "1. Study/Coding Test/PS/통계학.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 2676,
+      "exportedPath": "1.-study/coding-test/ps/통계학.html",
       "dependencies": []
     },
-    "1. Study/Coding Test/java 기본.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 501,
-      "exportedPath": "1.-study/coding-test/java-기본.html",
+    "1. Study/Coding Test/PS/큐.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 4511,
+      "exportedPath": "1.-study/coding-test/ps/큐.html",
       "dependencies": []
     },
-    "1. Study/Coding Test/N과 M(1).md": {
-      "modifiedTime": 1718097375742,
+    "1. Study/Coding Test/PS/집합.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 2708,
+      "exportedPath": "1.-study/coding-test/ps/집합.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/체스판 다시 칠하기.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 5555,
+      "exportedPath": "1.-study/coding-test/ps/체스판-다시-칠하기.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/카드2.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 5923,
+      "exportedPath": "1.-study/coding-test/ps/카드2.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/좌표 정렬.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 578,
+      "exportedPath": "1.-study/coding-test/ps/좌표-정렬.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/제목 없음.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 2286,
+      "exportedPath": "1.-study/coding-test/ps/제목-없음.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/요세푸스 문제.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 5251,
+      "exportedPath": "1.-study/coding-test/ps/요세푸스-문제.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/요세푸스 문제 0.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 3983,
+      "exportedPath": "1.-study/coding-test/ps/요세푸스-문제-0.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/영화감독 숌.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 6712,
+      "exportedPath": "1.-study/coding-test/ps/영화감독-숌.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/스위치 켜고 끄기.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 8067,
+      "exportedPath": "1.-study/coding-test/ps/스위치-켜고-끄기.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/숫자 카드 2.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 5172,
+      "exportedPath": "1.-study/coding-test/ps/숫자-카드-2.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/수들의 합2.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 2688,
+      "exportedPath": "1.-study/coding-test/ps/수들의-합2.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/수 찾기.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 7445,
+      "exportedPath": "1.-study/coding-test/ps/수-찾기.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/소수 구하기.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 3151,
+      "exportedPath": "1.-study/coding-test/ps/소수-구하기.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/설탕 배달.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 4138,
+      "exportedPath": "1.-study/coding-test/ps/설탕-배달.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/색종이.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 2212,
+      "exportedPath": "1.-study/coding-test/ps/색종이.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/비밀번호 만들기.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 2893,
+      "exportedPath": "1.-study/coding-test/ps/비밀번호-만들기.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/본.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 1725,
+      "exportedPath": "1.-study/coding-test/ps/본.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/보물.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 3031,
+      "exportedPath": "1.-study/coding-test/ps/보물.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/바이러스.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 3717,
+      "exportedPath": "1.-study/coding-test/ps/바이러스.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/마인크래프트.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 4273,
+      "exportedPath": "1.-study/coding-test/ps/마인크래프트.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/로프.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 2325,
+      "exportedPath": "1.-study/coding-test/ps/로프.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/1654. 랜선 자르기.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 5348,
+      "exportedPath": "1.-study/coding-test/ps/1654.-랜선-자르기.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/듣보잡.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 2612,
+      "exportedPath": "1.-study/coding-test/ps/듣보잡.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/덩치.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 4627,
+      "exportedPath": "1.-study/coding-test/ps/덩치.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/단어정렬.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 2190,
+      "exportedPath": "1.-study/coding-test/ps/단어정렬.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/다이나믹프로그래밍(DP).md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 3646,
+      "exportedPath": "1.-study/coding-test/ps/다이나믹프로그래밍(dp).html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/나이순 정렬.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 2155,
+      "exportedPath": "1.-study/coding-test/ps/나이순-정렬.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/나는야 포켓몬 마스터 이다솜.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 11487,
+      "exportedPath": "1.-study/coding-test/ps/나는야-포켓몬-마스터-이다솜.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/기본.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 178,
+      "exportedPath": "1.-study/coding-test/ps/기본.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/계단 오르기.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 5003,
+      "exportedPath": "1.-study/coding-test/ps/계단-오르기.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/개인정보 수집 유효기간.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 3160,
+      "exportedPath": "1.-study/coding-test/ps/개인정보-수집-유효기간.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/N과 M(1).md": {
+      "modifiedTime": 1730166053812,
       "sourceSize": 3232,
-      "exportedPath": "1.-study/coding-test/n과-m(1).html",
+      "exportedPath": "1.-study/coding-test/ps/n과-m(1).html",
       "dependencies": []
     },
-    "1. Study/Coding Test/new.md": {
-      "modifiedTime": 1718097375742,
-      "sourceSize": 3359,
-      "exportedPath": "1.-study/coding-test/new.html",
+    "1. Study/Coding Test/PS/ATM.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 3194,
+      "exportedPath": "1.-study/coding-test/ps/atm.html",
       "dependencies": []
     },
-    "1. Study/Coding Test/49191. 순위.md": {
-      "modifiedTime": 1718283796120,
-      "sourceSize": 3218,
-      "exportedPath": "1.-study/coding-test/49191.-순위.html",
+    "1. Study/Coding Test/PS/DNA.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 5983,
+      "exportedPath": "1.-study/coding-test/ps/dna.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/1로 만들기.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 4838,
+      "exportedPath": "1.-study/coding-test/ps/1로-만들기.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/01타일.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 2217,
+      "exportedPath": "1.-study/coding-test/ps/01타일.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/터렛.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 2358,
+      "exportedPath": "1.-study/coding-test/ps/터렛.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/괄호.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 3925,
+      "exportedPath": "1.-study/coding-test/ps/괄호.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/11279. 최대 힙.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 3822,
+      "exportedPath": "1.-study/coding-test/ps/11279.-최대-힙.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/12865. 평범한 배낭.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 3094,
+      "exportedPath": "1.-study/coding-test/ps/12865.-평범한-배낭.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/11047. 동전 0.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 2649,
+      "exportedPath": "1.-study/coding-test/ps/11047.-동전-0.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/코테 질문 모음.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 143,
+      "exportedPath": "1.-study/coding-test/ps/코테-질문-모음.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/1003. 피보나치 함수.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 4401,
+      "exportedPath": "1.-study/coding-test/ps/1003.-피보나치-함수.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/1107. 리모컨.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 13494,
+      "exportedPath": "1.-study/coding-test/ps/1107.-리모컨.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/1012. 유기농 배추.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 5406,
+      "exportedPath": "1.-study/coding-test/ps/1012.-유기농-배추.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/1157. 단어 공부.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 4267,
+      "exportedPath": "1.-study/coding-test/ps/1157.-단어-공부.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/BufferedReader.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 8172,
+      "exportedPath": "1.-study/coding-test/ps/bufferedreader.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/15969. 행복.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 4706,
+      "exportedPath": "1.-study/coding-test/ps/15969.-행복.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/1309.동물원.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 2329,
+      "exportedPath": "1.-study/coding-test/ps/1309.동물원.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/PS.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 6603,
+      "exportedPath": "1.-study/coding-test/ps/ps.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/42626. 더맵게.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 6592,
+      "exportedPath": "1.-study/coding-test/ps/42626.-더맵게.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/2336. Smallest Number in Infinite Set.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 6611,
+      "exportedPath": "1.-study/coding-test/ps/2336.-smallest-number-in-infinite-set.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/42746. 가장 큰 수.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 3065,
+      "exportedPath": "1.-study/coding-test/ps/42746.-가장-큰-수.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/42747. H-Index.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 2210,
+      "exportedPath": "1.-study/coding-test/ps/42747.-h-index.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/84512. 모음사전.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 1839,
+      "exportedPath": "1.-study/coding-test/ps/84512.-모음사전.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/42842. 카펫.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 49,
+      "exportedPath": "1.-study/coding-test/ps/42842.-카펫.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/42839. 소수 찾기.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 2185,
+      "exportedPath": "1.-study/coding-test/ps/42839.-소수-찾기.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/43165. 타겟넘버.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 2457,
+      "exportedPath": "1.-study/coding-test/ps/43165.-타겟넘버.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/1844. 게임 맵 최단거리.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 8233,
+      "exportedPath": "1.-study/coding-test/ps/1844.-게임-맵-최단거리.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/1302. Deepest Leaves Sum.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 861,
+      "exportedPath": "1.-study/coding-test/ps/1302.-deepest-leaves-sum.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/42860. 조이스틱.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 6074,
+      "exportedPath": "1.-study/coding-test/ps/42860.-조이스틱.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/42885. 구명보트.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 4867,
+      "exportedPath": "1.-study/coding-test/ps/42885.-구명보트.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/894. All Possible Full Binary Trees.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 6597,
+      "exportedPath": "1.-study/coding-test/ps/894.-all-possible-full-binary-trees.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/1011. Capacity To Ship Packages Within D Days.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 3992,
+      "exportedPath": "1.-study/coding-test/ps/1011.-capacity-to-ship-packages-within-d-days.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/49191. 순위.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 3466,
+      "exportedPath": "1.-study/coding-test/ps/49191.-순위.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/99 club 2기 코테 문제 정리.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 11994,
+      "exportedPath": "1.-study/coding-test/ps/99-club-2기-코테-문제-정리.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/1476. Subrectangle Queries.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 3839,
+      "exportedPath": "1.-study/coding-test/ps/1476.-subrectangle-queries.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/1260. DFS와 BFS.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 4661,
+      "exportedPath": "1.-study/coding-test/ps/1260.-dfs와-bfs.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/24228. 젓가락.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 2842,
+      "exportedPath": "1.-study/coding-test/ps/24228.-젓가락.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/1541. 잃어버린 괄호.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 2964,
+      "exportedPath": "1.-study/coding-test/ps/1541.-잃어버린-괄호.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/2805. 나무 자르기.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 6162,
+      "exportedPath": "1.-study/coding-test/ps/2805.-나무-자르기.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/11724. 연결 요소의 개수.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 3192,
+      "exportedPath": "1.-study/coding-test/ps/11724.-연결-요소의-개수.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/1406. 에디터.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 12510,
+      "exportedPath": "1.-study/coding-test/ps/1406.-에디터.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/30804. 과일 탕후루.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 6801,
+      "exportedPath": "1.-study/coding-test/ps/30804.-과일-탕후루.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/10025. 게으른 백곰.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 7490,
+      "exportedPath": "1.-study/coding-test/ps/10025.-게으른-백곰.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/1074. Z.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 2000,
+      "exportedPath": "1.-study/coding-test/ps/1074.-z.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/1249. 보급로.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 3842,
+      "exportedPath": "1.-study/coding-test/ps/1249.-보급로.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/PS/1072. 게임.md": {
+      "modifiedTime": 1730166978424,
+      "sourceSize": 3498,
+      "exportedPath": "1.-study/coding-test/ps/1072.-게임.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/Algorithm/HELP 알고리즘.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 1688,
+      "exportedPath": "1.-study/coding-test/algorithm/help-알고리즘.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/Algorithm/HELP 반례 찾기.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 2512,
+      "exportedPath": "1.-study/coding-test/algorithm/help-반례-찾기.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/Algorithm/Help Python과 Pypy.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 2332,
+      "exportedPath": "1.-study/coding-test/algorithm/help-python과-pypy.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/Algorithm/java 기본.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 501,
+      "exportedPath": "1.-study/coding-test/algorithm/java-기본.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/Algorithm/Algorithm.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 629,
+      "exportedPath": "1.-study/coding-test/algorithm/algorithm.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/Algorithm/이분탐색.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 5204,
+      "exportedPath": "1.-study/coding-test/algorithm/이분탐색.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/Algorithm/Graph/Graph.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 420,
+      "exportedPath": "1.-study/coding-test/algorithm/graph/graph.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/Algorithm/Graph/0. Graph.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 2364,
+      "exportedPath": "1.-study/coding-test/algorithm/graph/0.-graph.html",
+      "dependencies": []
+    },
+    "1. Study/Coding Test/Algorithm/Graph/BFS, DFS.md": {
+      "modifiedTime": 1730166053812,
+      "sourceSize": 245,
+      "exportedPath": "1.-study/coding-test/algorithm/graph/bfs,-dfs.html",
       "dependencies": []
     }
   }

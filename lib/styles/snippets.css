@@ -1,1 +1,1 @@
-.cm-line:not(.cm-active) .cm-comment{display:none}
+body{--heading-spacing:var(--p-spacing)}.markdown-source-view.mod-cm6 .cm-content>.HyperMD-header+:not(.HyperMD-header){padding-top:var(--p-spacing)!important}.markdown-source-view.mod-cm6 .cm-content>.HyperMD-header+.cm-line.cm-active:not(.HyperMD-header){padding-top:var(--p-spacing)!important}
