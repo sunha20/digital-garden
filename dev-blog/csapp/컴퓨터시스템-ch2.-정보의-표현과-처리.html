@@ -1,0 +1,665 @@
+<!DOCTYPE html> <html lang="ko"><head>
+<title>컴퓨터시스템 CH2. 정보의 표현과 처리</title>
+<base href="../..">
+<meta name="pathname" content="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html">
+<meta name="description" content="Obsidian - 컴퓨터시스템 CH2. 정보의 표현과 처리">
+<meta property="og:title" content="컴퓨터시스템 CH2. 정보의 표현과 처리">
+<meta property="og:description" content="Obsidian - 컴퓨터시스템 CH2. 정보의 표현과 처리">
+<meta property="og:type" content="website">
+<meta property="og:url" content="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html">
+<meta property="og:image" content="app:/fd93f4c9737b26c367b78ac425e939ffab6c/C:/Users/seonha/Note/Obsidian/⁵ File/image/Pasted image 20250523213904.png?1748003944411">
+<meta property="og:site_name" content="Obsidian"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0"><meta charset="UTF-8"><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="site-lib/rss.xml"><script async="" id="webpage-script" src="site-lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="graph-wasm-script" src="site-lib/scripts/graph-wasm.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="graph-render-worker-script" src="site-lib/scripts/graph-render-worker.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="site-lib/media/favicon.png"><link rel="preload" href="site-lib/styles/snippets.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/snippets.css"></noscript><link rel="stylesheet" href="site-lib/styles/obsidian.css"><link rel="stylesheet" href="site-lib/styles/theme.css"><link rel="preload" href="site-lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="site-lib/styles/supported-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/supported-plugins.css"></noscript><link rel="preload" href="site-lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/main-styles.css"></noscript><style><div class="parsed-feature-container" style="display: contents;"><link itemprop="include" href="site-lib/html/custom-head-content-content.html"></div>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-vertical-spacing:1.3em;--sidebar-margin:12px}:root{background-color:#202124}.sidebar{height:100%;font-size:14px;z-index:10;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));position:relative;overflow:hidden;overflow:clip;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}#left-sidebar{left:0}#right-sidebar{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}.sidebar.floating{position:absolute}.sidebar .leaf-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .leaf-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}#left-sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}#right-sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar #left-sidebar-content,.sidebar #right-sidebar-content{contain:none!important;container-type:normal!important;animation:none!important}.sidebar:has(.leaf-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:2em;width:var(--sidebar-width);top:var(--sidebar-margin);padding-inline:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}#left-sidebar .sidebar-topbar{left:0;flex-direction:row}#right-sidebar .sidebar-topbar{right:0;flex-direction:row-reverse}#left-sidebar .topbar-content{margin-right:calc(2.3em + var(--sidebar-margin));flex-direction:row}#right-sidebar .topbar-content{margin-left:calc(2.3em + var(--sidebar-margin));flex-direction:row-reverse}.topbar-content{overflow:hidden visible;overflow:clip visible;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:2px!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}#left-sidebar .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}#right-sidebar .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.feature-title{margin-left:4px;text-transform:uppercase;letter-spacing:.06em;margin-top:.75em;margin-bottom:.75em}.feature-header{display:flex;align-items:center;padding-top:0;font-size:1em;padding-left:0}body.floating-sidebars .sidebar{position:absolute}body{transition:background-color var(--color-fade-speed) ease-in-out}#layout{display:flex;flex-direction:row;height:100%;width:100%;align-items:stretch;justify-content:center}#center-content{flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0!important;transition:opacity .2s ease-in-out;pointer-events:none}#center-content>.obsidian-document{padding-left:2em;padding-right:1em;margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}body #center-content>.obsidian-document>.markdown-preview-sizer{padding-bottom:80vh;width:100%;max-width:var(--line-width);flex-basis:var(--line-width);transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}#center-content>.obsidian-document>div{width:100%!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}#center-content>.obsidian-document:not([data-type=markdown]).embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}#center-content>.obsidian-document:not([data-type=markdown]).embed>*{max-width:100%;max-height:100%;object-fit:contain}:not(h1,h2,h3,h4,h5,h6):has(> :is(.math:not(.math-inline),table)){overflow-x:auto!important}#center-content>.obsidian-document:not([data-type=markdown]){overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.obsidian-document[data-type=attachment]{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;width:100%}.obsidian-document[data-type=attachment]>*{outline:0;border:none;box-shadow:none}.obsidian-document[data-type=attachment] :is(img){max-width:90%;max-height:90%;object-fit:contain}.obsidian-document[data-type=attachment]>:is(audio){width:100%;max-width:min(90%,var(--line-width))}.obsidian-document[data-type=attachment]>:is(embed,iframe,video){width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain}.canvas-wrapper>:is(.header,.footer){z-index:100;position:absolute;display:flex;justify-content:center;flex-direction:column;width:100%;align-items:center}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){let e=document.querySelectorAll("link[itemprop='include']");for(const t of e){let e=t.getAttribute("href");try{let o="";if(e.startsWith("https:")||e.startsWith("http:")||"file:"!=window.location.protocol){const l=await fetch(e);if(!l.ok){console.log("Could not include file: "+e),t?.remove();continue}o=await l.text()}else{const t=document.getElementById(btoa(encodeURI(e)));if(t){const e=JSON.parse(decodeURI(atob(t.getAttribute("value")??"")));o=e?.data??""}}let l=document.createRange().createContextualFragment(o),n=Array.from(l.children);for(let e of n)e?.classList?.add("hide"),e.style.transition="opacity 0.5s ease-in-out",setTimeout((()=>{e?.classList?.remove("hide")}),10);t.before(l),t.remove(),console.log("Included text: "+o),console.log("Included file: "+e)}catch(o){t?.remove(),console.log("Could not include file: "+e,o);continue}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script")));!function e(l){let n=o[l],c=l+1;n?(n&&"true"!=n.getAttribute("loaded")||l<o.length&&e(c),l<o.length&&n.addEventListener("load",(()=>e(c)))):l<o.length?e(c):t()}(0)}</script></head><body class="publish css-settings-manager mod-windows is-hidden-frameless show-inline-title show-ribbon show-view-header minimal-default-light minimal-default-dark minimal-readable minimal-dark-tonal borders-none colorful-active links-int-on links-ext-on full-width-media img-grid contextual-typography trim-cols checkbox-square metadata-heading-off sidebar-tabs-wide maximize-tables tabs-modern is-focused"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div id="layout"><div id="left-content" class="leaf" style="--sidebar-width: var(--sidebar-width-left);"><div id="left-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><div id="search-container"><div id="search-wrapper"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="Search..."><div aria-label="Clear search" id="search-clear-button"></div></div></div></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content-wrapper"><div id="left-sidebar-content" class="leaf-content"><link itemprop="include" href="site-lib/html/file-tree-content.html"></div></div><script defer="">let ls = document.querySelector("#left-sidebar"); ls.classList.toggle("is-collapsed", window.innerWidth < 768); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div></div><div id="center-content" class="leaf"><div class="obsidian-document markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings allow-fold-lists show-indentation-guide show-properties" data-type="markdown"><style id="MJX-CHTML-styles">mjx-c.mjx-c1D441.TEX-I::before{padding:.683em .888em 0 0;content:"N"}mjx-c.mjx-c6C::before{padding:.694em .278em 0 0;content:"l"}mjx-c.mjx-c6F::before{padding:.448em .5em .01em 0;content:"o"}mjx-c.mjx-c67::before{padding:.453em .5em .206em 0;content:"g"}mjx-c.mjx-c2061::before{padding:0;content:""}mjx-c.mjx-c2234.TEX-A::before{padding:.471em .667em .082em 0;content:"∴"}mjx-c.mjx-c1D442.TEX-I::before{padding:.704em .763em .022em 0;content:"O"}mjx-c.mjx-c1D449.TEX-I::before{padding:.683em .769em .022em 0;content:"V"}mjx-c.mjx-c1D446.TEX-I::before{padding:.705em .645em .022em 0;content:"S"}mjx-c.mjx-cD7::before{padding:.491em .778em 0 0;content:"×"}mjx-c.mjx-c1D440.TEX-I::before{padding:.683em 1.051em 0 0;content:"M"}mjx-c.mjx-c1D438.TEX-I::before{padding:.68em .764em 0 0;content:"E"}mjx-c.mjx-c3D::before{padding:.583em .778em .082em 0;content:"="}mjx-c.mjx-c3C::before{padding:.54em .778em .04em 0;content:"<"}mjx-c.mjx-c1D466.TEX-I::before{padding:.442em .49em .205em 0;content:"y"}mjx-c.mjx-c2265::before{padding:.636em .778em .138em 0;content:"≥"}mjx-c.mjx-c28::before{padding:.75em .389em .25em 0;content:"("}mjx-c.mjx-c29::before{padding:.75em .389em .25em 0;content:")"}mjx-c.mjx-c2192::before{padding:.511em 1em .011em 0;content:"→"}mjx-c.mjx-c2B::before{padding:.583em .778em .082em 0;content:"+"}mjx-c.mjx-c1D458.TEX-I::before{padding:.694em .521em .011em 0;content:"k"}mjx-c.mjx-c1D465.TEX-I::before{padding:.442em .572em .011em 0;content:"x"}mjx-c.mjx-c2C::before{padding:.121em .278em .194em 0;content:","}mjx-c.mjx-c30::before{padding:.666em .5em .022em 0;content:"0"}mjx-container[jax=CHTML]{line-height:0}mjx-container [space="1"]{margin-left:.111em}mjx-container [space="2"]{margin-left:.167em}mjx-container [space="3"]{margin-left:.222em}mjx-container [space="4"]{margin-left:.278em}mjx-container [space="5"]{margin-left:.333em}mjx-container [rspace="1"]{margin-right:.111em}mjx-container [rspace="2"]{margin-right:.167em}mjx-container [rspace="3"]{margin-right:.222em}mjx-container [rspace="4"]{margin-right:.278em}mjx-container [rspace="5"]{margin-right:.333em}mjx-container [size="s"]{font-size:70.7%}mjx-container [size=ss]{font-size:50%}mjx-container [size=Tn]{font-size:60%}mjx-container [size=sm]{font-size:85%}mjx-container [size=lg]{font-size:120%}mjx-container [size=Lg]{font-size:144%}mjx-container [size=LG]{font-size:173%}mjx-container [size=hg]{font-size:207%}mjx-container [size=HG]{font-size:249%}mjx-container [width=full]{width:100%}mjx-box{display:inline-block}mjx-block{display:block}mjx-itable{display:inline-table}mjx-row{display:table-row}mjx-row>*{display:table-cell}mjx-mtext{display:inline-block}mjx-mstyle{display:inline-block}mjx-merror{display:inline-block;color:red;background-color:#ff0}mjx-mphantom{visibility:hidden}mjx-assistive-mml{top:0;left:0;clip:rect(1px,1px,1px,1px);user-select:none;position:absolute!important;padding:1px 0 0!important;border:0!important;display:block!important;width:auto!important;overflow:hidden!important}mjx-assistive-mml[display=block]{width:100%!important}mjx-math{display:inline-block;text-align:left;line-height:0;text-indent:0;font-style:normal;font-weight:400;font-size:100%;letter-spacing:normal;border-collapse:collapse;overflow-wrap:normal;word-spacing:normal;white-space:nowrap;direction:ltr;padding:1px 0}mjx-container[jax=CHTML][display=true]{display:block;text-align:center;margin:1em 0}mjx-container[jax=CHTML][display=true][width=full]{display:flex}mjx-container[jax=CHTML][display=true] mjx-math{padding:0}mjx-container[jax=CHTML][justify=left]{text-align:left}mjx-container[jax=CHTML][justify=right]{text-align:right}mjx-msup{display:inline-block;text-align:left}mjx-mn{display:inline-block;text-align:left}mjx-c{display:inline-block}mjx-utext{display:inline-block;padding:.75em 0 .2em}mjx-mi{display:inline-block;text-align:left}mjx-mo{display:inline-block;text-align:left}mjx-stretchy-h{display:inline-table;width:100%}mjx-stretchy-h>*{display:table-cell;width:0}mjx-stretchy-h>*>mjx-c{display:inline-block;transform:scaleX(1)}mjx-stretchy-h>*>mjx-c::before{display:inline-block;width:initial}mjx-stretchy-h>mjx-ext{overflow:clip visible;width:100%}mjx-stretchy-h>mjx-ext>mjx-c::before{transform:scaleX(500)}mjx-stretchy-h>mjx-ext>mjx-c{width:0}mjx-stretchy-h>mjx-beg>mjx-c{margin-right:-.1em}mjx-stretchy-h>mjx-end>mjx-c{margin-left:-.1em}mjx-stretchy-v{display:inline-block}mjx-stretchy-v>*{display:block}mjx-stretchy-v>mjx-beg{height:0}mjx-stretchy-v>mjx-end>mjx-c{display:block}mjx-stretchy-v>*>mjx-c{transform:scaleY(1);transform-origin:left center;overflow:hidden}mjx-stretchy-v>mjx-ext{display:block;height:100%;box-sizing:border-box;border:0 solid transparent;overflow:visible clip}mjx-stretchy-v>mjx-ext>mjx-c::before{width:initial;box-sizing:border-box}mjx-stretchy-v>mjx-ext>mjx-c{transform:scaleY(500) translateY(.075em);overflow:visible}mjx-mark{display:inline-block;height:0}mjx-texatom{display:inline-block;text-align:left}mjx-msub{display:inline-block;text-align:left}mjx-c::before{display:block;width:0}.MJX-TEX{font-family:MJXZERO,MJXTEX}.TEX-B{font-family:MJXZERO,MJXTEX-B}.TEX-I{font-family:MJXZERO,MJXTEX-I}.TEX-MI{font-family:MJXZERO,MJXTEX-MI}.TEX-BI{font-family:MJXZERO,MJXTEX-BI}.TEX-S1{font-family:MJXZERO,MJXTEX-S1}.TEX-S2{font-family:MJXZERO,MJXTEX-S2}.TEX-S3{font-family:MJXZERO,MJXTEX-S3}.TEX-S4{font-family:MJXZERO,MJXTEX-S4}.TEX-A{font-family:MJXZERO,MJXTEX-A}.TEX-C{font-family:MJXZERO,MJXTEX-C}.TEX-CB{font-family:MJXZERO,MJXTEX-CB}.TEX-FR{font-family:MJXZERO,MJXTEX-FR}.TEX-FRB{font-family:MJXZERO,MJXTEX-FRB}.TEX-SS{font-family:MJXZERO,MJXTEX-SS}.TEX-SSB{font-family:MJXZERO,MJXTEX-SSB}.TEX-SSI{font-family:MJXZERO,MJXTEX-SSI}.TEX-SC{font-family:MJXZERO,MJXTEX-SC}.TEX-T{font-family:MJXZERO,MJXTEX-T}.TEX-V{font-family:MJXZERO,MJXTEX-V}.TEX-VB{font-family:MJXZERO,MJXTEX-VB}mjx-stretchy-h mjx-c,mjx-stretchy-v mjx-c{font-family:MJXZERO,MJXTEX-S1,MJXTEX-S4,MJXTEX,MJXTEX-A!important}@font-face{font-family:MJXZERO;src:url("site-lib/fonts/mathjax_zero.woff") format("woff")}@font-face{font-family:MJXTEX;src:url("site-lib/fonts/mathjax_main-regular.woff") format("woff")}@font-face{font-family:MJXTEX-B;src:url("site-lib/fonts/mathjax_main-bold.woff") format("woff")}@font-face{font-family:MJXTEX-I;src:url("site-lib/fonts/mathjax_math-italic.woff") format("woff")}@font-face{font-family:MJXTEX-MI;src:url("site-lib/fonts/mathjax_main-italic.woff") format("woff")}@font-face{font-family:MJXTEX-BI;src:url("site-lib/fonts/mathjax_math-bolditalic.woff") format("woff")}@font-face{font-family:MJXTEX-S1;src:url("site-lib/fonts/mathjax_size1-regular.woff") format("woff")}@font-face{font-family:MJXTEX-S2;src:url("site-lib/fonts/mathjax_size2-regular.woff") format("woff")}@font-face{font-family:MJXTEX-S3;src:url("site-lib/fonts/mathjax_size3-regular.woff") format("woff")}@font-face{font-family:MJXTEX-S4;src:url("site-lib/fonts/mathjax_size4-regular.woff") format("woff")}@font-face{font-family:MJXTEX-A;src:url("site-lib/fonts/mathjax_ams-regular.woff") format("woff")}@font-face{font-family:MJXTEX-C;src:url("site-lib/fonts/mathjax_calligraphic-regular.woff") format("woff")}@font-face{font-family:MJXTEX-CB;src:url("site-lib/fonts/mathjax_calligraphic-bold.woff") format("woff")}@font-face{font-family:MJXTEX-FR;src:url("site-lib/fonts/mathjax_fraktur-regular.woff") format("woff")}@font-face{font-family:MJXTEX-FRB;src:url("site-lib/fonts/mathjax_fraktur-bold.woff") format("woff")}@font-face{font-family:MJXTEX-SS;src:url("site-lib/fonts/mathjax_sansserif-regular.woff") format("woff")}@font-face{font-family:MJXTEX-SSB;src:url("site-lib/fonts/mathjax_sansserif-bold.woff") format("woff")}@font-face{font-family:MJXTEX-SSI;src:url("site-lib/fonts/mathjax_sansserif-italic.woff") format("woff")}@font-face{font-family:MJXTEX-SC;src:url("site-lib/fonts/mathjax_script-regular.woff") format("woff")}@font-face{font-family:MJXTEX-T;src:url("site-lib/fonts/mathjax_typewriter-regular.woff") format("woff")}@font-face{font-family:MJXTEX-V;src:url("site-lib/fonts/mathjax_vector-regular.woff") format("woff")}@font-face{font-family:MJXTEX-VB;src:url("site-lib/fonts/mathjax_vector-bold.woff") format("woff")}mjx-c.mjx-c32::before{padding:.666em .5em 0 0;content:"2"}mjx-c.mjx-c1D464.TEX-I::before{padding:.443em .716em .011em 0;content:"w"}mjx-c.mjx-c2212::before{padding:.583em .778em .082em 0;content:"−"}mjx-c.mjx-c31::before{padding:.666em .5em 0 0;content:"1"}mjx-c.mjx-c33::before{padding:.665em .5em .022em 0;content:"3"}mjx-c.mjx-c1D44E.TEX-I::before{padding:.441em .529em .01em 0;content:"a"}mjx-c.mjx-c1D456.TEX-I::before{padding:.661em .345em .011em 0;content:"i"}mjx-c.mjx-c1D44F.TEX-I::before{padding:.694em .429em .011em 0;content:"b"}mjx-c.mjx-c7C::before{padding:.75em .278em .249em 0;content:"|"}</style><pre class="frontmatter language-yaml" style="display: none;" tabindex="0"><code class="language-yaml is-loaded"><span class="token key atrule">Date</span><span class="token punctuation">:</span> <span class="token datetime number">2025-05-23</span></code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre><div class="markdown-preview-sizer markdown-preview-section"><div class="header"><h1 class="page-title heading inline-title el-p" id="컴퓨터시스템_CH2._정보의_표현과_처리_0" data-tag-name="p">컴퓨터시스템 CH2. 정보의 표현과 처리</h1><div class="data-bar"></div></div><div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div><div class="el-h2" data-heading="정보의 표현과 처리" data-tag-name="h2"><h2 data-heading="정보의 표현과 처리" dir="auto" class="heading" id="정보의_표현과_처리_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>정보의 표현과 처리</h2></div><div class="el-h3" data-heading="비트" data-tag-name="h3"><h3 data-heading="비트" dir="auto" class="heading" id="비트_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>비트</h3></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>
+<p>컴퓨터는 <strong>비트</strong>를 저장하고 처리</p>
+</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span>
+<p>디지털 혁명의 근원</p>
+</li>
+<li data-line="2" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>
+<p>두개의 값을 갖는 신호.</p>
+<ul class="has-list-bullet">
+<li data-line="3" dir="auto"><span class="list-bullet"></span>펀치카드에 구멍이 뚤렸는지 막혔는지</li>
+<li data-line="4" dir="auto"><span class="list-bullet"></span>높은 전압이 걸리는지 앉은 전압이 걸리는지</li>
+<li data-line="5" dir="auto"><span class="list-bullet"></span>자기장이 시계방향인지 반시계방향인지.</li>
+</ul>
+</li>
+<li data-line="6" dir="auto"><span class="list-bullet"></span>
+<p>이를 계산하고 저장하기 위한 전자회로는 매우 간단하고 안정적</p>
+</li>
+<li data-line="8" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>
+<p><strong>비트 패턴</strong></p>
+<ul class="has-list-bullet">
+<li data-line="9" dir="auto"><span class="list-bullet"></span>비트만으로는 그다지 유용 x</li>
+<li data-line="10" dir="auto"><span class="list-bullet"></span>비트들을 묶어서 비트 패턴을 만듦</li>
+<li data-line="11" dir="auto"><span class="list-bullet"></span>특정 <strong>해석방법</strong>을 적용하여 해당 비트패턴에 의미를 부여</li>
+</ul>
+</li>
+</ul></div><div class="el-h3" data-heading="컴퓨터의 숫자표현 기초" data-tag-name="h3"><h3 data-heading="컴퓨터의 숫자표현 기초" dir="auto" class="heading" id="컴퓨터의_숫자표현_기초_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>컴퓨터의 숫자표현 기초</h3></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span><strong>정수</strong>
+<ul class="has-list-bullet">
+<li data-line="1" dir="auto"><span class="list-bullet"></span>특징: <strong>작은 범위</strong>의 값을 매우 <strong>정밀</strong>하게</li>
+<li data-line="2" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span><strong>비부호형 인코딩</strong> → 양의 정수
+<ul class="has-list-bullet">
+<li data-line="3" dir="auto"><span class="list-bullet"></span>전통적인 이진수 표시</li>
+<li data-line="4" dir="auto"><span class="list-bullet"></span>0 이상의 수 표시</li>
+</ul>
+</li>
+<li data-line="5" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span><strong>2의 보수 인코딩</strong> → 정수
+<ul class="has-list-bullet">
+<li data-line="6" dir="auto"><span class="list-bullet"></span>양수와 음수값을 갖는 부호형 정수를 표시하는 가장 일반적 방법</li>
+</ul>
+</li>
+<li data-line="7" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>계산의 결과값이 너무 크면 <strong>오버플로우</strong> 발생
+<ul class="has-list-bullet">
+<li data-line="8" dir="auto"><span class="list-bullet"></span>이상한 숫자가 일관되게 나타남</li>
+<li data-line="9" dir="auto"><span class="list-bullet"></span>교환법칙, 분배법칙 성립</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="10" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span><strong>소수</strong>
+<ul class="has-list-bullet">
+<li data-line="11" dir="auto"><span class="list-bullet"></span>특징: <strong>넓은</strong> 범위의 값을 <strong>근사값</strong>으로만</li>
+<li data-line="12" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span><strong>부동소수점 인코딩</strong>
+<ul class="has-list-bullet">
+<li data-line="13" dir="auto"><span class="list-bullet"></span>소수 표시</li>
+</ul>
+</li>
+<li data-line="14" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span><strong>오버플로우</strong> 발생시
+<ul class="has-list-bullet">
+<li data-line="15" dir="auto"><span class="list-bullet"></span><strong>+∞</strong> 라는 특별한 값 생성</li>
+<li data-line="16" dir="auto"><span class="list-bullet"></span>교환 법칙이 성립하지 않음</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="17" dir="auto"><span class="list-bullet"></span>많은 컴퓨터 보안 취약성은 컴퓨터 연산의 취약성 때문에 생김 → 어떻게 원하지 않은 방향으로 동작하게 될 수 있는 지 이해하고 있어야함.</li>
+</ul></div><div class="el-h3" data-heading="2.1 정보의 저장" data-tag-name="h3"><h3 data-heading="2.1 정보의 저장" dir="auto" class="heading" id="2.1_정보의_저장_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.1 정보의 저장</h3></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>메모리 접근 단위 = 메모리 주소 지정 단위 ⇒ <strong>바이트(Byte)</strong></li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span>각 바이트는 <strong>주소</strong>라고 하는 고유한 숫자로 식별 가능</li>
+<li data-line="2" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span><strong>가상 주소 공간</strong>
+<ul class="has-list-bullet">
+<li data-line="3" dir="auto"><span class="list-bullet"></span>각 바이트를 식별하는 주소로 표현되는 전체 영역</li>
+<li data-line="4" dir="auto"><span class="list-bullet"></span>개념적인 이미지임 → 실제로는 균일하지 않으나, 균일한 것처럼 보이도록 함</li>
+</ul>
+</li>
+<li data-line="5" dir="auto"><span class="list-bullet"></span>ex) C에서 어떤 포인터의 값 = 해당 정수가 저장된 메모리 블록의 첫 바이트의 주소</li>
+</ul></div><div class="el-h4" data-heading="2.1.1 16진수 표시" data-tag-name="h4"><h4 data-heading="2.1.1 16진수 표시" dir="auto" class="heading" id="2.1.1_16진수_표시_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.1.1 16진수 표시</h4></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span><strong>비트 패턴</strong>을 16진수로 표시함</li>
+</ul></div><div class="el-h3" data-heading="int t = \*p" data-tag-name="h3"><h3 data-heading="int t = \*p" dir="auto" class="heading" id="int_t_=_\*p_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>int t = *p</h3></div><div class="el-h4" data-heading="2.1.2 데이터의 크기" data-tag-name="h4"><h4 data-heading="2.1.2 데이터의 크기" dir="auto" class="heading" id="2.1.2_데이터의_크기_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.1.2 데이터의 크기</h4></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>
+<p>모든 컴퓨터는 <strong>워드 크기</strong>를 규격으로 가짐</p>
+</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span>
+<p><strong>주소</strong>는 워드 크기로 인코딩됨</p>
+</li>
+<li data-line="2" dir="auto"><span class="list-bullet"></span>
+<p>이에 따라 <strong>가상 주소공간</strong>의 최대 크기도 결정됨</p>
+</li>
+<li data-line="3" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>
+<p>적용</p>
+<ul class="has-list-bullet">
+<li data-line="4" dir="auto"><span class="list-bullet"></span>워드 크기가 w비트 크기라는 소리는 주소의 길이도 w bit 크기라는 뜻임</li>
+<li data-line="5" dir="auto"><span class="list-bullet"></span>주소의 길이가 w bit 길이라는 것은 총 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D464 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span>개를 주소로 표현할 수 있다는 의미이며,</li>
+<li data-line="6" dir="auto"><span class="list-bullet"></span>이에 따라 가상주소의 범위는 0 ~ <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D464 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math></mjx-container></span>이 된다.</li>
+<li data-line="7" dir="auto"><span class="list-bullet"></span>결과적으로 가상주소공간의 크기는 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D464 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span> byte 이다. (ex. <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup></mjx-math></mjx-container></span> byte = 4GB)</li>
+</ul>
+</li>
+<li data-line="9" dir="auto"><span class="list-bullet"></span>
+<p>64비트 머신에서는 32비트로 컴파일된 프로그램과 64비트로 컴파일된 프로그램 모두 잘 작동 하지만, 32비트 머신에서는 그렇지 않다.</p>
+</li>
+</ul></div><div class="el-h5" data-heading="다중 데이터 포멧" data-tag-name="h5"><h5 data-heading="다중 데이터 포멧" dir="auto" class="heading" id="다중_데이터_포멧_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>다중 데이터 포멧</h5></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>부호형 / 비부호형</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span><code>char</code>도 숫자표현에 사용될 수 있음. 단, 부호형으로 사용하기 위해서는 <code>signed</code>를 붙여줘야함.</li>
+<li data-line="2" dir="auto"><span class="list-bullet"></span><code>short</code>, <code>int</code>, <code>long</code>은 데이터 크기에 따라 구분됨. 각각 2, 4, 8(32bit 프로그램에서는 4) byte의 크기를 가짐.</li>
+<li data-line="3" dir="auto"><span class="list-bullet"></span><code>int32_t</code>, <code>int64_t</code>은 컴파일러와 컴퓨터 설정에 관계없이 사용할 수 있는 자료형임</li>
+<li data-line="4" dir="auto"><span class="list-bullet"></span><code>T *p</code>는 자료형 <code>T</code>에 대한 포인터 변수로 word 길이의 주소값을 가진다.</li>
+<li data-line="5" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span><code>float</code>, <code>double</code>: 부동 소수점 형식의 소수형 자료형.
+<ul class="has-list-bullet">
+<li data-line="6" dir="auto"><span class="list-bullet"></span><code>float</code>: 단일 정밀도 / 4byte</li>
+<li data-line="7" dir="auto"><span class="list-bullet"></span><code>double</code>: 이중 정밀도 / 8byte</li>
+</ul>
+</li>
+<li data-line="8" dir="auto"><span class="list-bullet"></span>C언어에서는 데이터 타입의 최대값이 시스템(32, 64)마다 달라질 수 있음.</li>
+</ul></div><div class="el-h6" data-heading="+) ✅ 자바나 파이썬과 비교해 보면?" data-tag-name="h6"><h6 data-heading="+) ✅ 자바나 파이썬과 비교해 보면?" dir="auto" class="heading" id="+)_✅_자바나_파이썬과_비교해_보면?_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>+) ✅ 자바나 파이썬과 비교해 보면?</h6></div><div class="el-table" dir="ltr" style="overflow-x: auto;" data-tag-name="table"><table>
+<thead>
+<tr>
+<th dir="ltr">언어</th>
+<th dir="ltr">데이터 타입 크기</th>
+<th dir="ltr">표현 범위</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr"><strong>C</strong></td>
+<td dir="ltr">시스템/컴파일러에 따라 다름</td>
+<td dir="ltr">❗️상한값이 변할 수 있음</td>
+</tr>
+<tr>
+<td dir="ltr"><strong>Java</strong></td>
+<td dir="ltr">타입 크기 고정 (<code>int</code>는 항상 4바이트)</td>
+<td dir="ltr">✅ 표현 범위 고정</td>
+</tr>
+<tr>
+<td dir="ltr"><strong>Python</strong></td>
+<td dir="ltr">정수 타입은 크기 제한 없음 (<code>int</code>는 무한 정밀도)</td>
+<td dir="ltr">✅ 자동 확장</td>
+</tr>
+</tbody>
+</table></div><div class="el-h4" data-heading="2.1.3 주소지정과 바이트 순서" data-tag-name="h4"><h4 data-heading="2.1.3 주소지정과 바이트 순서" dir="auto" class="heading" id="2.1.3_주소지정과_바이트_순서_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.1.3 주소지정과 바이트 순서</h4></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>
+<p>여러 바이트에 걸쳐 있는 객체들에 대해,</p>
+<ol>
+<li data-line="1" dir="auto">객체의 <strong>주소</strong>가 여러 바이트중 무엇이 되어야 하는지</li>
+<li data-line="2" dir="auto">객체들을 여러바이트에 어떻게 <strong>정렬</strong>할 것인지</li>
+</ol>
+</li>
+<li data-line="4" dir="auto"><span class="list-bullet"></span>
+<p>주소지정: 사용된 바이트의 <strong>최소 주소</strong></p>
+</li>
+<li data-line="6" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>
+<p>정렬관습</p>
+<ul class="has-list-bullet">
+<li data-line="7" dir="auto"><span class="list-bullet"></span>용어: 중요한 바이트 → 숫자의 경우 얼마나 큰값을 차지하고 있는지.</li>
+<li data-line="8" dir="auto"><span class="list-bullet"></span>(16진수 값 0x01234567에 대새)</li>
+<li data-line="9" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>리틀 엔디안
+<ul class="has-list-bullet">
+<li data-line="10" dir="auto"><span class="list-bullet"></span>덜 중요한 바이트가 먼저 옴</li>
+<li data-line="11" dir="auto"><span class="list-bullet"></span>67 45 32 01</li>
+</ul>
+</li>
+<li data-line="12" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>빅 엔디안
+<ul class="has-list-bullet">
+<li data-line="13" dir="auto"><span class="list-bullet"></span>중요한 바이트가 먼저옴</li>
+<li data-line="14" dir="auto"><span class="list-bullet"></span>01 23 45 67</li>
+</ul>
+</li>
+<li data-line="15" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>선택해야하는 기술적 이유는 딱히 없고, 컴퓨터의 타입에 따라 달라짐
+<ul class="has-list-bullet">
+<li data-line="16" dir="auto"><span class="list-bullet"></span>대부분의 인텔 호환 머신에서는 리틀 엔디안 사용</li>
+<li data-line="17" dir="auto"><span class="list-bullet"></span>IBM, Oracle 머신들은 빅 엔디안 사용.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div><div class="el-h5" data-heading="정렬 관련 이슈" data-tag-name="h5"><h5 data-heading="정렬 관련 이슈" dir="auto" class="heading" id="정렬_관련_이슈_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>정렬 관련 이슈</h5></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>네트워크를 통해 <strong>다른 컴퓨터로 전송</strong>될 때 → 송신시에 <strong>네트워크 표준</strong>으로 변경하고, 수신시에 내 컴퓨터에 맞게 변환하는 방식 사용</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span><strong>정수 데이터를 나타내는 바이트</strong>들을 살펴볼때
+<ul class="has-list-bullet">
+<li data-line="2" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>예시 
+<ul class="has-list-bullet">
+<li data-line="3" dir="auto"><span class="list-bullet"></span>4004d3: 01 05 43 0b 20 00</li>
+<li data-line="4" dir="auto"><span class="list-bullet"></span>add %eax, 0x200b43(%rip)</li>
+</ul>
+</li>
+<li data-line="5" dir="auto"><span class="list-bullet"></span>정수 데이터: 0x200b43 → 어셈블리 명령어 안에 주소, 상수, 오프셋 등으로 사용되는 정수 값(사람이 직접쓴 숫자나, 참조되는 메모리 위치)</li>
+<li data-line="6" dir="auto"><span class="list-bullet"></span><strong>정수 데이터를 나타내는 바이트</strong>: 43 0b 20 00</li>
+<li data-line="7" dir="auto"><span class="list-bullet"></span>이것에 대한 해석을 잘 못하면 완전 다른 값이 도출됨.</li>
+</ul>
+</li>
+<li data-line="8" dir="auto"><span class="list-bullet"></span>프로그램이 <strong>정상적인 타입체계를 회피</strong>하도록 작성되었을 때</li>
+</ul></div><div class="el-h4" data-heading="2.1.4 스트링의 표시" data-tag-name="h4"><h4 data-heading="2.1.4 스트링의 표시" dir="auto" class="heading" id="2.1.4_스트링의_표시_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.1.4 스트링의 표시</h4></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>C에서 스트링은 null<sup data-footnote-id="fnref-1-ddff43e41cd65f11" class="footnote-ref" id="fnref-1-ddff43e41cd65f11"><a data-footref="1" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#fn-1-ddff43e41cd65f11_0" class="footnote-link" target="_self" rel="noopener nofollow">[1]</a></sup> 문자로 졸요하는 문자열로 인코딩 됨.</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span>각 문자열은 표준 인코딩<sup data-footnote-id="fnref-2-ddff43e41cd65f11" class="footnote-ref" id="fnref-2-ddff43e41cd65f11"><a data-footref="2" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#fn-2-ddff43e41cd65f11_0" class="footnote-link" target="_self" rel="noopener nofollow">[2]</a></sup>에 따라 표시됨</li>
+<li data-line="2" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>텍스트 데이터는 이진데이터에 비해 플랫폼 독립적이다. 
+<ul class="has-list-bullet">
+<li data-line="3" dir="auto"><span class="list-bullet"></span>이진데이터의 경우 정렬 순서나 워드크기에 따라 값이 변할 수 있지만</li>
+<li data-line="4" dir="auto"><span class="list-bullet"></span>텍스트의 경우 각 매칭되는 ascii값과 종료바이트인 0x00으로 이루어져있기 때문.</li>
+</ul>
+</li>
+</ul></div><div class="el-h4" data-heading="2.1.5 코드의 표현" data-tag-name="h4"><h4 data-heading="2.1.5 코드의 표현" dir="auto" class="heading" id="2.1.5_코드의_표현_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.1.5 코드의 표현</h4></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>인스트럭션들의 인코딩은 컴퓨터 타입과 운영체제 등에 따라 모두 다름</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span>동일한 것은 컴퓨터의 관점에서 프로그램은 단순히 바이트의 연속이라는 점이다.</li>
+</ul></div><div class="el-h4" data-heading="2.1.6 부울(Boolean) 대수" data-tag-name="h4"><h4 data-heading="2.1.6 부울(Boolean) 대수" dir="auto" class="heading" id="2.1.6_부울(Boolean)_대수_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.1.6 부울(Boolean) 대수</h4></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>부울 대수: 논리 값 TRUE(0)와 FALSE(1)를 다루는 이론적체계로, 논리연산을 수학적으로 다루기 위한 체계임.</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span>boole이라는 사람이 이진수 값 1과 0을 논리값 TRUE와 FALSE로 인코딩하면,  논리추론의 기본원리들을 수식화 할 수 있다는 것을 발견해서 이런 이름이 붙었음.</li>
+</ul></div><div class="el-table" dir="ltr" style="overflow-x: auto;" data-tag-name="table"><table>
+<thead>
+<tr>
+<th dir="ltr">논리 연산</th>
+<th dir="ltr">논리연산자</th>
+<th dir="ltr">C언어 기호</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr">Not</td>
+<td dir="auto">¬</td>
+<td dir="auto">~</td>
+</tr>
+<tr>
+<td dir="ltr">And</td>
+<td dir="auto">∧</td>
+<td dir="auto">&amp;</td>
+</tr>
+<tr>
+<td dir="ltr">Or</td>
+<td dir="auto">∨</td>
+<td dir="auto">|</td>
+</tr>
+<tr>
+<td dir="ltr">Xor</td>
+<td dir="auto">⊕</td>
+<td dir="auto">^</td>
+</tr>
+</tbody>
+</table></div><div class="el-h5" data-heading="비트 벡터" data-tag-name="h5"><h5 data-heading="비트 벡터" dir="auto" class="heading" id="비트_벡터_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>비트 벡터</h5></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>0과 1로 이루어진 <strong>비트 스트링</strong>(배열)</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span><strong>연산</strong>
+<ul class="has-list-bullet">
+<li data-line="2" dir="auto"><span class="list-bullet"></span>비트벡터간의 연산은 <strong>동일한 자리수의 비트간의 연산</strong>으로 볼 수 있다.</li>
+<li data-line="3" dir="auto"><span class="list-bullet"></span>즉 각 비트 벡터의 i번째 원소를 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-math></mjx-container></span>, <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-math></mjx-container></span>라고 할 때 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span>는 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-math></mjx-container></span>와 같다.</li>
+</ul>
+</li>
+<li data-line="4" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span><strong>유한 집합의 원소 포함 여부</strong>
+<ul class="has-list-bullet">
+<li data-line="5" dir="auto"><span class="list-bullet"></span>각 비트는 어떤 특정 항목의 포함 여부를 나타냄</li>
+<li data-line="6" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span><code>{0, 2, 5}</code>라는 집합을 표현할 때 → <code>101001</code>
+<ul class="has-list-bullet">
+<li data-line="7" dir="auto"><span class="list-bullet"></span>인덱스 0, 2, 5는 1 → 포함</li>
+<li data-line="8" dir="auto"><span class="list-bullet"></span>인덱스 1, 3, 4는 0 → 미포함</li>
+</ul>
+</li>
+<li data-line="9" dir="auto"><span class="list-bullet"></span>이에 대해 합집합이나 교집합, 여집합 연산을 하기에 편함</li>
+<li data-line="10" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span><strong>비트 (벡터) 마스크</strong>
+<ul class="has-list-bullet">
+<li data-line="11" dir="auto"><span class="list-bullet"></span>특정 시그널의 선택적으로 활성화, 비활성화 할 수 있도록 해줌</li>
+<li data-line="12" dir="auto"><span class="list-bullet"></span>아래에서 자세히 다룸</li>
+</ul>
+</li>
+<li data-line="13" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>장점
+<ul class="has-list-bullet">
+<li data-line="14" dir="auto"><span class="list-bullet"></span>메모리 사용이 표율적이고</li>
+<li data-line="15" dir="auto"><span class="list-bullet"></span>연산이 빠름</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div><div class="el-h4" data-heading="2.1.7 C에서의 비트수준 연산" data-tag-name="h4"><h4 data-heading="2.1.7 C에서의 비트수준 연산" dir="auto" class="heading" id="2.1.7_C에서의_비트수준_연산_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.1.7 C에서의 비트수준 연산</h4></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>C는 비트들 간의 부울 연산을 지원함(위에 기호 정리해둠.)</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>일반적으로 마스크 연산을 구현 할 때 사용.
+<ul class="has-list-bullet">
+<li data-line="2" dir="auto"><span class="list-bullet"></span><code>x = 0x89ABCDEF</code>일 때 <code>x&amp;0xFF</code>는 맨 우측의 <code>EF</code> 값만 활성화하는데 사용.</li>
+<li data-line="3" dir="auto"><span class="list-bullet"></span><code>~0</code>은 비트가 모두 1인 마스크를 만들 때 사용</li>
+</ul>
+</li>
+</ul></div><div class="el-h4" data-heading="2.1.8 C에서의 논리 연산" data-tag-name="h4"><h4 data-heading="2.1.8 C에서의 논리 연산" dir="auto" class="heading" id="2.1.8_C에서의_논리_연산_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.1.8 C에서의 논리 연산</h4></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>논리연산자인 <code>||</code>, <code>&amp;&amp;</code>, <code>!</code>를 제공함</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>비트수준의 연산과 혼동하지 말것
+<ul class="has-list-bullet">
+<li data-line="2" dir="auto"><span class="list-bullet"></span>해당 논리연산이 참인지 거짓인지에 따라 0 또는 1을 리턴함</li>
+<li data-line="3" dir="auto"><span class="list-bullet"></span>만일 첫번째 인자를 계산해서 참, 거짓이 결정된다면 뒤의 연산을 하지 않음.</li>
+</ul>
+</li>
+</ul></div><div class="el-table" dir="ltr" style="overflow-x: auto;" data-tag-name="table"><table>
+<thead>
+<tr>
+<th dir="ltr">항목</th>
+<th dir="ltr"><strong>비트 연산</strong></th>
+<th dir="ltr"><strong>논리 연산</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr">작동 대상</td>
+<td dir="ltr"><strong>각 비트 단위</strong></td>
+<td dir="ltr"><strong>논리값(True/False)</strong></td>
+</tr>
+<tr>
+<td dir="ltr">예시 타입</td>
+<td dir="ltr">정수 (<code>int</code>, <code>char</code>, <code>unsigned int</code>)</td>
+<td dir="ltr">조건식 (<code>bool</code>, if문 안)</td>
+</tr>
+<tr>
+<td dir="ltr">예시 연산자</td>
+<td dir="auto"><code>&amp;</code>, `</td>
+<td dir="auto"><code>,</code> ^<code>,</code> ~<code>,</code> &lt;&lt;<code>,</code> &gt;&gt;`</td>
+</tr>
+<tr>
+<td dir="ltr">결과값</td>
+<td dir="ltr">비트값 그대로 (숫자)</td>
+<td dir="ltr">논리값 (0 또는 1, 참/거짓)</td>
+</tr>
+<tr>
+<td dir="ltr">쓰임새</td>
+<td dir="ltr">마스크, 플래그 제어, 하드웨어 연산</td>
+<td dir="ltr">조건문, 분기, 참/거짓 판단</td>
+</tr>
+</tbody>
+</table></div><div class="el-h4" data-heading="2.1.9 C에서의 쉬프트 연산" data-tag-name="h4"><h4 data-heading="2.1.9 C에서의 쉬프트 연산" dir="auto" class="heading" id="2.1.9_C에서의_쉬프트_연산_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.1.9 C에서의 쉬프트 연산</h4></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>비트 패턴을 좌우로 이동시키는 연산 (정수를 2로 나눌 때 유용)</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span>좌측연산(x≪k): x를 좌측으로 k비트 이동 / 제일 좌측 비트 k개는 삭제 / 우측은 k개의 0으로 채워짐</li>
+<li data-line="2" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>우측연산(x≫k): x를 우측으로 k비트 이동 / 제일 우측 비트 k개는 삭제
+<ul class="has-list-bullet">
+<li data-line="3" dir="auto"><span class="list-bullet"></span>논리 우측 쉬프트: 좌측 k개가 0으로 채워짐</li>
+<li data-line="4" dir="auto"><span class="list-bullet"></span>산술 우측 쉬프트: 좌측 k개가 가장 중요한 비트(원래 제일 왼쪽 비트)로 채워짐 → 부호형 정수 데이터의 연산에서 유용하게 작용.</li>
+<li data-line="5" dir="auto"><span class="list-bullet"></span>대부분 산술 우측 쉬프트를 사용, 비부호형 데이터에 대해서 놀니 쉬프트를 적용</li>
+</ul>
+</li>
+</ul></div><div class="el-h3" data-heading="2.2 정수의 표시" data-tag-name="h3"><h3 data-heading="2.2 정수의 표시" dir="auto" class="heading" id="2.2_정수의_표시_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.2 정수의 표시</h3></div><div class="el-h4" data-heading="2.2.1 정수형 데이터 타입" data-tag-name="h4"><h4 data-heading="2.2.1 정수형 데이터 타입" dir="auto" class="heading" id="2.2.1_정수형_데이터_타입_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.2.1 정수형 데이터 타입</h4></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span><code>char</code>: 1 byte</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span><code>short</code>: 2 byte</li>
+<li data-line="2" dir="auto"><span class="list-bullet"></span><code>int</code>: 4 byte</li>
+<li data-line="3" dir="auto"><span class="list-bullet"></span><code>long</code>: 4 byte(32-bit) or 8 byte(64-bit) → 컴퓨터에 의존적인 범위</li>
+<li data-line="4" dir="auto"><span class="list-bullet"></span><code>int32_t</code>: 4 byte</li>
+<li data-line="5" dir="auto"><span class="list-bullet"></span><code>int64_t</code>: 8 byte</li>
+<li data-line="6" dir="auto"><span class="list-bullet"></span>각각에 대해 signed한 자료형(기본)과 unsigned한 자료형이 존재함.</li>
+<li data-line="7" dir="auto"><span class="list-bullet"></span>c표준에서는 각 데이터 타입에서 나타낼 수 있어야하는 최소한의 범위를 정의함.</li>
+</ul></div><div class="el-h4" data-heading="2.2.2 비부호형의 인코딩" data-tag-name="h4"><h4 data-heading="2.2.2 비부호형의 인코딩" dir="auto" class="heading" id="2.2.2_비부호형의_인코딩_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.2.2 비부호형의 인코딩</h4></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>비트 벡터의 각 비트는 0이나 1의 값을 가짐</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span>자리수 i에 대해 비트 값 1을 가진다는 의미 →  <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span> 값이 숫자의 값을 계산 할 때 포함 되어야한다는 의미</li>
+<li data-line="2" dir="auto"><span class="list-bullet"></span>계산: 자릿값(<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span>) x 1 또는 0을 해서 합함</li>
+<li data-line="3" dir="auto"><span class="list-bullet"></span>![|300](20250523_195552.jpg</li>
+</ul></div><div class="el-h4" data-heading="2.2.3 2의 보수(two’s complement) 인코딩" data-tag-name="h4"><h4 data-heading="2.2.3 2의 보수(two’s complement) 인코딩" dir="auto" class="heading" id="2.2.3_2의_보수(two’s_complement)_인코딩_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.2.3 2의 보수(two’s complement) 인코딩</h4></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>
+<p>부호형 숫자를 컴퓨터에서 표시하는 가장 일반적인 방법</p>
+</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>
+<p>가장 왼쪽 비트를 <strong>부호 비트</strong>로 사용함</p>
+<ul class="has-list-bullet">
+<li data-line="2" dir="auto"><span class="list-bullet"></span>1이면 음수</li>
+<li data-line="3" dir="auto"><span class="list-bullet"></span>0이면 양수</li>
+</ul>
+</li>
+<li data-line="4" dir="auto"><span class="list-bullet"></span>
+<p><span alt="Pasted image 20250523213904.png" src="⁵-file/image/pasted-image-20250523213904.png" class="internal-embed media-embed image-embed is-loaded" target="_self" style="width: 320px; max-width: 100%;"><img alt="Pasted image 20250523213904.png" src="⁵-file/image/pasted-image-20250523213904.png" target="_self" style="width: 320px; max-width: 100%;"></span></p>
+</li>
+<li data-line="5" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>
+<p>계산 → 4자리 비트에서</p>
+<ul class="has-list-bullet">
+<li data-line="6" dir="auto"><span class="list-bullet"></span>부호비트의 자리값은 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-msup><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup></mjx-math></mjx-container></span></li>
+<li data-line="7" dir="auto"><span class="list-bullet"></span>나머지의 자리값은 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msup space="2"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msup space="2"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math></mjx-container></span></li>
+<li data-line="8" dir="auto"><span class="list-bullet"></span>각 자리값에 해당하는 비트값(0 or 1)을 곱한 값들의 합합</li>
+</ul>
+</li>
+<li data-line="9" dir="auto"><span class="list-bullet"></span>
+<p><span alt="20250523_195539.jpg" src="⁵-file/image/20250523_195539.jpg" class="internal-embed media-embed image-embed is-loaded" target="_self" style="width: 300px; max-width: 100%;"><img alt="20250523_195539.jpg" src="⁵-file/image/20250523_195539.jpg" target="_self" style="width: 300px; max-width: 100%;"></span></p>
+</li>
+<li data-line="11" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>
+<p>특징</p>
+<ul class="has-list-bullet">
+<li data-line="12" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2의 보수의 범위는 <strong>비대칭적</strong>임.
+<ul class="has-list-bullet">
+<li data-line="13" dir="auto"><span class="list-bullet"></span><em>(양수값의 범위) = (음수값의 범위) - 1</em></li>
+<li data-line="14" dir="auto"><span class="list-bullet"></span>비트 패턴의 절반으로 <strong>음수</strong>를, 나머지 절반으로 <strong>비음수</strong>(0과 양수)를 표현하기 때문</li>
+</ul>
+</li>
+<li data-line="15" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>비부호형의 최대값 = 2의 보수 최대값 * 2 + 1
+<ul class="has-list-bullet">
+<li data-line="16" dir="auto"><span class="list-bullet"></span>2의 보수에서 음수를 표시하는 모든 비트 패턴들은 비부호형에서 양수값을 표시하고 있기 때문임.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="17" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>
+<p>사용</p>
+<ul class="has-list-bullet">
+<li data-line="18" dir="auto"><span class="list-bullet"></span>C의 경우 부호형 정수를 2의 보수 형식으로 나타낼 것을 요구하지는 않지만, 거의 모든 컴퓨터에서 요하고 있음.</li>
+<li data-line="19" dir="auto"><span class="list-bullet"></span>자바는 64비트의 경우 2의 보수 표시를 요구함</li>
+</ul>
+</li>
+</ul></div><div class="el-h4" data-heading="2.2.4 비부호형과 부호형 간의 변환" data-tag-name="h4"><h4 data-heading="2.2.4 비부호형과 부호형 간의 변환" dir="auto" class="heading" id="2.2.4_비부호형과_부호형_간의_변환_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.2.4 비부호형과 부호형 간의 변환</h4></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>비트의 값 → 동일하게 유지</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span>비트를 해석하는 방법 → 변경</li>
+</ul></div><div class="el-h4" data-heading="2.2.5 C에서 부호형과 비부호형의 비교" data-tag-name="h4"><h4 data-heading="2.2.5 C에서 부호형과 비부호형의 비교" dir="auto" class="heading" id="2.2.5_C에서_부호형과_비부호형의_비교_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.2.5 C에서 부호형과 비부호형의 비교</h4></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>묵시적으로 부호형 인자를 비부호형으로 변환하고 숫자들이 비음수라고 가정하고 계산</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span>이것은 관계 연산에 대해서 다소 덜 직관적인 결과를 만든다</li>
+</ul></div><div class="el-h4" data-heading="2.2.6 수의 비트 표시를 확장하기" data-tag-name="h4"><h4 data-heading="2.2.6 수의 비트 표시를 확장하기" dir="auto" class="heading" id="2.2.6_수의_비트_표시를_확장하기_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.2.6 수의 비트 표시를 확장하기</h4></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>비부호형 수: 단순히 앞에 0을 추가 → 0의 확장(zero extension)</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span>부호형 수(2의 보수): 부호비트를 <strong>복사</strong>해서 앞부분 전체에 추가 → 부호 확장(sign extension)</li>
+</ul></div><div class="el-h4" data-heading="2.2.7 숫자의 절삭" data-tag-name="h4"><h4 data-heading="2.2.7 숫자의 절삭" dir="auto" class="heading" id="2.2.7_숫자의_절삭_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.2.7 숫자의 절삭</h4></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>수를 절삭하면 그 값이 바뀔 수 있다. → 일종의 오버플로우</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span>컴퓨터는 그냥 자르지만 우리가 이것을 계산하려면 <strong>mod 연산</strong>을 하면 된다.</li>
+<li data-line="2" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>비부호형 수:
+<ul class="has-list-bullet">
+<li data-line="3" dir="auto"><span class="list-bullet"></span>x’ = x mod <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span></li>
+<li data-line="4" dir="auto"><span class="list-bullet"></span>k 위로 자를 때, i ≥ k인 모든 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span>의 자리값은 0으로 계산됨.</li>
+</ul>
+</li>
+<li data-line="5" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>부호형 수(2의 보수): 똑같이 그냥 자르고 그 값을 부호형 수로 바꿔 줌.
+<ul class="has-list-bullet">
+<li data-line="6" dir="auto"><span class="list-bullet"></span>x’ = U2T(x mod <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span>)</li>
+<li data-line="7" dir="auto"><span class="list-bullet"></span>가장 중요한 비트인 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub></mjx-math></mjx-container></span>이 자리값 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup></mjx-math></mjx-container></span> 대신 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-msup><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup></mjx-math></mjx-container></span>을 가짐</li>
+</ul>
+</li>
+</ul></div><div class="el-h4" data-heading="Signed와 Unsigned에 대한 조언" data-tag-name="h4"><h4 data-heading="Signed와 Unsigned에 대한 조언" dir="auto" class="heading" id="Signed와_Unsigned에_대한_조언_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Signed와 Unsigned에 대한 조언</h4></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>부호형과 비부호형 간의 묵시적인 타입변환은 미묘한 에러들을 수반한다.</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span>기왕이면 비부호형 수를 절대로 사용하지 말아라. → C외에 다른 언어들은 비부호형 수를 지원하지 않음.</li>
+</ul></div><div class="el-h3" data-heading="2.3 정수의 산술 연산" data-tag-name="h3"><h3 data-heading="2.3 정수의 산술 연산" dir="auto" class="heading" id="2.3_정수의_산술_연산_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.3 정수의 산술 연산</h3></div><div class="el-h4" data-heading="2.3.1 비부호형 덧셈" data-tag-name="h4"><h4 data-heading="2.3.1 비부호형 덧셈" dir="auto" class="heading" id="2.3.1_비부호형_덧셈_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.3.1 비부호형 덧셈</h4></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>두 개의 0 이상 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D464 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span> 미만의 정수 x와 y에 대해 x+y는 <strong>최대 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-texatom texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D464 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-math></mjx-container></span> 개의 비트</strong>로 표현 될 수 있음.<br>
+→ <strong>오버플로우 발생</strong></li>
+<li data-line="2" dir="auto"><span class="list-bullet"></span>이때 컴퓨터는 넘어간 비트를 <strong>절삭</strong>함</li>
+<li data-line="3" dir="auto"><span class="list-bullet"></span><span alt="Pasted image 20250529171635.png" src="⁵-file/image/pasted-image-20250529171635.png" class="internal-embed media-embed image-embed is-loaded" target="_self" style="width: 180px; max-width: 100%;"><img alt="Pasted image 20250529171635.png" src="⁵-file/image/pasted-image-20250529171635.png" target="_self" style="width: 180px; max-width: 100%;"></span></li>
+</ul></div><div class="el-h4" data-heading="2.3.2 2의 보수의 덧셈" data-tag-name="h4"><h4 data-heading="2.3.2 2의 보수의 덧셈" dir="auto" class="heading" id="2.3.2_2의_보수의_덧셈_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.3.2 2의 보수의 덧셈</h4></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span><span alt="Pasted image 20250529171701.png" src="⁵-file/image/pasted-image-20250529171701.png" class="internal-embed media-embed image-embed is-loaded" target="_self" style="width: 250px; max-width: 100%;"><img alt="Pasted image 20250529171701.png" src="⁵-file/image/pasted-image-20250529171701.png" target="_self" style="width: 250px; max-width: 100%;"></span></li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span>이 경우도 비슷하게 overflow가 발생할 수 있다.</li>
+<li data-line="2" dir="auto"><span class="list-bullet"></span>양의 오버플로우 (case 4): <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D466 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2265"></mjx-c></mjx-mo><mjx-msup space="4"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D464 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup></mjx-math></mjx-container></span></li>
+<li data-line="3" dir="auto"><span class="list-bullet"></span>음의 오버플로우 (case 1): <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D466 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3C"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-msup><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D464 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup></mjx-math></mjx-container></span></li>
+<li data-line="4" dir="auto"><span class="list-bullet"></span>overflow의 판별은 양수끼리 더했을 때 음수가, 음수끼리 더했을 때 양수가 나오는 경우로 판별할 수 있다.</li>
+<li data-line="5" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>여기도 동일하게 절삭을 진행하고, 그 값은 아래와 같이 계산할 수 있다.
+<ul class="has-list-bullet">
+<li data-line="6" dir="auto"><span class="list-bullet"></span>양의 오버플로우: <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D466 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-msup space="3"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D464 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span></li>
+<li data-line="7" dir="auto"><span class="list-bullet"></span>음의 오버플로우: <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D466 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-msup space="3"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D464 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span></li>
+</ul>
+</li>
+</ul></div><div class="el-h4" data-heading="2.3.4 비부호형 곱셈 / 2.3.5 2의 보수 곱셈" data-tag-name="h4"><h4 data-heading="2.3.4 비부호형 곱셈 / 2.3.5 2의 보수 곱셈" dir="auto" class="heading" id="2.3.4_비부호형_곱셈_/_2.3.5_2의_보수_곱셈_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.3.4 비부호형 곱셈 / 2.3.5 2의 보수 곱셈</h4></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>표시하려면 <strong><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D464 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span> 비트</strong>까지 필요할 수 있다.</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span>동일하게 절삭을 진행한다.</li>
+<li data-line="2" dir="auto"><span class="list-bullet"></span>2의 보수는 절삭 후 해당 수를 2의 보수로 해석한다.</li>
+</ul></div><div class="el-h4" data-heading="2.3.6 상수를 사용한 곱셈" data-tag-name="h4"><h4 data-heading="2.3.6 상수를 사용한 곱셈" dir="auto" class="heading" id="2.3.6_상수를_사용한_곱셈_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.3.6 상수를 사용한 곱셈</h4></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>컴퓨터에서 정수 <strong>곱셈은 매우 느리다</strong>.</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span>따라서 곱셈을 대체할 수 있는 방법이 필요하다.</li>
+<li data-line="2" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>그 방법이 <strong>시프트 연산을 하고 그 값을 더하는 것</strong>이다.
+<ul class="has-list-bullet">
+<li data-line="3" dir="auto"><span class="list-bullet"></span><strong>2의 제곱</strong>을 곱하는 경우 → <strong>좌측 시프트</strong></li>
+<li data-line="4" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2의 제곱이 아닌 경우
+<ul class="has-list-bullet">
+<li data-line="5" dir="auto"><span class="list-bullet"></span>곱하는 수를 2의 제곱들의 합(또는 차)로 표현을 하고 그것을 활용</li>
+<li data-line="6" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>ex) 14 = 8 + 4 + 2
+<ul class="has-list-bullet">
+<li data-line="7" dir="auto"><span class="list-bullet"></span>(x &lt;&lt; 3) + (x &lt;&lt; 2) + (x &lt;&lt; 1) = x * 14</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="8" dir="auto"><span class="list-bullet"></span>일반 곱셈기 또한 내부에서 위의 방식으로 작동한다.</li>
+</ul></div><div class="el-table" dir="ltr" style="overflow-x: auto;" data-tag-name="table"><table>
+<thead>
+<tr>
+<th dir="ltr">구분</th>
+<th dir="ltr">곱셈 대상</th>
+<th dir="ltr">자료형 의미</th>
+<th dir="ltr">연산 방식</th>
+<th dir="ltr">시점</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr">비부호형 곱셈</td>
+<td dir="ltr">변수 × 변수</td>
+<td dir="ltr">unsigned</td>
+<td dir="ltr">일반 곱셈기</td>
+<td dir="ltr">곱셈기를 호출</td>
+</tr>
+<tr>
+<td dir="ltr">2의 보수 곱셈</td>
+<td dir="ltr">변수 × 변수</td>
+<td dir="ltr">signed (2's comp.)</td>
+<td dir="ltr">일반 곱셈기 + 부호 보정</td>
+<td dir="ltr">곱셈기를 호출</td>
+</tr>
+<tr>
+<td dir="ltr">상수 곱셈</td>
+<td dir="ltr">변수 × 상수</td>
+<td dir="ltr">unsigned or signed</td>
+<td dir="ltr">시프트 + 덧셈</td>
+<td dir="ltr">컴파일 시점에서 <br>시프드 + 덧셈으로 수정</td>
+</tr>
+</tbody>
+</table></div><div class="el-h4" data-heading="2.3.7 2의 제곱으로 나눗셈하기" data-tag-name="h4"><h4 data-heading="2.3.7 2의 제곱으로 나눗셈하기" dir="auto" class="heading" id="2.3.7_2의_제곱으로_나눗셈하기_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.3.7 2의 제곱으로 나눗셈하기</h4></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>곱셈보다도 느리다므로 우측 시프트연산을 사용한다.</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span>각각 표현방식에 따라 논리 시프트(비부호형), 산술 시프트(2의 보수)를 사용함</li>
+<li data-line="2" dir="auto"><span class="list-bullet"></span>정수의 나눗셈에 대해 <strong>소수점 이하는 버린다고 정의</strong>했기 때문에 이에 맞추어 컴퓨터가 작동하게 보정을 해줘야함.</li>
+<li data-line="3" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>기본적으로 <strong>시프트 연산</strong>을 마치면 결과는 버림이 아닌 <strong>내림</strong>으로 나옴
+<ul class="has-list-bullet">
+<li data-line="4" dir="auto"><span class="list-bullet"></span>양수: 내림 = 버림</li>
+<li data-line="5" dir="auto"><span class="list-bullet"></span>음수: 내림 ≠ 버림 → -3.5 = -3 (버림) = -4 (내림)</li>
+</ul>
+</li>
+<li data-line="6" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>따라서 이 값을 보정해주기위해 <strong>bias</strong>값을 사용한다.
+<ul class="has-list-bullet">
+<li data-line="7" dir="auto"><span class="list-bullet"></span><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3C"></mjx-c><mjx-c class="mjx-c3C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math></mjx-container></span></li>
+<li data-line="8" dir="auto"><span class="list-bullet"></span>가장 큰 오차를 더하는 것임.</li>
+</ul>
+</li>
+</ul></div><div class="el-h3" data-heading="2.4 부동소수점" data-tag-name="h3"><h3 data-heading="2.4 부동소수점" dir="auto" class="heading" id="2.4_부동소수점_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.4 부동소수점</h3></div><div class="el-h4" data-heading="2.4.1 비율 이진수" data-tag-name="h4"><h4 data-heading="2.4.1 비율 이진수" dir="auto" class="heading" id="2.4.1_비율_이진수_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.4.1 비율 이진수</h4></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>&nbsp;<strong>소수점이 있는 이진수</strong>로 2의 음의 거듭제곱이다.</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span>십진수에 무한소수가 있는 것처럼, 비율이진수 또한 무한 소수가 있다</li>
+<li data-line="2" dir="auto"><span class="list-bullet"></span>따라서 모든 수를 정확히 표현할 수 없고 근사값을 사용할 때가 많다.</li>
+</ul></div><div class="el-h4" data-heading="2.4.2 IEEE 부동 소수점 표시" data-tag-name="h4"><h4 data-heading="2.4.2 IEEE 부동 소수점 표시" dir="auto" class="heading" id="2.4.2_IEEE_부동_소수점_표시_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.4.2 IEEE 부동 소수점 표시</h4></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>부동소수점: <strong>아주 큰 수</strong> 또는 <strong>아주 작은 수</strong>를 효율적으로 표현하기 위한 범용적인 숫자 표현 방식</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>기본 공식: <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D449 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-cD7"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-cD7"></mjx-c></mjx-mi><mjx-msup><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D438 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span>
+<ul class="has-list-bullet">
+<li data-line="2" dir="auto"><span class="list-bullet"></span><strong>S</strong>: 부호 비트 →  0이면 양수, 1이면 음수</li>
+<li data-line="3" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span><strong>M</strong>: 가수
+<ul class="has-list-bullet">
+<li data-line="4" dir="auto"><span class="list-bullet"></span>실제 숫자의 유효 자릿수</li>
+<li data-line="5" dir="auto"><span class="list-bullet"></span>비율 이진수와 유사</li>
+</ul>
+</li>
+<li data-line="6" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span><strong>E</strong>: 지수
+<ul class="has-list-bullet">
+<li data-line="7" dir="auto"><span class="list-bullet"></span>2의 몇 제곱인지</li>
+<li data-line="8" dir="auto"><span class="list-bullet"></span>bias 값을 사용하여 부호 없이 음수, 양수를 모두 표현할 수 있도록함.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="9" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>종류
+<ul class="has-list-bullet">
+<li data-line="10" dir="auto"><span class="list-bullet"></span><span src="⁵-file/image/pasted-image-20250529174514.png" class="internal-embed media-embed image-embed is-loaded" target="_self"><img src="⁵-file/image/pasted-image-20250529174514.png" target="_self"></span></li>
+<li data-line="11" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span><strong>정규화 값</strong>
+<ul class="has-list-bullet">
+<li data-line="12" dir="auto"><span class="list-bullet"></span>가장 <strong>일반적</strong>인 경우 지수 필드가 <strong>모두 0은 아니며, 모두 1이 아니어</strong>야 한다.</li>
+<li data-line="13" dir="auto"><span class="list-bullet"></span>가수 앞에 암묵적 ‘1.’ 이 존재함</li>
+</ul>
+</li>
+<li data-line="14" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span><strong>비정규화 값</strong>
+<ul class="has-list-bullet">
+<li data-line="15" dir="auto"><span class="list-bullet"></span>지수 필드가 <strong>모두 0</strong>일 때</li>
+<li data-line="16" dir="auto"><span class="list-bullet"></span><strong>아주 작은 수</strong>를 표현할 때 사용</li>
+<li data-line="17" dir="auto"><span class="list-bullet"></span>가수 앞의 암묵적 1. 이 없음 → 0.</li>
+</ul>
+</li>
+<li data-line="18" dir="auto"><span class="list-bullet"></span><span class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span><strong>특수 값</strong>
+<ul class="has-list-bullet">
+<li data-line="19" dir="auto"><span class="list-bullet"></span>지수 필드가 <strong>모두 1</strong>인 경우</li>
+<li data-line="20" dir="auto"><span class="list-bullet"></span><strong>숫자가 아닌</strong> 것을 표현함</li>
+<li data-line="21" dir="auto"><span class="list-bullet"></span>NaN이나, 무한대 값을 표현함</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div><div class="el-table" dir="ltr" style="overflow-x: auto;" data-tag-name="table"><table>
+<thead>
+<tr>
+<th dir="ltr"><strong>구분</strong></th>
+<th dir="ltr"><strong>지수 필드 (8비트)</strong></th>
+<th dir="ltr"><strong>지수 (실제 값)</strong></th>
+<th dir="ltr"><strong>가수(fraction)</strong></th>
+<th dir="ltr"><strong>의미 / 해석</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr"><strong>비정규화 수</strong></td>
+<td dir="auto"><code>00000000</code> (0)</td>
+<td dir="ltr"><strong>-126 고정</strong></td>
+<td dir="auto"><code>≠ 0</code></td>
+<td dir="ltr"><code>0.f × 2⁻¹²⁶</code> (작은 실수)</td>
+</tr>
+<tr>
+<td dir="auto"><strong>+0 / -0</strong></td>
+<td dir="auto"><code>00000000</code> (0)</td>
+<td dir="ltr">-126 고정</td>
+<td dir="auto"><code>0</code></td>
+<td dir="ltr">정수 0 (부호만 다름)</td>
+</tr>
+<tr>
+<td dir="ltr"><strong>정규화 수</strong></td>
+<td dir="auto"><code>00000001</code> (1)<br>~ <code>11111110</code> (254)</td>
+<td dir="auto"><code>-126</code> ~ <code>+127</code></td>
+<td dir="ltr"><code>임의의 값</code></td>
+<td dir="ltr"><code>1.f × 2^{e-127}</code></td>
+</tr>
+<tr>
+<td dir="auto"><strong>+∞ / -∞</strong></td>
+<td dir="auto"><code>11111111</code> (255)</td>
+<td dir="ltr">N/A</td>
+<td dir="auto"><code>0</code></td>
+<td dir="ltr">양/음의 무한대</td>
+</tr>
+<tr>
+<td dir="ltr"><strong>NaN</strong></td>
+<td dir="auto"><code>11111111</code> (255)</td>
+<td dir="ltr">N/A</td>
+<td dir="auto"><code>≠ 0</code></td>
+<td dir="ltr">정의되지 않은 수</td>
+</tr>
+</tbody>
+</table></div><div class="el-h4" data-heading="2.4.4 근사법" data-tag-name="h4"><h4 data-heading="2.4.4 근사법" dir="auto" class="heading" id="2.4.4_근사법_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.4.4 근사법</h4></div><div class="el-table" dir="ltr" style="overflow-x: auto;" data-tag-name="table"><table>
+<thead>
+<tr>
+<th dir="ltr">이름</th>
+<th dir="ltr">방향</th>
+<th dir="ltr">예 (3.5)</th>
+<th dir="ltr">예 (-3.5)</th>
+<th dir="ltr">특징</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr"><strong>짝수 근사법</strong> (기본)</td>
+<td dir="ltr">가장 가까운 값,<br>동점 시 짝수 쪽</td>
+<td dir="auto"><strong>4</strong></td>
+<td dir="auto"><strong>-4</strong></td>
+<td dir="ltr">통계적 중립성, 기본값</td>
+</tr>
+<tr>
+<td dir="ltr"><strong>영 방향 근사</strong></td>
+<td dir="ltr">0을 향해 절삭</td>
+<td dir="auto">3</td>
+<td dir="auto">-3</td>
+<td dir="ltr">truncate, 정수 나눗셈처럼</td>
+</tr>
+<tr>
+<td dir="ltr"><strong>하향 근사</strong></td>
+<td dir="ltr">-∞ 방향으로</td>
+<td dir="auto">3</td>
+<td dir="auto"><strong>-4</strong></td>
+<td dir="ltr">항상 아래로</td>
+</tr>
+<tr>
+<td dir="ltr"><strong>상향 근사</strong></td>
+<td dir="ltr">+∞ 방향으로</td>
+<td dir="auto"><strong>4</strong></td>
+<td dir="auto">-3</td>
+<td dir="ltr">항상 위로</td>
+</tr>
+</tbody>
+</table></div><div class="el-h4" data-heading="2.4.5 부동소수점 연산" data-tag-name="h4"><h4 data-heading="2.4.5 부동소수점 연산" dir="auto" class="heading" id="2.4.5_부동소수점_연산_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2.4.5 부동소수점 연산</h4></div><div class="el-ul" data-tag-name="ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>정확하지 않은 경우가 많다 → 근사값값</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span>분배, 교환, 결합법칙이 성립하지 않는다</li>
+</ul></div><div class="el-hr" data-tag-name="hr"><hr></div><div></div><div></div><div>
+</div><div class="el-section" data-tag-name="section"><section class="footnotes"><hr><ol>
+<li data-line="-1" data-footnote-id="fn-1-ddff43e41cd65f11" id="fn-1-ddff43e41cd65f11" dir="auto"><p>값 0을 가짐<a href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#fnref-1-ddff43e41cd65f11_0" class="footnote-backref footnote-link" target="_self" rel="noopener nofollow">↩︎</a></p></li>
+<li data-line="0" data-footnote-id="fn-2-ddff43e41cd65f11" id="fn-2-ddff43e41cd65f11" dir="auto"><p>대개 ASCII<a href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#fnref-2-ddff43e41cd65f11_0" class="footnote-backref footnote-link" target="_self" rel="noopener nofollow">↩︎</a></p></li>
+</ol></section></div><div class="footer"><div class="data-bar"></div></div></div></div></div><div id="right-content" class="leaf" style="--sidebar-width: var(--sidebar-width-right);"><div id="right-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme-toggle-input" id=""><input class="theme-toggle-input" type="checkbox" id="theme-toggle-input"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content-wrapper"><div id="right-sidebar-content" class="leaf-content"><div class="graph-view-wrapper"><div class="feature-header"><div class="feature-title">Interactive Graph</div></div><div class="graph-view-placeholder">
+		<div class="graph-view-container">
+			<div class="graph-icon graph-expand" role="button" aria-label="Expand" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+			<div class="graph-icon graph-global" role="button" aria-label="Global Graph" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-git-fork"><circle cx="12" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><circle cx="18" cy="6" r="3"></circle><path d="M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9"></path><path d="M12 12v3"></path></svg></div>
+			<canvas id="graph-canvas" class="hide" width="512px" height="512px"></canvas>
+		</div>
+		</div></div><div id="outline" class=" tree-container"><div class="feature-header"><div class="feature-title">Table Of Contents</div><button class="clickable-icon nav-action-button tree-collapse-all" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-item mod-collapsible" data-depth="1"><a class="tree-item-self is-clickable mod-collapsible" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#컴퓨터시스템_CH2._정보의_표현과_처리_0" data-path="#컴퓨터시스템_CH2._정보의_표현과_처리_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="컴퓨터시스템 CH2. 정보의 표현과 처리">컴퓨터시스템 CH2. 정보의 표현과 처리</div></a><div class="tree-item-children"><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-item-self is-clickable mod-collapsible" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#정보의_표현과_처리_0" data-path="#정보의_표현과_처리_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="정보의 표현과 처리">정보의 표현과 처리</div></a><div class="tree-item-children"><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#비트_0" data-path="#비트_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="비트">비트</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#컴퓨터의_숫자표현_기초_0" data-path="#컴퓨터의_숫자표현_기초_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="컴퓨터의 숫자표현 기초">컴퓨터의 숫자표현 기초</div></a><div class="tree-item-children"></div></div><div class="tree-item mod-collapsible" data-depth="3"><a class="tree-item-self is-clickable mod-collapsible" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.1_정보의_저장_0" data-path="#2.1_정보의_저장_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.1 정보의 저장">2.1 정보의 저장</div></a><div class="tree-item-children"><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.1.1_16진수_표시_0" data-path="#2.1.1_16진수_표시_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.1.1 16진수 표시">2.1.1 16진수 표시</div></a><div class="tree-item-children"></div></div></div></div><div class="tree-item mod-collapsible" data-depth="3"><a class="tree-item-self is-clickable mod-collapsible" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#int_t_=_\*p_0" data-path="#int_t_=_\*p_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="int t = \*p">int t = *p</div></a><div class="tree-item-children"><div class="tree-item mod-collapsible" data-depth="4"><a class="tree-item-self is-clickable mod-collapsible" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.1.2_데이터의_크기_0" data-path="#2.1.2_데이터의_크기_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.1.2 데이터의 크기">2.1.2 데이터의 크기</div></a><div class="tree-item-children"><div class="tree-item mod-collapsible" data-depth="5"><a class="tree-item-self is-clickable mod-collapsible" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#다중_데이터_포멧_0" data-path="#다중_데이터_포멧_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="다중 데이터 포멧">다중 데이터 포멧</div></a><div class="tree-item-children"><div class="tree-item" data-depth="6"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#+)_✅_자바나_파이썬과_비교해_보면?_0" data-path="#+)_✅_자바나_파이썬과_비교해_보면?_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="+) ✅ 자바나 파이썬과 비교해 보면?">+) ✅ 자바나 파이썬과 비교해 보면?</div></a><div class="tree-item-children"></div></div></div></div></div></div><div class="tree-item mod-collapsible" data-depth="4"><a class="tree-item-self is-clickable mod-collapsible" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.1.3_주소지정과_바이트_순서_0" data-path="#2.1.3_주소지정과_바이트_순서_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.1.3 주소지정과 바이트 순서">2.1.3 주소지정과 바이트 순서</div></a><div class="tree-item-children"><div class="tree-item" data-depth="5"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#정렬_관련_이슈_0" data-path="#정렬_관련_이슈_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="정렬 관련 이슈">정렬 관련 이슈</div></a><div class="tree-item-children"></div></div></div></div><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.1.4_스트링의_표시_0" data-path="#2.1.4_스트링의_표시_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.1.4 스트링의 표시">2.1.4 스트링의 표시</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.1.5_코드의_표현_0" data-path="#2.1.5_코드의_표현_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.1.5 코드의 표현">2.1.5 코드의 표현</div></a><div class="tree-item-children"></div></div><div class="tree-item mod-collapsible" data-depth="4"><a class="tree-item-self is-clickable mod-collapsible" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.1.6_부울(Boolean)_대수_0" data-path="#2.1.6_부울(Boolean)_대수_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.1.6 부울(Boolean) 대수">2.1.6 부울(Boolean) 대수</div></a><div class="tree-item-children"><div class="tree-item" data-depth="5"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#비트_벡터_0" data-path="#비트_벡터_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="비트 벡터">비트 벡터</div></a><div class="tree-item-children"></div></div></div></div><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.1.7_C에서의_비트수준_연산_0" data-path="#2.1.7_C에서의_비트수준_연산_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.1.7 C에서의 비트수준 연산">2.1.7 C에서의 비트수준 연산</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.1.8_C에서의_논리_연산_0" data-path="#2.1.8_C에서의_논리_연산_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.1.8 C에서의 논리 연산">2.1.8 C에서의 논리 연산</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.1.9_C에서의_쉬프트_연산_0" data-path="#2.1.9_C에서의_쉬프트_연산_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.1.9 C에서의 쉬프트 연산">2.1.9 C에서의 쉬프트 연산</div></a><div class="tree-item-children"></div></div></div></div><div class="tree-item mod-collapsible" data-depth="3"><a class="tree-item-self is-clickable mod-collapsible" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.2_정수의_표시_0" data-path="#2.2_정수의_표시_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.2 정수의 표시">2.2 정수의 표시</div></a><div class="tree-item-children"><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.2.1_정수형_데이터_타입_0" data-path="#2.2.1_정수형_데이터_타입_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.2.1 정수형 데이터 타입">2.2.1 정수형 데이터 타입</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.2.2_비부호형의_인코딩_0" data-path="#2.2.2_비부호형의_인코딩_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.2.2 비부호형의 인코딩">2.2.2 비부호형의 인코딩</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.2.3_2의_보수(two’s_complement)_인코딩_0" data-path="#2.2.3_2의_보수(two’s_complement)_인코딩_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.2.3 2의 보수(two’s complement) 인코딩">2.2.3 2의 보수(two’s complement) 인코딩</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.2.4_비부호형과_부호형_간의_변환_0" data-path="#2.2.4_비부호형과_부호형_간의_변환_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.2.4 비부호형과 부호형 간의 변환">2.2.4 비부호형과 부호형 간의 변환</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.2.5_C에서_부호형과_비부호형의_비교_0" data-path="#2.2.5_C에서_부호형과_비부호형의_비교_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.2.5 C에서 부호형과 비부호형의 비교">2.2.5 C에서 부호형과 비부호형의 비교</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.2.6_수의_비트_표시를_확장하기_0" data-path="#2.2.6_수의_비트_표시를_확장하기_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.2.6 수의 비트 표시를 확장하기">2.2.6 수의 비트 표시를 확장하기</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.2.7_숫자의_절삭_0" data-path="#2.2.7_숫자의_절삭_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.2.7 숫자의 절삭">2.2.7 숫자의 절삭</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#Signed와_Unsigned에_대한_조언_0" data-path="#Signed와_Unsigned에_대한_조언_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="Signed와 Unsigned에 대한 조언">Signed와 Unsigned에 대한 조언</div></a><div class="tree-item-children"></div></div></div></div><div class="tree-item mod-collapsible" data-depth="3"><a class="tree-item-self is-clickable mod-collapsible" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.3_정수의_산술_연산_0" data-path="#2.3_정수의_산술_연산_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.3 정수의 산술 연산">2.3 정수의 산술 연산</div></a><div class="tree-item-children"><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.3.1_비부호형_덧셈_0" data-path="#2.3.1_비부호형_덧셈_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.3.1 비부호형 덧셈">2.3.1 비부호형 덧셈</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.3.2_2의_보수의_덧셈_0" data-path="#2.3.2_2의_보수의_덧셈_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.3.2 2의 보수의 덧셈">2.3.2 2의 보수의 덧셈</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.3.4_비부호형_곱셈_/_2.3.5_2의_보수_곱셈_0" data-path="#2.3.4_비부호형_곱셈_/_2.3.5_2의_보수_곱셈_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.3.4 비부호형 곱셈 / 2.3.5 2의 보수 곱셈">2.3.4 비부호형 곱셈 / 2.3.5 2의 보수 곱셈</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.3.6_상수를_사용한_곱셈_0" data-path="#2.3.6_상수를_사용한_곱셈_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.3.6 상수를 사용한 곱셈">2.3.6 상수를 사용한 곱셈</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.3.7_2의_제곱으로_나눗셈하기_0" data-path="#2.3.7_2의_제곱으로_나눗셈하기_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.3.7 2의 제곱으로 나눗셈하기">2.3.7 2의 제곱으로 나눗셈하기</div></a><div class="tree-item-children"></div></div></div></div><div class="tree-item mod-collapsible" data-depth="3"><a class="tree-item-self is-clickable mod-collapsible" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.4_부동소수점_0" data-path="#2.4_부동소수점_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.4 부동소수점">2.4 부동소수점</div></a><div class="tree-item-children"><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.4.1_비율_이진수_0" data-path="#2.4.1_비율_이진수_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.4.1 비율 이진수">2.4.1 비율 이진수</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.4.2_IEEE_부동_소수점_표시_0" data-path="#2.4.2_IEEE_부동_소수점_표시_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.4.2 IEEE 부동 소수점 표시">2.4.2 IEEE 부동 소수점 표시</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.4.4_근사법_0" data-path="#2.4.4_근사법_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.4.4 근사법">2.4.4 근사법</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-item-self is-clickable" href="dev-blog/csapp/컴퓨터시스템-ch2.-정보의-표현과-처리.html#2.4.5_부동소수점_연산_0" data-path="#2.4.5_부동소수점_연산_0"><div class="tree-item-inner el-p heading-link" data-tag-name="p" heading-name="2.4.5 부동소수점 연산">2.4.5 부동소수점 연산</div></a><div class="tree-item-children"></div></div></div></div></div></div></div></div></div></div></div><script defer="">let rs = document.querySelector("#right-sidebar"); rs.classList.toggle("is-collapsed", window.innerWidth < 768); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></div></body></html>
